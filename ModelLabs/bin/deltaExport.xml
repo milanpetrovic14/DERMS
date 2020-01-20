@@ -1,66 +1,155 @@
 ﻿<delta id="0">
   <operations>
-    <operation type="update">
+    <operation type="insert">
       <ResourceDescriptions count="15">
         <ResourceDescription>
-          <id gid="0x0000000100000001" type="GEOGRAPHICALREGION" />
-          <Properties />
+          <id gid="0x00000001ffffffff" type="GEOGRAPHICALREGION" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="gr_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="gr1" />
+            <Property id="IDOBJ_NAME" value="GR1" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000100000002" type="GEOGRAPHICALREGION" />
-          <Properties />
+          <id gid="0x00000001fffffffe" type="GEOGRAPHICALREGION" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="gr_2" />
+            <Property id="IDOBJ_DESCRIPTION" value="gr2" />
+            <Property id="IDOBJ_NAME" value="GR2" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000b00000001" type="SUBGEOGRAPHICALREGION" />
-          <Properties />
+          <id gid="0x0000000bffffffff" type="SUBGEOGRAPHICALREGION" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="sgr_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="sgr1" />
+            <Property id="IDOBJ_NAME" value="SGR1" />
+            <Property id="SUBGEOGRAPHICALREGION_GEOREG" value="0x00000001fffffffe" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000b00000002" type="SUBGEOGRAPHICALREGION" />
-          <Properties />
+          <id gid="0x0000000bfffffffe" type="SUBGEOGRAPHICALREGION" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="sgr_2" />
+            <Property id="IDOBJ_DESCRIPTION" value="sgr2" />
+            <Property id="IDOBJ_NAME" value="SGR2" />
+            <Property id="SUBGEOGRAPHICALREGION_GEOREG" value="0x00000001ffffffff" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000a00000001" type="SUBSTATION" />
-          <Properties />
+          <id gid="0x0000000affffffff" type="SUBSTATION" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="s_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="s1" />
+            <Property id="IDOBJ_NAME" value="S1" />
+            <Property id="SUBSTATION_SUBGEOREG" value="0x0000000bffffffff" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000200000001" type="BREAKER" />
-          <Properties />
+          <id gid="0x00000002ffffffff" type="BREAKER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="b_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="b1" />
+            <Property id="IDOBJ_NAME" value="B1" />
+            <Property id="SWITCH_NORMAL_OPEN" value="1" />
+            <Property id="SWITCH_FEEDER_ID1" value="feeder1" />
+            <Property id="SWITCH_FEEDER_ID2" value="feeder2" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000300000001" type="CONNECTIVITYNODE" />
-          <Properties />
+          <id gid="0x00000003ffffffff" type="CONNECTIVITYNODE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="cn_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="cn1" />
+            <Property id="IDOBJ_NAME" value="CN1" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000300000002" type="CONNECTIVITYNODE" />
-          <Properties />
+          <id gid="0x00000003fffffffe" type="CONNECTIVITYNODE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="cn_2" />
+            <Property id="IDOBJ_DESCRIPTION" value="cn2" />
+            <Property id="IDOBJ_NAME" value="CN2" />
+            <Property id="CONNECTIVITYNODE_CONTAINER" value="0x0000000affffffff" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000600000001" type="TERMINAL" />
-          <Properties />
+          <id gid="0x00000006ffffffff" type="TERMINAL" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="t_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="t1" />
+            <Property id="IDOBJ_NAME" value="T1" />
+            <Property id="TERMINAL_COND_EQ" value="0x00000002ffffffff" />
+            <Property id="TERMINAL_CONNECTIVITY_NODE" value="0x00000003ffffffff" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000500000001" type="SYNCHRONOUSMACHINE" />
-          <Properties />
+          <id gid="0x00000005ffffffff" type="SYNCHRONOUSMACHINE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="sm_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="sm1" />
+            <Property id="IDOBJ_NAME" value="SM2" />
+            <Property id="SYNCHRONOUSMACHINE_MAXQ" value="8" />
+            <Property id="SYNCHRONOUSMACHINE_MINQ" value="0" />
+            <Property id="SYNCHRONOUSMACHINE_CONSIDERP" value="2" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000400000001" type="ENERGYCONSUMER" />
-          <Properties />
+          <id gid="0x00000004ffffffff" type="ENERGYCONSUMER" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="ec_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="ec1" />
+            <Property id="IDOBJ_NAME" value="EC1" />
+            <Property id="ENERGYCONSUMER_PFIXED" value="2" />
+            <Property id="ENERGYCONSUMER_QFIXED" value="2" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000900000001" type="ENEGRYSOURCE" />
-          <Properties />
+          <id gid="0x00000009ffffffff" type="ENEGRYSOURCE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="es_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="es1" />
+            <Property id="IDOBJ_NAME" value="ES1" />
+            <Property id="ENERGYSOURCE_ACTIVEPOWER" value="40" />
+            <Property id="ENERGYSOURCE_VOLTAGE" value="10" />
+            <Property id="ENERGYSOURCE_MAGNITUDE" value="20" />
+            <Property id="ENERGYSOURCE_TYPE" value="0" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000c00000001" type="ACLINESEGMENT" />
-          <Properties />
+          <id gid="0x0000000cffffffff" type="ACLINESEGMENT" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="acl_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="acl1" />
+            <Property id="IDOBJ_NAME" value="ACL1" />
+            <Property id="CONDUCTOR_TYPE" value="2" />
+            <Property id="ACLINESEGMENT_CURRENTFLOW" value="30" />
+            <Property id="ACLINESEGMENT_FEEDERCABLE" value="0" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000700000001" type="ANALOG" />
-          <Properties />
+          <id gid="0x00000007ffffffff" type="ANALOG" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="a_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="a1" />
+            <Property id="IDOBJ_NAME" value="A1" />
+            <Property id="MEASUREMENT_MEAS_TYPE" value="Voltage" />
+            <Property id="ANALOG_MAX_VALUE" value="4" />
+            <Property id="ANALOG_MIN_VALUE" value="2" />
+            <Property id="ANALOG_NORMAL_VALUE" value="3" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
-          <id gid="0x0000000800000001" type="DISCRETE" />
-          <Properties />
+          <id gid="0x00000008ffffffff" type="DISCRETE" />
+          <Properties>
+            <Property id="IDOBJ_MRID" value="d_1" />
+            <Property id="IDOBJ_DESCRIPTION" value="d1" />
+            <Property id="IDOBJ_NAME" value="D1" />
+            <Property id="MEASUREMENT_MEAS_TYPE" value="Voltage" />
+            <Property id="DISCRETE_MAX_VALUE" value="4" />
+            <Property id="DISCRETE_MIN_VALUE" value="2" />
+            <Property id="DISCRETE_NORMAL_VALUE" value="3" />
+          </Properties>
         </ResourceDescription>
       </ResourceDescriptions>
     </operation>

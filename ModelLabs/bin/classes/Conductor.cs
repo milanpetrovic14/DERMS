@@ -15,5 +15,39 @@ namespace FTN {
     
     /// Combination of conducting material with consistent electrical characteristics, building a single electrical system, used to carry current between points in the power system.
     public class Conductor : ConductingEquipment {
+        
+        /// Overhead, cable, or overhead cable
+        private ConductorType? cim_conductorType;
+        
+        private const bool isConductorTypeMandatory = true;
+        
+        private const string _conductorTypePrefix = "tdms";
+        
+        public virtual ConductorType ConductorType {
+            get {
+                return this.cim_conductorType.GetValueOrDefault();
+            }
+            set {
+                this.cim_conductorType = value;
+            }
+        }
+        
+        public virtual bool ConductorTypeHasValue {
+            get {
+                return this.cim_conductorType != null;
+            }
+        }
+        
+        public static bool IsConductorTypeMandatory {
+            get {
+                return isConductorTypeMandatory;
+            }
+        }
+        
+        public static string ConductorTypePrefix {
+            get {
+                return _conductorTypePrefix;
+            }
+        }
     }
 }

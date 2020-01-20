@@ -9,6 +9,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
 {
     public class Conductor : ConductingEquipment
     {
+        private ConductorType type;
+
+        public ConductorType Type { get => type; set => type = value; }
+
         public Conductor(long globalId) : base(globalId)
         {
         }
@@ -17,7 +21,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
         {
             if (base.Equals(obj))
             {
-                return true;
+                Conductor x = (Conductor)obj;
+                return (x.type == this.type);
             }
             else
             {
@@ -40,8 +45,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
                 //case ModelCode.SWITCH_RATED_CURRENT:
                 //case ModelCode.SWITCH_RETAINED:
                 //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                //case ModelCode.SWITCH_SWITCH_ON_DATE:
-                //    return true;
+                case ModelCode.CONDUCTOR_TYPE:
+                    return true;
 
                 default:
                     return base.HasProperty(property);
@@ -66,9 +71,9 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
                 //case ModelCode.SWITCH_SWITCH_ON_COUNT:
                 //    prop.SetValue(switchOnCount);
                 //    break;
-                //case ModelCode.SWITCH_SWITCH_ON_DATE:
-                //    prop.SetValue(switchOnDate);
-                //    break;
+                case ModelCode.CONDUCTOR_TYPE:
+                    prop.SetValue((short)type);
+                    break;
 
                 default:
                     base.GetProperty(prop);
@@ -84,9 +89,9 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
                 //    normalOpen = property.AsBool();
                 //    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    ratedCurrent = (CurrentFlow)property.AsEnum();
-                //    break;
+                case ModelCode.CONDUCTOR_TYPE:
+                    type = (ConductorType)property.AsEnum();
+                    break;
 
                 //case ModelCode.SWITCH_RETAINED:
                 //    retained = property.AsBool();

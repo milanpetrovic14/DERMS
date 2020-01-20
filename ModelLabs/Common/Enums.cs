@@ -65,4 +65,20 @@ namespace FTN.Common
         Voltage = 2,
         None = 3
     }
+
+    public enum ConductorType : short
+    {
+        BusSegment = 0,
+        Cable = 1,
+        OhCable = 1,
+        Overhead = 2,
+        None = 3
+    }
+
+    public enum EnergySourceType : short
+    {
+        Distribution = 0,
+        Interconnection = 1,
+        None = 3
+    }
 }

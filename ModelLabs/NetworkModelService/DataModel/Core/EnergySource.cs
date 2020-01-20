@@ -9,6 +9,16 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 {
     public class EnergySource : ConductingEquipment
     {
+        private float activePower;
+        private float nominalVoltage;
+        private float magnitudeVoltage;
+        private EnergySourceType type;
+
+        public float ActivePower { get => activePower; set => activePower = value; }
+        public float NominalVoltage { get => nominalVoltage; set => nominalVoltage = value; }
+        public float MagnitudeVoltage { get => magnitudeVoltage; set => magnitudeVoltage = value; }
+        public EnergySourceType Type { get => type; set => type = value; }
+
         public EnergySource(long globalId) : base(globalId)
         {
         }
@@ -17,7 +27,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             if (base.Equals(obj))
             {
-                return true;
+                EnergySource x = (EnergySource)obj;
+                return (x.activePower == this.activePower && x.nominalVoltage == this.nominalVoltage && x.magnitudeVoltage == this.magnitudeVoltage && x.type == this.type);
             }
             else
             {
@@ -37,11 +48,11 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             switch (property)
             {
                 //case ModelCode.SWITCH_NORMAL_OPEN:
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //case ModelCode.SWITCH_RETAINED:
-                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                //case ModelCode.SWITCH_SWITCH_ON_DATE:
-                //    return true;
+                case ModelCode.ENERGYSOURCE_ACTIVEPOWER:
+                case ModelCode.ENERGYSOURCE_VOLTAGE:
+                case ModelCode.ENERGYSOURCE_MAGNITUDE:
+                case ModelCode.ENERGYSOURCE_TYPE:
+                    return true;
 
                 default:
                     return base.HasProperty(property);
@@ -56,19 +67,19 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
                 //    prop.SetValue(normalOpen);
                 //    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    prop.SetValue((short)ratedCurrent);
-                //    break;
+                case ModelCode.ENERGYSOURCE_ACTIVEPOWER:
+                    prop.SetValue(activePower);
+                    break;
 
-                //case ModelCode.SWITCH_RETAINED:
-                //    prop.SetValue(retained);
-                //    break;
-                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                //    prop.SetValue(switchOnCount);
-                //    break;
-                //case ModelCode.SWITCH_SWITCH_ON_DATE:
-                //    prop.SetValue(switchOnDate);
-                //    break;
+                case ModelCode.ENERGYSOURCE_MAGNITUDE:
+                    prop.SetValue(magnitudeVoltage);
+                    break;
+                case ModelCode.ENERGYSOURCE_VOLTAGE:
+                    prop.SetValue(nominalVoltage);
+                    break;
+                case ModelCode.ENERGYSOURCE_TYPE:
+                    prop.SetValue((short)type);
+                    break;
 
                 default:
                     base.GetProperty(prop);
@@ -84,19 +95,19 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
                 //    normalOpen = property.AsBool();
                 //    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    ratedCurrent = (CurrentFlow)property.AsEnum();
-                //    break;
+                case ModelCode.ENERGYSOURCE_ACTIVEPOWER:
+                    activePower = property.AsFloat();
+                    break;
 
-                //case ModelCode.SWITCH_RETAINED:
-                //    retained = property.AsBool();
-                //    break;
-                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                //    switchOnCount = property.AsInt();
-                //    break;
-                //case ModelCode.SWITCH_SWITCH_ON_DATE:
-                //    switchOnDate = property.AsDateTime();
-                //    break;
+                case ModelCode.ENERGYSOURCE_MAGNITUDE:
+                    magnitudeVoltage = property.AsFloat();
+                    break;
+                case ModelCode.ENERGYSOURCE_VOLTAGE:
+                    nominalVoltage = property.AsFloat();
+                    break;
+                case ModelCode.ENERGYSOURCE_TYPE:
+                    type = (EnergySourceType)property.AsEnum();
+                    break;
 
                 default:
                     base.SetProperty(property);

@@ -9,6 +9,12 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
 {
     public class ACLineSegment : Conductor
     {
+        private float currentFlow;
+        private bool feederCable;
+
+        public float CurrentFlow { get => currentFlow; set => currentFlow = value; }
+        public bool FeederCable { get => feederCable; set => feederCable = value; }
+
         public ACLineSegment(long globalId) : base(globalId)
         {
         }
@@ -17,7 +23,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
         {
             if (base.Equals(obj))
             {
-                return true;
+                ACLineSegment x = (ACLineSegment)obj;
+                return (x.currentFlow == this.currentFlow && x.feederCable == this.feederCable);
             }
             else
             {
@@ -36,8 +43,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
         {
             switch (property)
             {
-                //case ModelCode.SWITCH_NORMAL_OPEN:
-                //case ModelCode.SWITCH_RATED_CURRENT:
+                case ModelCode.ACLINESEGMENT_CURRENTFLOW:
+                case ModelCode.ACLINESEGMENT_FEEDERCABLE:
                 //case ModelCode.SWITCH_RETAINED:
                 //case ModelCode.SWITCH_SWITCH_ON_COUNT:
                 //case ModelCode.SWITCH_SWITCH_ON_DATE:
@@ -52,13 +59,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
         {
             switch (prop.Id)
             {
-                //case ModelCode.SWITCH_NORMAL_OPEN:
-                //    prop.SetValue(normalOpen);
-                //    break;
+                case ModelCode.ACLINESEGMENT_CURRENTFLOW:
+                    prop.SetValue(currentFlow);
+                    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    prop.SetValue((short)ratedCurrent);
-                //    break;
+                case ModelCode.ACLINESEGMENT_FEEDERCABLE:
+                    prop.SetValue(feederCable);
+                    break;
 
                 //case ModelCode.SWITCH_RETAINED:
                 //    prop.SetValue(retained);
@@ -80,13 +87,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Wires
         {
             switch (property.Id)
             {
-                //case ModelCode.SWITCH_NORMAL_OPEN:
-                //    normalOpen = property.AsBool();
-                //    break;
+                case ModelCode.ACLINESEGMENT_FEEDERCABLE:
+                    feederCable = property.AsBool();
+                    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    ratedCurrent = (CurrentFlow)property.AsEnum();
-                //    break;
+                case ModelCode.ACLINESEGMENT_CURRENTFLOW:
+                    currentFlow = property.AsFloat();
+                    break;
 
                 //case ModelCode.SWITCH_RETAINED:
                 //    retained = property.AsBool();

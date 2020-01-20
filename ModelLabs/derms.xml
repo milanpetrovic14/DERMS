@@ -13,14 +13,14 @@
 	<cim:GeographicalRegion rdf:ID="gr_2">
 		<cim:IdentifiedObject.description>gr2</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>gr_2</cim:IdentifiedObject.mRID>
-		<cim:IdentifiedObject.Name>GR1</cim:IdentifiedObject.Name>
+		<cim:IdentifiedObject.Name>GR2</cim:IdentifiedObject.Name>
 	</cim:GeographicalRegion>
 	
 	<cim:SubGeographicalRegion rdf:ID="sgr_1">
 		<cim:IdentifiedObject.description>sgr1</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>sgr_1</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>SGR1</cim:IdentifiedObject.name>
-		<cim:SubGeographicalRegion.Region rdf:resource="#gr_1"/>
+		<cim:SubGeographicalRegion.Region rdf:resource="#gr_2"/>
 	</cim:SubGeographicalRegion>	
 	
 	<cim:SubGeographicalRegion rdf:ID="sgr_2">
@@ -92,7 +92,7 @@
 		<cim:IdentifiedObject.description>sm1</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>sm_1</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>SM2</cim:IdentifiedObject.name>
-		<cim:SynchronousMachine.maxQ>6</cim:SynchronousMachine.maxQ>			
+		<cim:SynchronousMachine.maxQ>8</cim:SynchronousMachine.maxQ>			
 		<cim:SynchronousMachine.minQ>0</cim:SynchronousMachine.minQ>			
 		<cim:SynchronousMachine.condenserP>2</cim:SynchronousMachine.condenserP>
 		<!-- <cim:Equipment.EquipmentContainer rdf:resource="#f_1"/>		 -->
@@ -102,12 +102,19 @@
 		<cim:IdentifiedObject.description>es1</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>es_1</cim:IdentifiedObject.mRID>		
 		<cim:IdentifiedObject.name>ES1</cim:IdentifiedObject.name>
+		<cim:EnergySource.activePower>40</cim:EnergySource.activePower>
+		<cim:EnergySource.nominalVoltage>10</cim:EnergySource.nominalVoltage>
+		<cim:EnergySource.voltageMagnitude>20</cim:EnergySource.voltageMagnitude>
+		<cim:EnergySource.sourceType>Distribution</cim:EnergySource.sourceType>
 	</cim:EnergySource>
 	
 	<cim:ACLineSegment rdf:id="acl_1">
 		<cim:identifiedobject.description>acl1</cim:identifiedobject.description>
 		<cim:identifiedobject.mRID>acl_1</cim:identifiedobject.mRID>
 		<cim:IdentifiedObject.name>ACL1</cim:IdentifiedObject.name>	
+		<cim:Conductor.conductorType>Overhead</cim:Conductor.conductorType>	
+		<cim:ACLineSegment.feederCable>false</cim:ACLineSegment.feederCable>	
+		<cim:ACLineSegment.ratedCurrent>30</cim:ACLineSegment.ratedCurrent>	
 	</cim:ACLineSegment>
 	
 	<cim:Analog rdf:id="a_1">

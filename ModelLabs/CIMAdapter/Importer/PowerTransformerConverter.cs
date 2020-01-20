@@ -23,29 +23,18 @@
 				{
 					rd.AddProperty(new Property(ModelCode.IDOBJ_DESCRIPTION, cimIdentifiedObject.Description));
 				}
-				//if (cimIdentifiedObject.AliasNameHasValue)
-				//{
-				//	rd.AddProperty(new Property(ModelCode.IDOBJ_ALIAS, cimIdentifiedObject.AliasName));
-				//}
-			}
+                if (cimIdentifiedObject.NameHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.IDOBJ_NAME, cimIdentifiedObject.Name));
+                }
+            }
 		}        
 
         public static void PopulatePowerSystemResourceProperties(FTN.PowerSystemResource cimPowerSystemResource, ResourceDescription rd, ImportHelper importHelper, TransformAndLoadReport report)
         {
             if ((cimPowerSystemResource != null) && (rd != null))
             {
-                PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimPowerSystemResource, rd);                
-
-                //if (cimPowerSystemResource.OutageScheduleHasValue)
-                //{
-                //    long gid = importHelper.GetMappedGID(cimPowerSystemResource.OutageSchedule.ID);
-                //    if (gid < 0)
-                //    {
-                //        report.Report.Append("WARNING: Convert ").Append(cimPowerSystemResource.GetType().ToString()).Append(" rdfID = \"").Append(cimPowerSystemResource.ID);
-                //        report.Report.Append("\" - Failed to set reference to OutageSchedule: rdfID \"").Append(cimPowerSystemResource.OutageSchedule.ID).AppendLine(" \" is not mapped to GID!");
-                //    }
-                //    rd.AddProperty(new Property(ModelCode.PSR_OUTSCH, gid));
-                //}
+                PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimPowerSystemResource, rd);            
             }
         }         
 
@@ -55,17 +44,7 @@
             if ((cimTerminal != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimTerminal, rd);
-
-                //if (cimTerminal.ConnectedHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.TERMINAL_CONNECTED, cimTerminal.Connected));
-                //}
-
-                //if (cimTerminal.SequenceNumberHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.TERMINAL_SEQ_NUM, cimTerminal.SequenceNumber));
-                //}
-
+                
                 if (cimTerminal.ConductingEquipmentHasValue)
                 {
                     long gid = importHelper.GetMappedGID(cimTerminal.ConductingEquipment.ID);
@@ -96,11 +75,6 @@
             {
                 PowerTransformerConverter.PopulateRegulatingCondEqProperties(cimSynchronousMachine, rd, importHelper, report);
 
-                //if (cimSynchronousMachine.BaseQHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_BASEQ, cimSynchronousMachine.BaseQ));
-                //}
-
                 if (cimSynchronousMachine.MaxQHasValue)
                 {
                     rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_MAXQ, cimSynchronousMachine.MaxQ));
@@ -110,14 +84,7 @@
                 {
                     rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_MINQ, cimSynchronousMachine.MinQ));
                 }
-                //if (cimSynchronousMachine.MaxUHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_MAXU, cimSynchronousMachine.MaxU));
-                //}
-                //if (cimSynchronousMachine.MinUHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_MINU, cimSynchronousMachine.MinU));
-                //}
+                
                 if (cimSynchronousMachine.CondenserPHasValue)
                 {
                     rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_CONSIDERP, cimSynchronousMachine.CondenserP));
@@ -150,6 +117,11 @@
             if ((cimMeasurement != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimMeasurement, rd);
+
+                if (cimMeasurement.MeasurementTypeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.MEASUREMENT_MEAS_TYPE, (short)GetDMSMeasurementType(cimMeasurement.MeasurementType)));
+                }
             }
         }
 
@@ -173,12 +145,7 @@
         {
             if ((cimAnalog != null) && (rd != null))
             {
-                PowerTransformerConverter.PopulateMeasurementProperties(cimAnalog, rd, importHelper, report);
-
-                //if (cimAnalog.CurrentValueHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.ANALOG_CURRENT_VALUE, cimAnalog.CurrentValue));
-                //}
+                PowerTransformerConverter.PopulateMeasurementProperties(cimAnalog, rd, importHelper, report);                
 
                 if (cimAnalog.MaxValueHasValue)
                 {
@@ -212,12 +179,7 @@
         {
             if ((cimDiscrete != null) && (rd != null))
             {
-                PowerTransformerConverter.PopulateMeasurementProperties(cimDiscrete, rd, importHelper, report);
-
-                //if (cimDiscrete.CurrentOpenHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.DISCRETE_CURRENT_OPEN, cimDiscrete.CurrentOpen));
-                //}
+                PowerTransformerConverter.PopulateMeasurementProperties(cimDiscrete, rd, importHelper, report);                               
 
                 if (cimDiscrete.MaxValueHasValue)
                 {
@@ -301,15 +263,7 @@
                 }
             }
         }
-
-        //public static void PopulateFeederObjectProperties(FTN.FeederObject cimFeederObject, ResourceDescription rd, ImportHelper importHelper, TransformAndLoadReport report)
-        //{
-        //    if ((cimFeederObject != null) && (rd != null))
-        //    {
-        //        PowerTransformerConverter.PopulateEquipmentContainerProperties(cimFeederObject, rd, importHelper, report);
-        //    }
-        //}
-
+        
         public static void PopulateSubstationProperties(FTN.Substation cimSubstation, ResourceDescription rd, ImportHelper importHelper, TransformAndLoadReport report)
         {
             if ((cimSubstation != null) && (rd != null))
@@ -374,12 +328,7 @@
             if ((cimEnergyConsumer != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateConductingEquipmentProperties(cimEnergyConsumer, rd, importHelper, report);
-
-                //if (cimEnergyConsumer.CustomerCountHasValue)
-                //{
-                //    rd.AddProperty(new Property(ModelCode.ENERGYCONSUMER_CONSUMER_COUNT, cimEnergyConsumer.CustomerCount));
-                //}
-
+                
                 if (cimEnergyConsumer.PfixedHasValue)
                 {
                     rd.AddProperty(new Property(ModelCode.ENERGYCONSUMER_PFIXED, cimEnergyConsumer.Pfixed));
@@ -408,18 +357,7 @@
 		{
 			if ((cimEquipment != null) && (rd != null))
 			{
-				PowerTransformerConverter.PopulatePowerSystemResourceProperties(cimEquipment, rd, importHelper, report);
-
-				//if (cimEquipment.PrivateHasValue)
-				//{
-				//	rd.AddProperty(new Property(ModelCode.EQUIPMENT_PRIVATE, cimEquipment.Private));
-				//}
-                //if (cimEquipment.NormallyInServiceHasValue)
-                //{
-                //	rd.AddProperty(new Property(ModelCode.EQUIPMENT_NORMALLY_IN_SERVICE, cimEquipment.NormallyInService));
-                //}            
-
-
+				PowerTransformerConverter.PopulatePowerSystemResourceProperties(cimEquipment, rd, importHelper, report);      
             }
 		}
 
@@ -437,16 +375,10 @@
             {
                 PowerTransformerConverter.PopulateConductingEquipmentProperties(cimConductor, rd, importHelper, report);
 
-                //if (cimPowerSystemResource.OutageScheduleHasValue)
-                //{
-                //    long gid = importHelper.GetMappedGID(cimPowerSystemResource.OutageSchedule.ID);
-                //    if (gid < 0)
-                //    {
-                //        report.Report.Append("WARNING: Convert ").Append(cimPowerSystemResource.GetType().ToString()).Append(" rdfID = \"").Append(cimPowerSystemResource.ID);
-                //        report.Report.Append("\" - Failed to set reference to OutageSchedule: rdfID \"").Append(cimPowerSystemResource.OutageSchedule.ID).AppendLine(" \" is not mapped to GID!");
-                //    }
-                //    rd.AddProperty(new Property(ModelCode.PSR_OUTSCH, gid));
-                //}
+                if (cimConductor.ConductorTypeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.CONDUCTOR_TYPE, (short)GetDMSConductorType(cimConductor.ConductorType)));
+                }                
             }
         }
 
@@ -455,6 +387,26 @@
             if ((cimEnergySource != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateConductingEquipmentProperties(cimEnergySource, rd, importHelper, report);
+
+                if (cimEnergySource.ActivePowerHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ENERGYSOURCE_ACTIVEPOWER, cimEnergySource.ActivePower));
+                }
+
+                if (cimEnergySource.NominalVoltageHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ENERGYSOURCE_VOLTAGE, cimEnergySource.NominalVoltage));
+                }
+
+                if (cimEnergySource.VoltageMagnitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ENERGYSOURCE_MAGNITUDE, cimEnergySource.VoltageMagnitude));
+                }
+
+                if (cimEnergySource.SourceTypeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ENERGYSOURCE_TYPE, (short)GetDMSEnergySourceType(cimEnergySource.SourceType)));
+                }
 
                 if (cimEnergySource.EquipmentContainerHasValue)
                 {
@@ -465,18 +417,7 @@
                         report.Report.Append("\" - Failed to set reference to EquipmentContainer: rdfID \"").Append(cimEnergySource.EquipmentContainer.ID).AppendLine(" \" is not mapped to GID!");
                     }
                     rd.AddProperty(new Property(ModelCode.EQUIPMENT_CONTAINER, gid));
-                }
-
-                //if (cimPowerSystemResource.OutageScheduleHasValue)
-                //{
-                //    long gid = importHelper.GetMappedGID(cimPowerSystemResource.OutageSchedule.ID);
-                //    if (gid < 0)
-                //    {
-                //        report.Report.Append("WARNING: Convert ").Append(cimPowerSystemResource.GetType().ToString()).Append(" rdfID = \"").Append(cimPowerSystemResource.ID);
-                //        report.Report.Append("\" - Failed to set reference to OutageSchedule: rdfID \"").Append(cimPowerSystemResource.OutageSchedule.ID).AppendLine(" \" is not mapped to GID!");
-                //    }
-                //    rd.AddProperty(new Property(ModelCode.PSR_OUTSCH, gid));
-                //}
+                }               
             }
         }
 
@@ -486,16 +427,15 @@
             {
                 PowerTransformerConverter.PopulateConductorProperties(cimACLineSegment, rd, importHelper, report);
 
-                //if (cimPowerSystemResource.OutageScheduleHasValue)
-                //{
-                //    long gid = importHelper.GetMappedGID(cimPowerSystemResource.OutageSchedule.ID);
-                //    if (gid < 0)
-                //    {
-                //        report.Report.Append("WARNING: Convert ").Append(cimPowerSystemResource.GetType().ToString()).Append(" rdfID = \"").Append(cimPowerSystemResource.ID);
-                //        report.Report.Append("\" - Failed to set reference to OutageSchedule: rdfID \"").Append(cimPowerSystemResource.OutageSchedule.ID).AppendLine(" \" is not mapped to GID!");
-                //    }
-                //    rd.AddProperty(new Property(ModelCode.PSR_OUTSCH, gid));
-                //}
+                if (cimACLineSegment.RatedCurrentHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ACLINESEGMENT_CURRENTFLOW, cimACLineSegment.RatedCurrent));
+                }
+
+                if (cimACLineSegment.FeederCableHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.ACLINESEGMENT_FEEDERCABLE, cimACLineSegment.FeederCable));
+                }                
             }
         }
 
@@ -503,7 +443,7 @@
 
         #region Enums convert
 
-        public static MeasurementType GetDMSUnitMultiplier(FTN.MeasurementType measurementType)
+        public static MeasurementType GetDMSMeasurementType(FTN.MeasurementType measurementType)
         {
             switch (measurementType)
             {
@@ -518,112 +458,35 @@
             }
         }
 
-        //public static UnitSymbol GetDMSUnitSymbol(FTN.UnitSymbol unitSymbol)
-        //{
-        //	switch (unitSymbol)
-        //	{
-        //		case FTN.UnitSymbol.A:
-        //			return UnitSymbol.A;
-        //		case FTN.UnitSymbol.deg:
-        //			return UnitSymbol.deg;
-        //		case FTN.UnitSymbol.degC:
-        //			return UnitSymbol.degC;
-        //		case FTN.UnitSymbol.F:
-        //			return UnitSymbol.F;
-        //		case FTN.UnitSymbol.g:
-        //			return UnitSymbol.g;
-        //		case FTN.UnitSymbol.h:
-        //			return UnitSymbol.h;
-        //		case FTN.UnitSymbol.H:
-        //			return UnitSymbol.H;
-        //		case FTN.UnitSymbol.Hz:
-        //			return UnitSymbol.Hz;
-        //		case FTN.UnitSymbol.J:
-        //			return UnitSymbol.J;
-        //		case FTN.UnitSymbol.m:
-        //			return UnitSymbol.m;
-        //              case FTN.UnitSymbol.m2:
-        //			return UnitSymbol.m2;
-        //		case FTN.UnitSymbol.m3:
-        //			return UnitSymbol.m3;
-        //		case FTN.UnitSymbol.min:
-        //			return UnitSymbol.min;
-        //		case FTN.UnitSymbol.N:
-        //			return UnitSymbol.N;
-        //		case FTN.UnitSymbol.ohm:
-        //			return UnitSymbol.ohm;
-        //		case FTN.UnitSymbol.Pa:
-        //			return UnitSymbol.Pa;
-        //		case FTN.UnitSymbol.rad:
-        //			return UnitSymbol.rad;
-        //		case FTN.UnitSymbol.s:
-        //			return UnitSymbol.s;
-        //              case FTN.UnitSymbol.S:
-        //                  return UnitSymbol.S;
-        //              case FTN.UnitSymbol.V:
-        //                  return UnitSymbol.V;
-        //              case FTN.UnitSymbol.VA:
-        //                  return UnitSymbol.VA;
-        //              case FTN.UnitSymbol.VAh:
-        //                  return UnitSymbol.Vah;
-        //              case FTN.UnitSymbol.VAr:
-        //                  return UnitSymbol.Var;
-        //              case FTN.UnitSymbol.VArh:
-        //                  return UnitSymbol.VArh;
-        //              case FTN.UnitSymbol.W:
-        //                  return UnitSymbol.W;
-        //              case FTN.UnitSymbol.Wh:
-        //                  return UnitSymbol.Wh;
-        //              default: return UnitSymbol.Unknown;
-        //	}
-        //}
+        public static ConductorType GetDMSConductorType(FTN.ConductorType conductorType)
+        {
+            switch (conductorType)
+            {
+                case FTN.ConductorType.BusSegment:
+                    return ConductorType.BusSegment;
+                case FTN.ConductorType.Cable:
+                    return ConductorType.Cable;
+                case FTN.ConductorType.OhCable:
+                    return ConductorType.OhCable;
+                case FTN.ConductorType.Overhead:
+                    return ConductorType.Overhead;
+                default:
+                    return ConductorType.None;
+            }
+        }
 
-        //public static UnitMultiplier GetDMSUnitMultiplier(FTN.UnitMultiplier unitMultiplier)
-        //{
-        //	switch (unitMultiplier)
-        //	{
-        //		case FTN.UnitMultiplier.c:
-        //			return UnitMultiplier.c;
-        //              case FTN.UnitMultiplier.d:
-        //                  return UnitMultiplier.d;
-        //              case FTN.UnitMultiplier.G:
-        //                  return UnitMultiplier.G;
-        //              case FTN.UnitMultiplier.k:
-        //                  return UnitMultiplier.k;
-        //              case FTN.UnitMultiplier.m:
-        //                  return UnitMultiplier.m;
-        //              case FTN.UnitMultiplier.M:
-        //                  return UnitMultiplier.M;
-        //              case FTN.UnitMultiplier.micro:
-        //                  return UnitMultiplier.micro;
-        //              case FTN.UnitMultiplier.n:
-        //                  return UnitMultiplier.n;                
-        //              case FTN.UnitMultiplier.p:
-        //                  return UnitMultiplier.p;
-        //              case FTN.UnitMultiplier.T:
-        //                  return UnitMultiplier.T;                
-        //              default:
-        //			return UnitMultiplier.none;
-        //	}
-        //}
-
-        //public static CurveStyle GetDMSCurveStyle(FTN.CurveStyle curveStyle)
-        //{
-        //	switch (curveStyle)
-        //	{
-        //		case FTN.CurveStyle.constantYValue:
-        //			return CurveStyle.CONST;
-        //		case FTN.CurveStyle.formula:
-        //			return CurveStyle.FORMULA;
-        //		case FTN.CurveStyle.rampYValue:
-        //			return CurveStyle.RAMP;
-        //              case FTN.CurveStyle.straightLineYValues:
-        //                  return CurveStyle.STRAIGHT;
-        //              default:
-        //			return CurveStyle.None;
-        //	}
-        //}
-
+        public static EnergySourceType GetDMSEnergySourceType(FTN.EnergySourceType sourceType)
+        {
+            switch (sourceType)
+            {
+                case FTN.EnergySourceType.Distribution:
+                    return EnergySourceType.Distribution;
+                case FTN.EnergySourceType.Interconnection:
+                    return EnergySourceType.Interconnection;
+                default:
+                    return EnergySourceType.None;
+            }
+        }                
 
         #endregion Enums convert
     }
