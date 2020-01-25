@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Data;
 using DERMSCommon;
+using DermsUI.MediatorPattern;
+using DermsUI.ViewModel.PointViewModel;
 
 namespace DermsUI.ViewModel
 {
@@ -46,7 +48,11 @@ namespace DermsUI.ViewModel
         private IEnumerable<SampleGroupVm> _samples4;
         private readonly IEnumerable<SampleGroupVm> _dataSource4;
         #endregion
-
+        public void OnChange(object parameter)
+        {
+            Console.Beep();
+            Mediator.NotifyColleagues("AlarmSignalUpdate", true);
+        }
         #region TreeView
         private List<EnergyNetwork> energyNetworks;
         public MyICommand<long> GeographicalRegionCommand { get; private set; }
@@ -56,6 +62,7 @@ namespace DermsUI.ViewModel
         #endregion
         public HomeViewModel()
         {
+            Mediator.Register("GetAlarmSignals", OnChange);
             Logger.Log("UI is started.", DERMSCommon.Enums.Component.UI, DERMSCommon.Enums.LogLevel.Info);
 
             #region TreeView
@@ -100,16 +107,17 @@ namespace DermsUI.ViewModel
 
             _samples = _dataSource;
             #endregion
-            #region Commanding
+            #region Scada
             IsMenuOpen2 = true;
             _dataSource2 = new[]
             {
                 new SampleGroupVm
                 {
-                    Name = "Create new entites",
+                    Name = "Data",
                     Items = new []
                     {
-                        new SampleVm("Terminal",typeof(View.AddNewTerminal)),
+                        new SampleVm("SCADA Data",typeof(View.SCADAView)),
+                        new SampleVm("SCADA Alarms",typeof(View.Alarms)),
                     }
                 }
             };

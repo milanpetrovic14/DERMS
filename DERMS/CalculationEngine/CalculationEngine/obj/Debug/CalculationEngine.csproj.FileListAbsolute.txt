@@ -1,0 +1,23 @@
+D:\CE\CalculationEngine\bin\Debug\CalculationEngine.exe.config
+D:\CE\CalculationEngine\bin\Debug\CalculationEngine.exe
+D:\CE\CalculationEngine\bin\Debug\CalculationEngine.pdb
+D:\CE\CalculationEngine\bin\Debug\CalculationEngineService.dll
+D:\CE\CalculationEngine\bin\Debug\CalculationEngineServiceCommon.dll
+D:\CE\CalculationEngine\bin\Debug\CalculationEngineService.pdb
+D:\CE\CalculationEngine\bin\Debug\CalculationEngineServiceCommon.pdb
+D:\CE\CalculationEngine\obj\Debug\CalculationEngine.csproj.CopyComplete
+D:\CE\CalculationEngine\obj\Debug\CalculationEngine.exe
+D:\CE\CalculationEngine\obj\Debug\CalculationEngine.pdb
+D:\CE\CalculationEngine\obj\Debug\CalculationEngine.csprojAssemblyReference.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngine.exe.config
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngine.exe
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngine.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngineService.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngineService.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csprojAssemblyReference.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CoreCompileInputs.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CopyComplete
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.exe
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.pdb

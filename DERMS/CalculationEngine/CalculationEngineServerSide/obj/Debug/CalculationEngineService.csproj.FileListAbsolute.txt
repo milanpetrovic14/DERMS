@@ -1,0 +1,25 @@
+D:\CalculationEngineServerSide\bin\Debug\CalculationEngineService.dll
+D:\CalculationEngineServerSide\bin\Debug\CalculationEngineService.pdb
+D:\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.dll
+D:\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.pdb
+D:\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csprojAssemblyReference.cache
+D:\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csproj.CopyComplete
+D:\CalculationEngineServerSide\obj\Debug\CalculationEngineService.dll
+D:\CalculationEngineServerSide\obj\Debug\CalculationEngineService.pdb
+D:\CE\CalculationEngineServerSide\bin\Debug\CalculationEngineService.dll
+D:\CE\CalculationEngineServerSide\bin\Debug\CalculationEngineService.pdb
+D:\CE\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.dll
+D:\CE\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.pdb
+D:\CE\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csprojAssemblyReference.cache
+D:\CE\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csproj.CopyComplete
+D:\CE\CalculationEngineServerSide\obj\Debug\CalculationEngineService.dll
+D:\CE\CalculationEngineServerSide\obj\Debug\CalculationEngineService.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\bin\Debug\CalculationEngineService.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\bin\Debug\CalculationEngineService.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csprojAssemblyReference.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csproj.CoreCompileInputs.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\obj\Debug\CalculationEngineService.csproj.CopyComplete
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\obj\Debug\CalculationEngineService.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServerSide\obj\Debug\CalculationEngineService.pdb

@@ -69,6 +69,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MediatorPattern\EventArgs.cs" />
+    <Compile Include="MediatorPattern\EventRaiser.cs" />
+    <Compile Include="MediatorPattern\Mediator.cs" />
+    <Compile Include="MediatorPattern\RelayCommand.cs" />
     <Compile Include="Model\ConnectivityNodeHelper.cs" />
     <Compile Include="Model\EnergyConsumerHelper.cs" />
     <Compile Include="Model\Enums.cs" />
@@ -81,7 +85,17 @@
     <Compile Include="Model\ThreeViewModel\GeographicalRegion.cs" />
     <Compile Include="Model\ThreeViewModel\Substation.cs" />
     <Compile Include="Resources\BindableBase.cs" />
+    <Compile Include="Resources\CommandHandler.cs" />
     <Compile Include="Resources\MyICommand.cs" />
+    <Compile Include="SCADAResources\Configuration\ConfigItem.cs" />
+    <Compile Include="SCADAResources\Configuration\ConfigItemEqualityComparer.cs" />
+    <Compile Include="SCADAResources\Configuration\ConfigReader.cs" />
+    <Compile Include="SCADAResources\Converters\AlarmToBackgroundColorConverter.cs" />
+    <Compile Include="SCADAResources\Converters\ConnectionStateToColorConverter.cs" />
+    <Compile Include="SCADAResources\Converters\PointTypeToVisibilityConverter.cs" />
+    <Compile Include="SCADAResources\Converters\StringToVisibilityConverter.cs" />
+    <Compile Include="SCADAResources\Exceptions\ConfigurationException.cs" />
+    <Compile Include="SCADAResources\Utils\RelayCommand.cs" />
     <Compile Include="ViewModel\AddNewAnalogSignalViewModel.cs" />
     <Compile Include="ViewModel\AddNewBreakerViewModel.cs" />
     <Compile Include="ViewModel\AddNewConnectivityNodeViewModel.cs" />
@@ -92,11 +106,21 @@
     <Compile Include="ViewModel\AddNewSubstationViewModel.cs" />
     <Compile Include="ViewModel\AddNewSynchronousMachineViewModel.cs" />
     <Compile Include="ViewModel\AddNewTerminalViewModel.cs" />
+    <Compile Include="ViewModel\AlarmsViewModel.cs" />
     <Compile Include="ViewModel\CimProfileCreatorViewModel.cs" />
+    <Compile Include="ViewModel\CommandingWindowViewModel.cs" />
     <Compile Include="ViewModel\CreateApplyDeltaViewModel.cs" />
     <Compile Include="ViewModel\CreateNewSignalViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoadSignalsViewModel.cs" />
+    <Compile Include="ViewModel\PointViewModels\AnalaogInput.cs" />
+    <Compile Include="ViewModel\PointViewModels\AnalogBase.cs" />
+    <Compile Include="ViewModel\PointViewModels\AnalogOutput.cs" />
+    <Compile Include="ViewModel\PointViewModels\BasePointItem.cs" />
+    <Compile Include="ViewModel\PointViewModels\DigitalBase.cs" />
+    <Compile Include="ViewModel\PointViewModels\DigitalInput.cs" />
+    <Compile Include="ViewModel\PointViewModels\DigitalOutput.cs" />
+    <Compile Include="ViewModel\SCADAViewModel.cs" />
     <Compile Include="View\AddNewAnalogSignal.xaml.cs">
       <DependentUpon>AddNewAnalogSignal.xaml</DependentUpon>
     </Compile>
@@ -127,11 +151,17 @@
     <Compile Include="View\AddNewTerminal.xaml.cs">
       <DependentUpon>AddNewTerminal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Alarms.xaml.cs">
+      <DependentUpon>Alarms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CELoggs.xaml.cs">
       <DependentUpon>CELoggs.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CimProfileCreator.xaml.cs">
       <DependentUpon>CimProfileCreator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CommandingWindow.xaml.cs">
+      <DependentUpon>CommandingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\CreateApplyDelta.xaml.cs">
       <DependentUpon>CreateApplyDelta.xaml</DependentUpon>
@@ -150,6 +180,9 @@
     </Compile>
     <Compile Include="View\SCADALoggs.xaml.cs">
       <DependentUpon>SCADALoggs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SCADAView.xaml.cs">
+      <DependentUpon>SCADAView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\TMLoggs.xaml.cs">
       <DependentUpon>TMLoggs.xaml</DependentUpon>
@@ -230,11 +263,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Alarms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CELoggs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CimProfileCreator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CommandingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,6 +300,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SCADALoggs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SCADAView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

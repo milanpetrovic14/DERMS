@@ -1,4 +1,5 @@
-﻿using DermsUI.Model;
+﻿using DermsUI.MediatorPattern;
+using DermsUI.Model;
 using DermsUI.Resources;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace DermsUI.ViewModel
 
         public AddNewTerminalViewModel()
         {
+           
+
             name = "";
             connectedBoolList = new List<bool>();
             connectedBoolList.Add(true);
@@ -32,6 +35,8 @@ namespace DermsUI.ViewModel
 
             AddCommand = new MyICommand<string>(OnAddCommand);
         }
+
+       
 
         public string DescriptionString { get { return descriptionString; } set { { SetProperty(ref descriptionString, value); } } }
         public string Name { get { return name; } set { { SetProperty(ref name, value); } } }

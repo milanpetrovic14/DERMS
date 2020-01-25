@@ -13,3 +13,9 @@ C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfil
 C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csprojAssemblyReference.cache
 C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
 C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csprojAssemblyReference.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csproj.CoreCompileInputs.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
