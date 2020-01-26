@@ -84,7 +84,8 @@ namespace DermsUI.ViewModel
                 }
                 else
                 {
-                    item = dataPointItem;
+                    Points.Remove(item);
+                    Points.Add(dataPointItem);
                 }
             }
 

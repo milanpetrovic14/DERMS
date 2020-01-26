@@ -191,7 +191,8 @@ namespace DermsUI.ViewModel
                 }
                 else
                 {
-                    item = dataPoint;
+                    Points.Remove(item);
+                    Points.Add(dataPoint);
                 }
             }
 
