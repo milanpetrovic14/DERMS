@@ -19,11 +19,6 @@
         <converters:AlarmToBackgroundColorConverter x:Key="AlarmToBackgroundColor"/>
     </UserControl.Resources>
 
-    <!--Style TargetType="DataGridRow" x:Name="BaseStyle">
-        <EventSetter Event="MouseDoubleClick" Handler="DataGrid_MouseDoubleClick" />
-        <Setter Property="Background" Value="{Binding Alarm, Converter={StaticResource AlarmToBackgroundColor}}"/>
-    </-->
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -74,23 +69,7 @@
         </DataGrid>
 
         <StatusBar Grid.Row="2" Grid.ColumnSpan="2">
-                <StatusBarItem>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Current Time: " />
-                        <Label>
-                            <TextBlock Text="{Binding Path=CurrentTime, StringFormat='{}{0:dd/MM/yyyy hh:mm:ss}'}" />
-                        </Label>
-                    </StackPanel>
-                </StatusBarItem>
-                <StatusBarItem>
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Elapsed Time: " />
-                        <Label>
-                            <TextBlock Text="{Binding Path=ElapsedTime}" />
-                        </Label>
-                    </StackPanel>
-                </StatusBarItem>
-                <StatusBarItem>
+            <StatusBarItem>
                     <Border Background="{Binding ConnectionState, Converter={StaticResource ResourceKey=ConnectionStateToColor}}" Opacity="0.9">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Connection status: " TextBlock.FontWeight="Bold" />

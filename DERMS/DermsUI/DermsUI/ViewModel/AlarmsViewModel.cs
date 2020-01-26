@@ -2,7 +2,6 @@
 using DermsUI.MediatorPattern;
 using DermsUI.Resources;
 using DermsUI.View;
-using DermsUI.ViewModel.PointViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,9 +12,10 @@ using System.Windows.Input;
 
 namespace DermsUI.ViewModel
 {
-    internal class AlarmsViewModel:BindableBase
+    public class AlarmsViewModel:BindableBase
     {
-        public ObservableCollection<DataPoint> Points { get; set; }
+        private ObservableCollection<DataPoint> points;
+        public ObservableCollection<DataPoint> Points { get { return points; } set { points = value; OnPropertyChanged("Points"); } }
         private DataPoint selectedDataItem;
         public DataPoint SelectedDataItem
         {
@@ -44,8 +44,10 @@ namespace DermsUI.ViewModel
 
         public AlarmsViewModel()
         {
+            Points = new ObservableCollection<DataPoint>();
             Mediator.Register("AlarmSignalUpdate", OnChange);
             Mediator.NotifyColleagues("GetAlarmSignals",true);
+
         }
 
         public void OnChange(object parameter)
@@ -62,11 +64,10 @@ namespace DermsUI.ViewModel
                 }
                 else
                 {
-                    item = dataPointItem;
+                    Points.Remove(item);
+                    Points.Add(dataPointItem);
                 }
             }
-
-            Console.Beep();
         }
     }
 }

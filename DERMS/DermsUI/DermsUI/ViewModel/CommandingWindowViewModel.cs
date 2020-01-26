@@ -1,6 +1,5 @@
 ﻿using DERMSCommon.SCADACommon;
 using DermsUI.Resources;
-using DermsUI.ViewModel.PointViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

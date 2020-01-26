@@ -20,12 +20,13 @@ namespace DermsUI.MediatorPattern
             }
             else
             {
-                bool found = false;
-                foreach (var item in pl_dict[token])
-                    if (item.Method.ToString() == callback.Method.ToString())
-                        found = true;
-                if (!found)
-                    pl_dict[token].Add(callback);
+                //bool found = false;
+                //foreach (var item in pl_dict[token])
+                //    if (item.Method.ToString() == callback.Method.ToString())
+                //        found = true;
+                //if (!found)
+                pl_dict[token].RemoveAt(0);
+               pl_dict[token].Add(callback);
             }
         }
 

@@ -116,13 +116,6 @@
     <Compile Include="ViewModel\CreateNewSignalViewModel.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="ViewModel\LoadSignalsViewModel.cs" />
-    <Compile Include="ViewModel\PointViewModels\AnalaogInput.cs" />
-    <Compile Include="ViewModel\PointViewModels\AnalogBase.cs" />
-    <Compile Include="ViewModel\PointViewModels\AnalogOutput.cs" />
-    <Compile Include="ViewModel\PointViewModels\BasePointItem.cs" />
-    <Compile Include="ViewModel\PointViewModels\DigitalBase.cs" />
-    <Compile Include="ViewModel\PointViewModels\DigitalInput.cs" />
-    <Compile Include="ViewModel\PointViewModels\DigitalOutput.cs" />
     <Compile Include="ViewModel\SCADAViewModel.cs" />
     <Compile Include="View\AddNewAnalogSignal.xaml.cs">
       <DependentUpon>AddNewAnalogSignal.xaml</DependentUpon>

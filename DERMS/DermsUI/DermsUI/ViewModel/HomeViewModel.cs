@@ -13,7 +13,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using DERMSCommon;
 using DermsUI.MediatorPattern;
-using DermsUI.ViewModel.PointViewModel;
 using DermsUI.Communication;
 using DERMSCommon.SCADACommon;
 
@@ -187,18 +186,40 @@ namespace DermsUI.ViewModel
                 }
             }
 
-            Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
+            List<DataPoint> sendPoints = new List<DataPoint>();
+
+            foreach (DataPoint dataPoint in Points)
+            {
+
+                if (dataPoint.Alarm != AlarmType.NO_ALARM)
+                {
+                    sendPoints.Add(dataPoint);
+                }
+            }
+
+            Mediator.NotifyColleagues("AlarmSignalUpdate", sendPoints);
+            Mediator.NotifyColleagues("AllSignalUpdate", Points);
         }
 
         private void GetAlarmSignals(object parameter)
         {
-            Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
+            List<DataPoint> sendPoints = new List<DataPoint>();
+
+            foreach (DataPoint dataPoint in Points)
+            {
+
+                if (dataPoint.Alarm !=  AlarmType.NO_ALARM)
+                {
+                    sendPoints.Add(dataPoint);
+                }
+            }
+
+            Mediator.NotifyColleagues("AlarmSignalUpdate", sendPoints);
         }
 
         private void GetAllSignals(object parameter)
         {
-            Console.Beep();
-            // Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
+            Mediator.NotifyColleagues("AllSignalUpdate", Points);
         }
 
         #region TreeView Commands

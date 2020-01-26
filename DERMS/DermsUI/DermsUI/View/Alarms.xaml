@@ -26,11 +26,32 @@
         </Grid.RowDefinitions>
         <DataGrid ItemsSource="{Binding Points}" SelectionMode="Single" AutoGenerateColumns="False"
 				  CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False"
-				  SelectionUnit="FullRow"
+				  SelectionUnit="FullRow" Background="#b6b3af"
 				  Name="dgPoints" SelectedItem="{Binding SelectedDataItem}">
             <DataGrid.InputBindings>
                 <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding SelectedPointCommand}" CommandParameter="{Binding Points}"></MouseBinding>
             </DataGrid.InputBindings>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow" >
+                    <Setter Property="IsHitTestVisible" Value="True"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Alarm}" Value="REASONABILITY_FAILURE">
+                            <Setter Property="Background" Value="#ff9966"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Alarm}" Value="LOW_ALARM">
+                            <Setter Property="Background" Value="#ff3300"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Alarm}" Value="HIGH_ALARM">
+                            <Setter Property="Background" Value="#cc0000"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Alarm}" Value="ABNORMAL_VALUE">
+                            <Setter Property="Background" Value="#ff33cc"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}" IsReadOnly="True" Width="*" />
@@ -44,22 +65,6 @@
         </DataGrid>
 
         <StatusBar Grid.Row="2" Grid.ColumnSpan="2">
-            <StatusBarItem>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Current Time: " />
-                    <Label>
-                        <TextBlock Text="{Binding Path=CurrentTime, StringFormat='{}{0:dd/MM/yyyy hh:mm:ss}'}" />
-                    </Label>
-                </StackPanel>
-            </StatusBarItem>
-            <StatusBarItem>
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Elapsed Time: " />
-                    <Label>
-                        <TextBlock Text="{Binding Path=ElapsedTime}" />
-                    </Label>
-                </StackPanel>
-            </StatusBarItem>
             <StatusBarItem>
                 <Border Background="{Binding ConnectionState, Converter={StaticResource ResourceKey=ConnectionStateToColor}}" Opacity="0.9">
                     <StackPanel Orientation="Horizontal">
