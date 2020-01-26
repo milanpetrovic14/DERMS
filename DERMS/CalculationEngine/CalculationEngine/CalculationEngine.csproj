@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DERMSCommon\DERMSCommon.csproj">
+      <Project>{776EB305-B428-4D01-B4A7-0B05FA59F9B9}</Project>
+      <Name>DERMSCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CalculationEngineServerSide\CalculationEngineService.csproj">
       <Project>{1802B261-9FD6-4CD7-80D8-25F0C588A9B7}</Project>
       <Name>CalculationEngineService</Name>

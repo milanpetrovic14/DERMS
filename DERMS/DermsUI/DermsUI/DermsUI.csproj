@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -69,6 +70,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Communication\CommunicationProxy.cs" />
+    <Compile Include="Communication\SendDataToUI.cs" />
     <Compile Include="MediatorPattern\EventArgs.cs" />
     <Compile Include="MediatorPattern\EventRaiser.cs" />
     <Compile Include="MediatorPattern\Mediator.cs" />
@@ -317,6 +320,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CalculationEngine\CalculationEngineServiceCommon\CalculationEngineServiceCommon.csproj">
+      <Project>{C6A1D90E-C842-4B98-958B-C3267664D121}</Project>
+      <Name>CalculationEngineServiceCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DERMSCommon\DERMSCommon.csproj">
       <Project>{776eb305-b428-4d01-b4a7-0b05fa59f9b9}</Project>
       <Name>DERMSCommon</Name>

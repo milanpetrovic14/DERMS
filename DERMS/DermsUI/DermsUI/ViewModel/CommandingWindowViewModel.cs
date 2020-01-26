@@ -1,4 +1,5 @@
-﻿using DermsUI.Resources;
+﻿using DERMSCommon.SCADACommon;
+using DermsUI.Resources;
 using DermsUI.ViewModel.PointViewModel;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ namespace DermsUI.ViewModel
 {
     internal class CommandingWindowViewModel:BindableBase
     {
-        private BasePointItem item;
-        public BasePointItem Item { get { return item; } set { item = value; } }
+        private DataPoint item;
+        public DataPoint Item { get { return item; } set { item = value; } }
         public ushort CommandedValue { get; set; }
 
         public CommandingWindowViewModel()
@@ -20,7 +21,7 @@ namespace DermsUI.ViewModel
 
         }
 
-        public CommandingWindowViewModel(BasePointItem selectedItem)
+        public CommandingWindowViewModel(DataPoint selectedItem)
         {
             Item = selectedItem;
         }

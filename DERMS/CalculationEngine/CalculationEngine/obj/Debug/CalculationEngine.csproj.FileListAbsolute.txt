@@ -21,3 +21,5 @@ C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CopyComplete
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.exe
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\DERMSCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\DERMSCommon.pdb

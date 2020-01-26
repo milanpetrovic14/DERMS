@@ -1,4 +1,5 @@
 ﻿using CalculationEngineServiceCommon;
+using DERMSCommon.SCADACommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace CalculationEngineService
     {
         public void ReceiveFromScada(DataFromScadaToCE data)
         {
-            ClientSideCE.Instance.ProxyUI.SendDataUI(data);
+            // FILIP
+            //  ClientSideCE.Instance.ProxyUI.SendDataUI(data);
         }
     }
 }

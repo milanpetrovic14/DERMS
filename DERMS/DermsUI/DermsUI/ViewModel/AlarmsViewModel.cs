@@ -1,4 +1,5 @@
-﻿using DermsUI.MediatorPattern;
+﻿using DERMSCommon.SCADACommon;
+using DermsUI.MediatorPattern;
 using DermsUI.Resources;
 using DermsUI.View;
 using DermsUI.ViewModel.PointViewModel;
@@ -14,9 +15,9 @@ namespace DermsUI.ViewModel
 {
     internal class AlarmsViewModel:BindableBase
     {
-        public ObservableCollection<BasePointItem> Points { get; set; }
-        private BasePointItem selectedDataItem;
-        public BasePointItem SelectedDataItem
+        public ObservableCollection<DataPoint> Points { get; set; }
+        private DataPoint selectedDataItem;
+        public DataPoint SelectedDataItem
         {
             get
             {
@@ -49,8 +50,23 @@ namespace DermsUI.ViewModel
 
         public void OnChange(object parameter)
         {
-            Console.Beep();
+            List<DataPoint> newPoints = (List<DataPoint>)parameter;
 
+            foreach (DataPoint dataPointItem in newPoints)
+            {
+                DataPoint item = Points.Where(x => x.Gid == dataPointItem.Gid).FirstOrDefault();
+
+                if (item == null)
+                {
+                    Points.Add(dataPointItem);
+                }
+                else
+                {
+                    item = dataPointItem;
+                }
+            }
+
+            Console.Beep();
         }
     }
 }

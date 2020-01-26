@@ -41,7 +41,7 @@ namespace DermsUI.ViewModel
         public void ShowCommanding()
         {
             CommandingWindow commandingWindow = new CommandingWindow();
-            commandingWindow.DataContext = new CommandingWindowViewModel(SelectedDataItem);
+            //commandingWindow.DataContext = new CommandingWindowViewModel(SelectedDataItem);
             commandingWindow.ShowDialog();
         }
 

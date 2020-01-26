@@ -1,4 +1,5 @@
 ﻿using CalculationEngineService;
+using DERMSCommon.SCADACommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace CalculationEngine
         {
             ServiceManager serviceManager = new ServiceManager();
             ClientSideCE n = ClientSideCE.Instance;
+
+            //filip
+           // n.Connect();
+
             Console.ReadLine();
         }
     }

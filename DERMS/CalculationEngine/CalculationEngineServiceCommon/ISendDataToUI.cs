@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DERMSCommon.SCADACommon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -11,6 +12,7 @@ namespace CalculationEngineServiceCommon
     public interface ISendDataToUI
     {
         [OperationContract]
-        void SendDataUI(DataFromScadaToCE data);
+        //FILIP - promenio tip koji se prosledjuje
+        void SendDataUI(List<DataPoint> data);
     }
 }

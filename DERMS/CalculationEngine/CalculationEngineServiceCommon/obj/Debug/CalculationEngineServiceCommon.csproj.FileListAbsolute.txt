@@ -14,3 +14,6 @@ C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
 C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete

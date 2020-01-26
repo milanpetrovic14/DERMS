@@ -53,5 +53,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeOfSignalEnum.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DERMSCommon\DERMSCommon.csproj">
+      <Project>{776EB305-B428-4D01-B4A7-0B05FA59F9B9}</Project>
+      <Name>DERMSCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

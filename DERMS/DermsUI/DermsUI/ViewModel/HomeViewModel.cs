@@ -14,12 +14,15 @@ using System.Windows.Data;
 using DERMSCommon;
 using DermsUI.MediatorPattern;
 using DermsUI.ViewModel.PointViewModel;
+using DermsUI.Communication;
+using DERMSCommon.SCADACommon;
 
 namespace DermsUI.ViewModel
 {
     public class HomeViewModel : INotifyPropertyChanged
     {
-
+        private List<DataPoint> Points;
+        private CommunicationProxy proxy;
         #region Model Management
         private UserControl _content;
         private bool _isMenuOpen;
@@ -48,11 +51,6 @@ namespace DermsUI.ViewModel
         private IEnumerable<SampleGroupVm> _samples4;
         private readonly IEnumerable<SampleGroupVm> _dataSource4;
         #endregion
-        public void OnChange(object parameter)
-        {
-            Console.Beep();
-            Mediator.NotifyColleagues("AlarmSignalUpdate", true);
-        }
         #region TreeView
         private List<EnergyNetwork> energyNetworks;
         public MyICommand<long> GeographicalRegionCommand { get; private set; }
@@ -60,10 +58,19 @@ namespace DermsUI.ViewModel
         public MyICommand<long> SubstationCommand { get; private set; }
         public MyICommand<long> FeederCommand { get; private set; }
         #endregion
+
         public HomeViewModel()
         {
-            Mediator.Register("GetAlarmSignals", OnChange);
+            Mediator.Register("GetAlarmSignals", GetAlarmSignals);
+            Mediator.Register("GetAllSignals", GetAllSignals);
+            Mediator.Register("Proxy", GetSignalsFromProxy);
+
+            Points = new List<DataPoint>();
+
             Logger.Log("UI is started.", DERMSCommon.Enums.Component.UI, DERMSCommon.Enums.LogLevel.Info);
+
+            proxy = new CommunicationProxy(19009, "ISendDataToUI");
+            proxy.Open();
 
             #region TreeView
             EnergyNetworks = new List<EnergyNetwork>() { new EnergyNetwork() };
@@ -160,6 +167,38 @@ namespace DermsUI.ViewModel
 
             _samples4 = _dataSource4;
             #endregion
+        }
+
+        private void GetSignalsFromProxy(object parameter)
+        {
+            List<DataPoint> newPoints = (List<DataPoint>)parameter;
+
+            foreach (DataPoint dataPoint in newPoints)
+            {
+                DataPoint item = Points.Where(x => x.Gid == dataPoint.Gid).FirstOrDefault();
+
+                if (item == null)
+                {
+                    Points.Add(dataPoint);
+                }
+                else
+                {
+                    item = dataPoint;
+                }
+            }
+
+            Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
+        }
+
+        private void GetAlarmSignals(object parameter)
+        {
+            Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
+        }
+
+        private void GetAllSignals(object parameter)
+        {
+            Console.Beep();
+            // Mediator.NotifyColleagues("AlarmSignalUpdate", Points);
         }
 
         #region TreeView Commands
