@@ -11,10 +11,9 @@ namespace CalculationEngineService
 {
     public class SendDataToCEThroughScada : ISendDataToCEThroughScada
     {
-        public void ReceiveFromScada(DataFromScadaToCE data)
+        public void ReceiveFromScada(List<DataPoint> data)
         {
-            // FILIP
-            //  ClientSideCE.Instance.ProxyUI.SendDataUI(data);
+            ClientSideCE.Instance.ProxyUI.SendDataUI(data);
         }
     }
 }

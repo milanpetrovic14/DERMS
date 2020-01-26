@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DERMSCommon.SCADACommon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -11,6 +12,6 @@ namespace CalculationEngineServiceCommon
     public interface ICEUpdateThroughUI
     {
         [OperationContract]
-        void UpdateThroughUI(DataFromScadaToCE data);
+        void UpdateThroughUI(SCADACommanding data);
     }
 }

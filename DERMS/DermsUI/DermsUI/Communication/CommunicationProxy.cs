@@ -11,18 +11,26 @@ namespace DermsUI.Communication
     public class CommunicationProxy
     {
         private ServiceHost serviceHost;
-
-        public CommunicationProxy(int port, string serviceContract)
+        private ChannelFactory<ICEUpdateThroughUI> factory;
+        public ICEUpdateThroughUI sendToCE;
+        public CommunicationProxy()
         {
+            // Receive from CE
             serviceHost = new ServiceHost(typeof(SendDataToUI));
 
             serviceHost.AddServiceEndpoint(typeof(ISendDataToUI), new NetTcpBinding(),
-                                            new Uri("net.tcp://localhost:" + port + "/" + serviceContract));
+                                            new Uri("net.tcp://localhost:19009/ISendDataToUI"));
+
+            // Send to CE
+            factory = new ChannelFactory<ICEUpdateThroughUI>(new NetTcpBinding(),
+                                                                    new EndpointAddress("net.tcp://localhost:19001/ICEUpdateThroughUI"));
         }
 
         public void Open()
         {
             serviceHost.Open();
+            sendToCE = factory.CreateChannel();
+
         }
 
         public void Close()

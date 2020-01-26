@@ -22,6 +22,7 @@ namespace DermsUI.ViewModel
     {
         private List<DataPoint> Points;
         private CommunicationProxy proxy;
+
         #region Model Management
         private UserControl _content;
         private bool _isMenuOpen;
@@ -63,13 +64,14 @@ namespace DermsUI.ViewModel
             Mediator.Register("GetAlarmSignals", GetAlarmSignals);
             Mediator.Register("GetAllSignals", GetAllSignals);
             Mediator.Register("Proxy", GetSignalsFromProxy);
+            Mediator.Register("SCADACommanding", SCADACommanding);
+
+            proxy = new CommunicationProxy();
+            proxy.Open();
 
             Points = new List<DataPoint>();
 
             Logger.Log("UI is started.", DERMSCommon.Enums.Component.UI, DERMSCommon.Enums.LogLevel.Info);
-
-            proxy = new CommunicationProxy(19009, "ISendDataToUI");
-            proxy.Open();
 
             #region TreeView
             EnergyNetworks = new List<EnergyNetwork>() { new EnergyNetwork() };
@@ -166,6 +168,13 @@ namespace DermsUI.ViewModel
 
             _samples4 = _dataSource4;
             #endregion
+        }
+
+        private void SCADACommanding(object parameter) 
+        {
+            DERMSCommon.SCADACommon.SCADACommanding commanding = (DERMSCommon.SCADACommon.SCADACommanding)parameter;
+
+            proxy.sendToCE.UpdateThroughUI(commanding);
         }
 
         private void GetSignalsFromProxy(object parameter)

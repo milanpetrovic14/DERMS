@@ -1,0 +1,28 @@
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\Common\bin\Debug\Common.dll
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\Common\bin\Debug\Common.pdb
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\Common\obj\Debug\Common.dll
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\Common\obj\Debug\Common.pdb
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\bin\Debug\Common.dll
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\bin\Debug\Common.pdb
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\obj\Debug\Common.dll
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\Common\obj\Debug\Common.pdb
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\bin\Debug\Common.dll
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\bin\Debug\Common.pdb
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\obj\Debug\Common.dll
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\Common\obj\Debug\Common.pdb
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\bin\Debug\Common.dll
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\bin\Debug\Common.pdb
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.dll
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.pdb
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\bin\Debug\Common.dll
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\bin\Debug\Common.pdb
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.dll
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.pdb

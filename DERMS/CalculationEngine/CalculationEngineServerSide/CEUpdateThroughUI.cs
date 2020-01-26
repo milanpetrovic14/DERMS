@@ -1,4 +1,5 @@
 ﻿using CalculationEngineServiceCommon;
+using DERMSCommon.SCADACommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace CalculationEngineService
 {
     public class CEUpdateThroughUI : ICEUpdateThroughUI
     {
-        public void UpdateThroughUI(DataFromScadaToCE data)
+        public void UpdateThroughUI(SCADACommanding data)
         {
-            ClientSideCE.Instance.ProxyScada.UpdateCommandScada(data);
+           // ClientSideCE.Instance.ProxyScada.UpdateCommandScada(data);
         }
     }
 }

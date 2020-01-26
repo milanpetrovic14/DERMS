@@ -15,8 +15,7 @@ namespace CalculationEngine
             ServiceManager serviceManager = new ServiceManager();
             ClientSideCE n = ClientSideCE.Instance;
 
-            //filip
-           // n.Connect();
+            n.Connect();
 
             Console.ReadLine();
         }

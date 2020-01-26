@@ -21,34 +21,23 @@ namespace DERMSCommon.SCADACommon
         [DataMember]
         private long _gid;
         [DataMember]
-        private ushort _rawValue;
+        private string _value;
         [DataMember]
-        private double _commandedValue;
+        private ushort _rawValue;
         [DataMember]
         protected AlarmType _alarm;
 
-        public DataPoint(long gid, PointType type, ushort address, DateTime timestamp, string name, ushort rawValue, AlarmType alarm)
+        public DataPoint(long gid, PointType type, ushort address, DateTime timestamp, string name, string value, ushort rawValue, AlarmType alarm)
         {
             _gid = gid;
             _type = type;
             _address = address;
             _timestamp = timestamp;
             _name = name;
+            _value = value;
             _rawValue = rawValue;
             _alarm = alarm;
 
-        }
-
-        public DataPoint(long gid, PointType type, ushort address, DateTime timestamp, string name, ushort rawValue, AlarmType alarm, double commandedValue)
-        {
-            _gid = gid;
-            _type = type;
-            _address = address;
-            _timestamp = timestamp;
-            _name = name;
-            _rawValue = rawValue;
-            _alarm = alarm;
-            _commandedValue = commandedValue;
         }
 
         public PointType Type
@@ -95,7 +84,7 @@ namespace DERMSCommon.SCADACommon
             }
         }
 
-        public double RawValue
+        public ushort RawValue
         {
             get
             {
@@ -103,15 +92,11 @@ namespace DERMSCommon.SCADACommon
             }
         }
 
-        public double CommandedValue
+        public string Value
         {
             get
             {
-                return _commandedValue;
-            }
-            set
-            {
-                _commandedValue = value;
+                return _value;
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using DERMSCommon.SCADACommon;
+using DermsUI.MediatorPattern;
 using DermsUI.Resources;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace DermsUI.ViewModel
 
         public CommandingWindowViewModel()
         {
-
+            CommandedValue = 0;
         }
 
         public CommandingWindowViewModel(DataPoint selectedItem)
@@ -30,9 +31,19 @@ namespace DermsUI.ViewModel
 
         public void Write()
         {
-            Console.Beep();
+            SCADACommanding commanding = new SCADACommanding(Item.Gid, CommandedValue);
+
+            Mediator.NotifyColleagues("SCADACommanding", commanding);
         }
 
-        public bool CanExecute { get { return true; } }
+        public bool CanExecute 
+        { 
+            get
+            { 
+                if(CommandedValue > 0)
+                    return true;
+                return false;
+            } 
+        }
     }
 }

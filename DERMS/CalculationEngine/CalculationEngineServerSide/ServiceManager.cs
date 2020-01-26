@@ -28,10 +28,11 @@ namespace CalculationEngineService
 
         public void StartService()
         {
-            //Open service for Scada
             string address = String.Format("net.tcp://localhost:19999/ISendDataToCEThroughScada");
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
+            serviceHostScada = new ServiceHost(typeof(SendDataToCEThroughScada));
+
             serviceHostScada.AddServiceEndpoint(typeof(ISendDataToCEThroughScada), binding, address);
             serviceHostScada.Open();
             Console.WriteLine("Open: net.tcp://localhost:19999/ISendDataToCEThroughScada");
@@ -40,6 +41,7 @@ namespace CalculationEngineService
             string address2 = String.Format("net.tcp://localhost:19001/ICEUpdateThroughUI");
             NetTcpBinding binding2 = new NetTcpBinding();
             binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
+            serviceHostUI = new ServiceHost(typeof(CEUpdateThroughUI));
             serviceHostUI.AddServiceEndpoint(typeof(ICEUpdateThroughUI), binding2, address2);
             serviceHostUI.Open();
             Console.WriteLine("Open: net.tcp://localhost:19001/ICEUpdateThroughUI");

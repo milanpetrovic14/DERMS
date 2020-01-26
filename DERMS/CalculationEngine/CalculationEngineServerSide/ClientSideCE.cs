@@ -54,11 +54,11 @@ namespace CalculationEngineService
             Console.WriteLine("Connected: net.tcp://localhost:19009/ISendDataToUI");
 
             //filip
-            ProxyUI.SendDataUI(new List<DataPoint>() { new DataPoint(10001, PointType.ANALOG_INPUT, 1001, DateTime.Now, "bb", 32, AlarmType.NO_ALARM),
-                                                       new DataPoint(10002, PointType.ANALOG_OUTPUT, 1002, DateTime.Now, "cc", 22, AlarmType.LOW_ALARM),
-                                                       new DataPoint(10003, PointType.DIGITAL_INPUT, 1003, DateTime.Now, "dd", 77, AlarmType.HIGH_ALARM),
-                                                       new DataPoint(10004, PointType.ANALOG_INPUT, 1004, DateTime.Now, "ff", 55, AlarmType.ABNORMAL_VALUE),
-                                                       new DataPoint(10005, PointType.DIGITAL_OUTPUT, 1005, DateTime.Now, "mm", 33, AlarmType.REASONABILITY_FAILURE)});
+            //ProxyUI.SendDataUI(new List<DataPoint>() { new DataPoint(10001, PointType.ANALOG_INPUT, 1001, DateTime.Now, "bb",100,  32, AlarmType.NO_ALARM),
+            //                                           new DataPoint(10002, PointType.ANALOG_OUTPUT, 1002, DateTime.Now, "cc",92, 22, AlarmType.LOW_ALARM),
+            //                                           new DataPoint(10003, PointType.DIGITAL_INPUT, 1003, DateTime.Now, "dd",205, 77, AlarmType.HIGH_ALARM),
+            //                                           new DataPoint(10004, PointType.ANALOG_INPUT, 1004, DateTime.Now, "ff",150, 55, AlarmType.ABNORMAL_VALUE),
+            //                                           new DataPoint(10005, PointType.DIGITAL_OUTPUT, 1005, DateTime.Now, "mm",102, 33, AlarmType.REASONABILITY_FAILURE)});
 
             //Connect to Scada
             NetTcpBinding binding2 = new NetTcpBinding();
