@@ -90,15 +90,6 @@
     <Compile Include="Resources\BindableBase.cs" />
     <Compile Include="Resources\CommandHandler.cs" />
     <Compile Include="Resources\MyICommand.cs" />
-    <Compile Include="SCADAResources\Configuration\ConfigItem.cs" />
-    <Compile Include="SCADAResources\Configuration\ConfigItemEqualityComparer.cs" />
-    <Compile Include="SCADAResources\Configuration\ConfigReader.cs" />
-    <Compile Include="SCADAResources\Converters\AlarmToBackgroundColorConverter.cs" />
-    <Compile Include="SCADAResources\Converters\ConnectionStateToColorConverter.cs" />
-    <Compile Include="SCADAResources\Converters\PointTypeToVisibilityConverter.cs" />
-    <Compile Include="SCADAResources\Converters\StringToVisibilityConverter.cs" />
-    <Compile Include="SCADAResources\Exceptions\ConfigurationException.cs" />
-    <Compile Include="SCADAResources\Utils\RelayCommand.cs" />
     <Compile Include="ViewModel\AddNewAnalogSignalViewModel.cs" />
     <Compile Include="ViewModel\AddNewBreakerViewModel.cs" />
     <Compile Include="ViewModel\AddNewConnectivityNodeViewModel.cs" />

@@ -14,11 +14,14 @@ namespace DERMSCommon.SCADACommon
         private long _gid;
         [DataMember]
         private ushort _commandedValue;
+        [DataMember]
+        private PointType _type;
 
-        public SCADACommanding(long gid, ushort commandedValue) 
+        public SCADACommanding(long gid, ushort commandedValue, PointType type) 
         {
             _gid = gid;
             _commandedValue = commandedValue;
+            _type = type;
         }
 
         public long Gid
@@ -26,6 +29,14 @@ namespace DERMSCommon.SCADACommon
             get
             {
                 return _gid;
+            }
+        }
+
+        public PointType Type
+        {
+            get
+            {
+                return _type;
             }
         }
 

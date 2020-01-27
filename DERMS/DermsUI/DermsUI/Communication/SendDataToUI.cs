@@ -11,12 +11,6 @@ namespace DermsUI.Communication
 {
     public class SendDataToUI : ISendDataToUI
     {
- 
-        public SendDataToUI()
-        {
-           
-        }
-
         public void SendDataUI(List<DataPoint> data)
         {
             Mediator.NotifyColleagues("Proxy", data);

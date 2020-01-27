@@ -14,12 +14,7 @@ namespace DermsUI.ViewModel
     {
         private DataPoint item;
         public DataPoint Item { get { return item; } set { item = value; } }
-        public ushort CommandedValue { get; set; }
-
-        public CommandingWindowViewModel()
-        {
-            CommandedValue = 0;
-        }
+        public short CommandedValue { get; set; }
 
         public CommandingWindowViewModel(DataPoint selectedItem)
         {
@@ -31,7 +26,7 @@ namespace DermsUI.ViewModel
 
         public void Write()
         {
-            SCADACommanding commanding = new SCADACommanding(Item.Gid, CommandedValue);
+            SCADACommanding commanding = new SCADACommanding(Item.Gid, (ushort)CommandedValue, Item.Type);
 
             Mediator.NotifyColleagues("SCADACommanding", commanding);
         }
@@ -39,9 +34,18 @@ namespace DermsUI.ViewModel
         public bool CanExecute 
         { 
             get
-            { 
-                if(CommandedValue > 0)
-                    return true;
+            {
+                if (Item.Type.Equals(PointType.ANALOG_INPUT) || Item.Type.Equals(PointType.ANALOG_OUTPUT))
+                {
+                    if(CommandedValue > 0)
+                        return true;
+                }
+                else
+                {
+                    if (CommandedValue.Equals(1) || CommandedValue.Equals(0))
+                        return true;
+                }
+
                 return false;
             } 
         }

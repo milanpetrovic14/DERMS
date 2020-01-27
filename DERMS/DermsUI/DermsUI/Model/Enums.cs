@@ -8,8 +8,22 @@ namespace DermsUI.Model
 {
     public class Enums
     {
-        public enum Components { NMS, SCADA, CE, TM, UI };
-        public enum Content { WARRNING, ERROR, INFO };
+        public enum Components 
+        { 
+            NMS, 
+            SCADA, 
+            CE, 
+            TM, 
+            UI 
+        };
+
+        public enum Content 
+        { 
+            WARRNING, 
+            ERROR, 
+            INFO 
+        };
+
         public enum SupportedProfiles : byte
         {
             PowerTransformer = 0,

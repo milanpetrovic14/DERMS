@@ -71,8 +71,6 @@ namespace DermsUI.ViewModel
 
             Points = new List<DataPoint>();
 
-            Logger.Log("UI is started.", DERMSCommon.Enums.Component.UI, DERMSCommon.Enums.LogLevel.Info);
-
             #region TreeView
             EnergyNetworks = new List<EnergyNetwork>() { new EnergyNetwork() };
             EnergyNetworkCommand = new MyICommand<long>(myEnergyNetworkCommand);
@@ -168,8 +166,11 @@ namespace DermsUI.ViewModel
 
             _samples4 = _dataSource4;
             #endregion
+
+            Logger.Log("UI is started.", DERMSCommon.Enums.Component.UI, DERMSCommon.Enums.LogLevel.Info);
         }
 
+        #region Mediator
         private void SCADACommanding(object parameter) 
         {
             DERMSCommon.SCADACommon.SCADACommanding commanding = (DERMSCommon.SCADACommon.SCADACommanding)parameter;
@@ -196,19 +197,8 @@ namespace DermsUI.ViewModel
                 }
             }
 
-            List<DataPoint> sendPoints = new List<DataPoint>();
-
-            foreach (DataPoint dataPoint in Points)
-            {
-
-                if (dataPoint.Alarm != AlarmType.NO_ALARM)
-                {
-                    sendPoints.Add(dataPoint);
-                }
-            }
-
-            Mediator.NotifyColleagues("AlarmSignalUpdate", sendPoints);
-            Mediator.NotifyColleagues("AllSignalUpdate", Points);
+            Mediator.NotifyColleagues("AlarmSignalUpdate", newPoints);
+            Mediator.NotifyColleagues("AllSignalUpdate", newPoints);
         }
 
         private void GetAlarmSignals(object parameter)
@@ -231,6 +221,7 @@ namespace DermsUI.ViewModel
         {
             Mediator.NotifyColleagues("AllSignalUpdate", Points);
         }
+        #endregion
 
         #region TreeView Commands
         public List<EnergyNetwork> EnergyNetworks

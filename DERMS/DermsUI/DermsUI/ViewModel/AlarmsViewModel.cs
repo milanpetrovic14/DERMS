@@ -15,8 +15,21 @@ namespace DermsUI.ViewModel
     public class AlarmsViewModel:BindableBase
     {
         private ObservableCollection<DataPoint> points;
-        public ObservableCollection<DataPoint> Points { get { return points; } set { points = value; OnPropertyChanged("Points"); } }
         private DataPoint selectedDataItem;
+
+        #region Properties
+        public ObservableCollection<DataPoint> Points 
+        { 
+            get 
+            { 
+                return points; 
+            } 
+            set 
+            { 
+                points = value; 
+                OnPropertyChanged("Points"); 
+            } 
+        }
         public DataPoint SelectedDataItem
         {
             get
@@ -26,21 +39,20 @@ namespace DermsUI.ViewModel
             set
             {
                 selectedDataItem = value;
-                //Poziv pROZORA
             }
         }
-
         public bool CanExecute { get { return true; } }
-
+        #endregion
+        #region Commanding
         private ICommand _selectedPointCommand;
         public ICommand SelectedPointCommand { get { return _selectedPointCommand ?? (_selectedPointCommand = new CommandHandler(() => ShowCommanding(), () => CanExecute)); } }
-
         public void ShowCommanding()
         {
             CommandingWindow commandingWindow = new CommandingWindow();
             commandingWindow.DataContext = new CommandingWindowViewModel(SelectedDataItem);
             commandingWindow.ShowDialog();
         }
+        #endregion
 
         public AlarmsViewModel()
         {
@@ -50,6 +62,7 @@ namespace DermsUI.ViewModel
 
         }
 
+        #region Mediator
         public void OnChange(object parameter)
         {
             List<DataPoint> newPoints = (List<DataPoint>)parameter;
@@ -63,11 +76,15 @@ namespace DermsUI.ViewModel
                     Points.Add(dataPointItem);
                 }
                 else
-                {
+                { 
                     Points.Remove(item);
-                    Points.Add(dataPointItem);
+                    if (dataPointItem.Alarm != AlarmType.NO_ALARM)
+                        Points.Add(dataPointItem);
                 }
             }
+            Points = new ObservableCollection<DataPoint>(Points.ToList().OrderBy(x => x.Address));
+            OnPropertyChanged("Points");
         }
+        #endregion
     }
 }

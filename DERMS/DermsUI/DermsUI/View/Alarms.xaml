@@ -5,18 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DermsUI.View"
              xmlns:ViewModel="clr-namespace:DermsUI.ViewModel"
-             xmlns:converters ="clr-namespace:dCom.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="530" d:DesignWidth="754">
 
     <UserControl.DataContext>
         <ViewModel:AlarmsViewModel></ViewModel:AlarmsViewModel>
     </UserControl.DataContext>
-    <UserControl.Resources>
-        <converters:ConnectionStateToColorConverter x:Key="ConnectionStateToColor" />
-        <converters:StringToVisibilityConverter x:Key="StringToVisibility" />
-        <converters:AlarmToBackgroundColorConverter x:Key="AlarmToBackgroundColor"/>
-    </UserControl.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -56,7 +50,7 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Address" Binding="{Binding Address, StringFormat={}{0:d5}}" IsReadOnly="True" Width="*" />
-                <DataGridTextColumn Header="Value" Binding="{Binding DisplayValue}" IsReadOnly="True" Width="*" />
+                <DataGridTextColumn Header="Value" Binding="{Binding Value}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Raw Value" Binding="{Binding RawValue}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Timestamp" Binding="{Binding Timestamp}" IsReadOnly="True" Width="*" />
                 <DataGridTextColumn Header="Alarm" Binding="{Binding Alarm}" IsReadOnly="True" Width="*" />
@@ -66,12 +60,93 @@
 
         <StatusBar Grid.Row="2" Grid.ColumnSpan="2">
             <StatusBarItem>
-                <Border Background="{Binding ConnectionState, Converter={StaticResource ResourceKey=ConnectionStateToColor}}" Opacity="0.9">
+                <Border Opacity="0.9">
                     <StackPanel Orientation="Horizontal">
-                        <Label Content="Connection status: " TextBlock.FontWeight="Bold" />
-                        <Label>
-                            <TextBlock Text="{Binding Path=ConnectionState}" TextBlock.FontWeight="Bold" />
-                        </Label>
+                        <Label Content="HIGH ALARM" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Background="#cc0000"  Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" TextBlock.FontWeight="Bold" Width="20" Height="20"/>
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="|" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="LOW ALARM" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Background="#ff3300"  Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" TextBlock.FontWeight="Bold" Width="20" Height="20" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="|" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="ABNORMAL VALUE" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Background="#ff33cc"  Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" TextBlock.FontWeight="Bold" Width="20" Height="20" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="|" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+
+            <StatusBarItem>
+                <Border Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="REASONABILITY FAILURE" TextBlock.FontWeight="Bold" />
+
+                    </StackPanel>
+                </Border>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Border Background="#ff9966"  Opacity="0.9">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="" TextBlock.FontWeight="Bold" Width="20" Height="20"/>
+
                     </StackPanel>
                 </Border>
             </StatusBarItem>
