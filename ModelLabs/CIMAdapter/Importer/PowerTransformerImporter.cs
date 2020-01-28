@@ -101,13 +101,14 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
             ImportSubGeographicalRegions();
             //ImportFeederObjects();
             ImportSubstations();
-            ImportBreakers();
-            ImportConnectivityNodes();
-            ImportTerminals();            
+            ImportBreakers();           
             ImportSynchronousMachines();
             ImportEnergyConsumers();
             ImportEnergySources();
             ImportACLineSegments();
+
+            ImportConnectivityNodes();
+            ImportTerminals();
             ImportAnalogs();
             ImportDiscretes();
 

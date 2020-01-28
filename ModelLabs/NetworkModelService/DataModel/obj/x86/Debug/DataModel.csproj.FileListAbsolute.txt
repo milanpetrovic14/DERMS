@@ -73,3 +73,17 @@ C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\Da
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\bin\FTN.DataModel.dll
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\bin\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\bin\FTN.DataModel.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\bin\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb

@@ -870,12 +870,12 @@ namespace FTN.Common
             typeIdsInInsertOrder.Add(ModelCode.SUBGEOGRAPHICALREGION);
             typeIdsInInsertOrder.Add(ModelCode.SUBSTATION);
             typeIdsInInsertOrder.Add(ModelCode.BREAKER);
-            typeIdsInInsertOrder.Add(ModelCode.CONNECTIVITYNODE);
             typeIdsInInsertOrder.Add(ModelCode.ENERGYCONSUMER);
             typeIdsInInsertOrder.Add(ModelCode.SYNCHRONOUSMACHINE);
-            typeIdsInInsertOrder.Add(ModelCode.TERMINAL);
             typeIdsInInsertOrder.Add(ModelCode.ENERGYSOURCE);
             typeIdsInInsertOrder.Add(ModelCode.ACLINESEGMENT);
+            typeIdsInInsertOrder.Add(ModelCode.CONNECTIVITYNODE);
+            typeIdsInInsertOrder.Add(ModelCode.TERMINAL);
             typeIdsInInsertOrder.Add(ModelCode.ANALOG);
             typeIdsInInsertOrder.Add(ModelCode.DISCRETE);
         }

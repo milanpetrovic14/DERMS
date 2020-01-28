@@ -56,3 +56,19 @@ C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\Te
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.exe
 C:\Users\Nemanja\Desktop\09.12\DERMS_NMS - Copy\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.pdb
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.exe.config
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.exe
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.pdb
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.exe
+C:\Users\Nemanja\Desktop\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.exe.config
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.exe
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\bin\NMSTestClient.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.exe
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.pdb
