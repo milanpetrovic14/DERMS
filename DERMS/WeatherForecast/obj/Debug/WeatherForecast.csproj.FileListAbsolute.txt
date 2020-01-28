@@ -1,0 +1,8 @@
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\WeatherForecast.dll
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\WeatherForecast.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\DarkSkyApi.dll
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csprojAssemblyReference.cache
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csproj.CopyComplete
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.dll
+C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.pdb

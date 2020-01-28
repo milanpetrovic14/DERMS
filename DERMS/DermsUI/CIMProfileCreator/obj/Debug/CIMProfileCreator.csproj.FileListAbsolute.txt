@@ -24,3 +24,4 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CI
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csprojAssemblyReference.cache
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csproj.CoreCompileInputs.cache

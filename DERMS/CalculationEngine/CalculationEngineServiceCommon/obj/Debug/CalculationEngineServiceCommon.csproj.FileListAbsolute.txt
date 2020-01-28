@@ -41,3 +41,4 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineSer
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache

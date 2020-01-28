@@ -523,3 +523,4 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.cspr
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.csproj.CopyComplete
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.exe
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.csproj.CoreCompileInputs.cache

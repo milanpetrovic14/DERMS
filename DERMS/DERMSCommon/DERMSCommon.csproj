@@ -54,6 +54,7 @@
     <Compile Include="SCADACommon\IModbusFunction.cs" />
     <Compile Include="SCADACommon\IStateUpdater.cs" />
     <Compile Include="SCADACommon\SCADACommanding.cs" />
+    <Compile Include="WeatherForecast\WeatherForecast.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ServiceContracts\" />
