@@ -6564,3 +6564,76 @@
 1/28/2020 1:19:40 PM : Inserting entity with GID (0000000800000001).
 1/28/2020 1:19:40 PM : Inserting entity with GID (0000000800000002).
 1/28/2020 1:19:40 PM : Applying delta to network model successfully finished.
+1/30/2020 9:50:09 AM : Starting Network Model Serivice...
+1/30/2020 9:50:09 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 9:50:09 AM : Endpoints:
+1/30/2020 9:50:10 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 9:50:10 AM : Connection string: ../NetworkModelData.data
+1/30/2020 9:50:10 AM : Trace level: Info
+1/30/2020 9:50:10 AM : The Network Model Service is started.
+1/30/2020 9:50:10 AM : Press <Enter> to stop the service.
+1/30/2020 9:53:59 AM : Starting Network Model Serivice...
+1/30/2020 9:53:59 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 9:53:59 AM : Endpoints:
+1/30/2020 9:53:59 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 9:53:59 AM : Connection string: ../NetworkModelData.data
+1/30/2020 9:53:59 AM : Trace level: Info
+1/30/2020 9:53:59 AM : The Network Model Service is started.
+1/30/2020 9:53:59 AM : Press <Enter> to stop the service.
+1/30/2020 9:54:22 AM : Starting Network Model Serivice...
+1/30/2020 9:54:22 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 9:54:22 AM : Endpoints:
+1/30/2020 9:54:22 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 9:54:22 AM : Connection string: ../NetworkModelData.data
+1/30/2020 9:54:22 AM : Trace level: Info
+1/30/2020 9:54:22 AM : The Network Model Service is started.
+1/30/2020 9:54:22 AM : Press <Enter> to stop the service.
+1/30/2020 9:54:39 AM : Starting Network Model Serivice...
+1/30/2020 9:54:39 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 9:54:39 AM : Endpoints:
+1/30/2020 9:54:39 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 9:54:39 AM : Connection string: ../NetworkModelData.data
+1/30/2020 9:54:39 AM : Trace level: Info
+1/30/2020 9:54:39 AM : The Network Model Service is started.
+1/30/2020 9:54:39 AM : Press <Enter> to stop the service.
+1/30/2020 9:55:39 AM : Starting Network Model Serivice...
+1/30/2020 9:55:39 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 9:55:39 AM : Endpoints:
+1/30/2020 9:55:39 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 9:55:39 AM : Connection string: ../NetworkModelData.data
+1/30/2020 9:55:39 AM : Trace level: Info
+1/30/2020 9:55:39 AM : The Network Model Service is started.
+1/30/2020 9:55:39 AM : Press <Enter> to stop the service.
+1/30/2020 10:00:03 AM : Starting Network Model Serivice...
+1/30/2020 10:00:03 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 10:00:03 AM : Endpoints:
+1/30/2020 10:00:03 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 10:00:03 AM : Connection string: ../NetworkModelData.data
+1/30/2020 10:00:03 AM : Trace level: Info
+1/30/2020 10:00:03 AM : The Network Model Service is started.
+1/30/2020 10:00:03 AM : Press <Enter> to stop the service.
+1/30/2020 10:12:50 AM : Starting Network Model Serivice...
+1/30/2020 10:12:51 AM : The WCF service GenericDataAccess is ready.
+1/30/2020 10:12:51 AM : Endpoints:
+1/30/2020 10:12:51 AM : net.tcp://localhost:10000/NetworkModelService/GDA/
+1/30/2020 10:12:51 AM : Connection string: ../NetworkModelData.data
+1/30/2020 10:12:51 AM : Trace level: Info
+1/30/2020 10:12:51 AM : The Network Model Service is started.
+1/30/2020 10:12:51 AM : Press <Enter> to stop the service.
+1/30/2020 10:13:07 AM : Applying  delta to network model.
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000100000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000100000002).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000b00000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000b00000002).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000a00000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000200000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000400000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000500000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000900000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000c00000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000300000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000300000002).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000600000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000700000001).
+1/30/2020 10:13:07 AM : Inserting entity with GID (0000000800000001).
+1/30/2020 10:13:07 AM : Applying delta to network model successfully finished.

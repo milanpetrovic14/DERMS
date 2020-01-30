@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F680D34F-C148-4314-8914-B2DF3E7B17AF}</ProjectGuid>
+    <ProjectGuid>{E0DAC37C-A981-4CBB-BAC4-813AB1177385}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FTN.ESI.SIMES.CIM.CIMAdapter</RootNamespace>

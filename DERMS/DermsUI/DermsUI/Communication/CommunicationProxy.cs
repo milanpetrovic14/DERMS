@@ -19,7 +19,7 @@ namespace DermsUI.Communication
             serviceHost = new ServiceHost(typeof(SendDataToUI));
 
             serviceHost.AddServiceEndpoint(typeof(ISendDataToUI), new NetTcpBinding(),
-                                            new Uri("net.tcp://localhost:19009/ISendDataToUI"));
+                                            new Uri("net.tcp://localhost:19109/ISendDataToUI"));
 
             // Send to CE
             factory = new ChannelFactory<ICEUpdateThroughUI>(new NetTcpBinding(),

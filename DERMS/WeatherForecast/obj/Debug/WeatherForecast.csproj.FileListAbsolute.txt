@@ -6,3 +6,6 @@ C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csp
 C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csproj.CopyComplete
 C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.dll
 C:\Users\filip\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.pdb

@@ -49,7 +49,7 @@ namespace CalculationEngineService
         {
             //Connect to UI
             NetTcpBinding binding = new NetTcpBinding();
-            factoryUI = new ChannelFactory<ISendDataToUI>(binding, new EndpointAddress("net.tcp://localhost:19009/ISendDataToUI"));
+            factoryUI = new ChannelFactory<ISendDataToUI>(binding, new EndpointAddress("net.tcp://localhost:19109/ISendDataToUI"));
             ProxyUI = factoryUI.CreateChannel();
             Console.WriteLine("Connected: net.tcp://localhost:19009/ISendDataToUI");
 
