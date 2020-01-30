@@ -4,6 +4,12 @@ using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using DermsUI.Model;
+using DermsUI.ViewModel;
+using MahApps.Metro.Controls;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +22,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GMap.NET;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using GMap.NET.ObjectModel;
+using GMap.NET.WindowsForms.ToolTips;
 
 namespace DermsUI.View
 {
@@ -27,6 +38,13 @@ namespace DermsUI.View
         public HomeWindow()
         {
             InitializeComponent();
+
+            GMapp.MapProvider = GMap.NET.MapProviders.GoogleMapProvider.Instance;
+            GMap.NET.GMaps.Instance.Mode = GMap.NET.AccessMode.ServerOnly;
+            GMapp.ShowCenter = true;
+
+            GMapp.DragButton = System.Windows.Input.MouseButton.Left;
+            GMapp.Position = new PointLatLng(45.2516700, 19.8369400);
         }
 
         private void RequestNavigate(object sender, RequestNavigateEventArgs e)

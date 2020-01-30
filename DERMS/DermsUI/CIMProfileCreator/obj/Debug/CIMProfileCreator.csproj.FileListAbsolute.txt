@@ -29,3 +29,8 @@ C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\De
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.pdb
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.dll
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.pdb
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csproj.CoreCompileInputs.cache
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb

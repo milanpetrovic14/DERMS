@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-        xmlns:local="clr-namespace:DermsUI.View"
-        xmlns:ViewModel="clr-namespace:DermsUI.ViewModel"  
-        xmlns:VM="clr-namespace:DermsUI.Model.ThreeViewModel" 
-        mc:Ignorable="d"
+                      xmlns:gmf="clr-namespace:GMap.NET.WindowsForms;assembly=GMap.NET.WindowsForms"
+                      xmlns:VM="clr-namespace:DermsUI.Model.ThreeViewModel"
+                      xmlns:gmaps="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+                      mc:Ignorable="d"
         Style="{StaticResource WindowStyle}"
         Height="650" Width="1100" 
         MinHeight="650" MinWidth="1100"
@@ -17,9 +17,9 @@
         Background="WhiteSmoke"
         ShowIconOnTitleBar="True"
          >
-    <controls:MetroWindow.DataContext>
+    <!--<controls:MetroWindow.DataContext>
         <ViewModel:HomeViewModel></ViewModel:HomeViewModel>
-    </controls:MetroWindow.DataContext>
+    </controls:MetroWindow.DataContext>-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -325,6 +325,9 @@
                         </Grid>
                     </Border>
                 </Grid>
+            </TabItem>
+            <TabItem Header="GMaps">
+                <gmaps:GMapControl x:Name="GMapp" MinZoom="3" MaxZoom="17" Zoom="12" />
             </TabItem>
         </TabControl>
 
