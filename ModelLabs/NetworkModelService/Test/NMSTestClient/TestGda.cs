@@ -10,9 +10,9 @@ using System.Xml;
 using System.Threading;
 using System.Diagnostics;
 using FTN.Common;
-using FTN.ServiceContracts;
-using FTN.Services.NetworkModelService.TestClient;
 
+using FTN.Services.NetworkModelService.TestClient;
+using FTN.ServiceContracts;
 
 namespace TelventDMS.Services.NetworkModelService.TestClient.Tests
 {

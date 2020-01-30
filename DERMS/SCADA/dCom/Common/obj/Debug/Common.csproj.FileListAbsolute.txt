@@ -32,3 +32,8 @@ C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAsse
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
