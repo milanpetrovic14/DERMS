@@ -133,9 +133,9 @@ namespace dCom.ViewModel
            
             NetTcpBinding binding = new NetTcpBinding();
             binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
-            factoryUI = new ChannelFactory<ISendDataToCEThroughScada>(binding, new EndpointAddress("net.tcp://localhost:19999/ISendDataToCEThroughScada"));
+            factoryUI = new ChannelFactory<ISendDataToCEThroughScada>(binding, new EndpointAddress("net.tcp://localhost:19000/ISendDataToCEThroughScada"));
             ProxyUI = factoryUI.CreateChannel();
-            Console.WriteLine("Connected: net.tcp://localhost:19999/ISendDataToCEThroughScada");
+            Console.WriteLine("Connected: net.tcp://localhost:19000/ISendDataToCEThroughScada");
 
            
             ProxyUI.ReceiveFromScada(datapoints);

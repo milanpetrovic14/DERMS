@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace DERMSCommon.SCADACommon
 {
     [DataContract]
+    [Serializable()]
     public class DataPoint
     {
         [DataMember]

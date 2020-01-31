@@ -37,3 +37,8 @@ C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Comm
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb

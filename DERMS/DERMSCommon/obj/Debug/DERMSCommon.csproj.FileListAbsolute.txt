@@ -29,3 +29,7 @@ C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DERMSCommon\obj\Debug\DERMS
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.csproj.CoreCompileInputs.cache
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.dll
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.pdb

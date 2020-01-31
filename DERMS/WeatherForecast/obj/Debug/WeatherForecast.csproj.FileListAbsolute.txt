@@ -15,3 +15,12 @@ C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\bin\Debug\DarkSk
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\bin\Debug\DERMSCommon.dll
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\bin\Debug\DERMSCommon.pdb
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csproj.CopyComplete
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\WeatherForecast.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\WeatherForecast.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\DarkSkyApi.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\DERMSCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\bin\Debug\DERMSCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csprojAssemblyReference.cache
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.csproj.CopyComplete
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\WeatherForecast\obj\Debug\WeatherForecast.pdb

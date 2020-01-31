@@ -58,3 +58,11 @@ C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\Calculati
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
 C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
