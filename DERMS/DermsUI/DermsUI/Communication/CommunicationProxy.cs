@@ -23,7 +23,7 @@ namespace DermsUI.Communication
 
             // Send to CE
             factory = new ChannelFactory<ICEUpdateThroughUI>(new NetTcpBinding(),
-                                                                    new EndpointAddress("net.tcp://localhost:19002/ICEUpdateThroughUI"));
+                                                                    new EndpointAddress("net.tcp://localhost:19001/ICEUpdateThroughUI"));
         }
 
         public void Open()

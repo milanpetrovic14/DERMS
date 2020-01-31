@@ -49,9 +49,9 @@ namespace CalculationEngineService
         {
             //Connect to UI
             NetTcpBinding binding = new NetTcpBinding();
-            factoryUI = new ChannelFactory<ISendDataToUI>(binding, new EndpointAddress("net.tcp://localhost:19100/ISendDataToUI"));
+            factoryUI = new ChannelFactory<ISendDataToUI>(binding, new EndpointAddress("net.tcp://localhost:19109/ISendDataToUI"));
             ProxyUI = factoryUI.CreateChannel();
-            Console.WriteLine("Connected: net.tcp://localhost:19100/ISendDataToUI");
+            Console.WriteLine("Connected: net.tcp://localhost:19109/ISendDataToUI");
 
             //filip
             //ProxyUI.SendDataUI(new List<DataPoint>() { new DataPoint(10001, PointType.ANALOG_INPUT, 1001, DateTime.Now, "bb",100,  32, AlarmType.NO_ALARM),
@@ -62,9 +62,9 @@ namespace CalculationEngineService
 
             //Connect to Scada
             NetTcpBinding binding2 = new NetTcpBinding();
-            factoryScada = new ChannelFactory<IUpdateCommand>(binding2, new EndpointAddress("net.tcp://localhost:18600/IUpdateCommand"));
+            factoryScada = new ChannelFactory<IUpdateCommand>(binding2, new EndpointAddress("net.tcp://localhost:18500/IUpdateCommand"));
             ProxyScada = factoryScada.CreateChannel();
-            Console.WriteLine("Connected: net.tcp://localhost:18600/IUpdateCommand");
+            Console.WriteLine("Connected: net.tcp://localhost:18500/IUpdateCommand");
 
         }
 

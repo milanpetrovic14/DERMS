@@ -6,6 +6,7 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
                       xmlns:gmf="clr-namespace:GMap.NET.WindowsForms;assembly=GMap.NET.WindowsForms"
                       xmlns:VM="clr-namespace:DermsUI.Model.ThreeViewModel"
+                      xmlns:ViewModel="clr-namespace:DermsUI.ViewModel"
                       xmlns:gmaps="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
                       mc:Ignorable="d"
         Style="{StaticResource WindowStyle}"
@@ -17,9 +18,9 @@
         Background="WhiteSmoke"
         ShowIconOnTitleBar="True"
          >
-    <!--<controls:MetroWindow.DataContext>
+    <controls:MetroWindow.DataContext>
         <ViewModel:HomeViewModel></ViewModel:HomeViewModel>
-    </controls:MetroWindow.DataContext>-->
+    </controls:MetroWindow.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
