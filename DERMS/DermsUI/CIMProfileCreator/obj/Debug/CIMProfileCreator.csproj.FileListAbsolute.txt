@@ -39,3 +39,7 @@ C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CI
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.csprojAssemblyReference.cache
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMProfileCreator\bin\Debug\CIMProfileCreator.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMProfileCreator\obj\Debug\CIMProfileCreator.pdb

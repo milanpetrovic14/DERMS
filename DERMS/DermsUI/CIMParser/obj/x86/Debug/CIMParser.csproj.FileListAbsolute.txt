@@ -34,3 +34,7 @@ C:\Users\Caki\Desktop\Projekat\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csprojA
 C:\Users\Caki\Desktop\Projekat\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csproj.CoreCompileInputs.cache
 C:\Users\Caki\Desktop\Projekat\DermsUI\CIMParser\obj\x86\Debug\CIMParser.dll
 C:\Users\Caki\Desktop\Projekat\DermsUI\CIMParser\obj\x86\Debug\CIMParser.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\bin\CIMParser.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\bin\CIMParser.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.pdb

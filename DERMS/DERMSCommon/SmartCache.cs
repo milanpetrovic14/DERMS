@@ -11,7 +11,7 @@ namespace DERMSCommon
 {
     public static class SmartCache
     {
-        static string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"Loggs\DERMS_Cache.txt");
+        static string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"SmartCash\Smart_Cash.dat");
 
         public static void WriteToFile(List<DataPoint> listOfScadaData)
         {

@@ -35,3 +35,8 @@ C:\Users\Caki\Desktop\Projekat\DermsUI\Common\obj\x86\Debug\Common.csprojAssembl
 C:\Users\Caki\Desktop\Projekat\DermsUI\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Caki\Desktop\Projekat\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
 C:\Users\Caki\Desktop\Projekat\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\bin\FTN.Common.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\bin\FTN.Common.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb

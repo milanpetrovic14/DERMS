@@ -66,3 +66,11 @@ C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\De
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CopyComplete
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.dll
 C:\Users\luka.bosanac\Desktop\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CopyComplete
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.pdb
