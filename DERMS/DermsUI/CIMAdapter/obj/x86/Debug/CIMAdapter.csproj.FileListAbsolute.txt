@@ -42,3 +42,9 @@ C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdap
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csproj.CopyComplete
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.dll
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\bin\FTN.ESI.SIMES.CIM.CIMAdapter.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\bin\FTN.ESI.SIMES.CIM.CIMAdapter.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csproj.CopyComplete
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.pdb

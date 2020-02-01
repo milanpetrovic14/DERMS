@@ -1,4 +1,5 @@
 ﻿using CalculationEngineServiceCommon;
+using DERMSCommon.NMSCommuication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace CalculationEngineService
     {
         private ServiceHost serviceHostUI;
         private ServiceHost serviceHostScada;
+        private ServiceHost serviceHostForNMS;
 
         public ServiceManager()
         {
@@ -46,6 +48,15 @@ namespace CalculationEngineService
             serviceHostUI.Open();
             Console.WriteLine("Open: net.tcp://localhost:19001/ICEUpdateThroughUI");
 
+            //Open service for NMS
+            string address3 = String.Format("net.tcp://localhost:19002/ISendDataFromNMSToCE");
+            NetTcpBinding binding3 = new NetTcpBinding();
+            binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
+            serviceHostForNMS = new ServiceHost(typeof(SendDataFromNMSToCE));
+
+            serviceHostForNMS.AddServiceEndpoint(typeof(ISendDataFromNMSToCE), binding3, address3);
+            serviceHostForNMS.Open();
+            Console.WriteLine("Open: net.tcp://localhost:19002/ISendDataFromNMSToCE");
         }
 
         public void StopServices()

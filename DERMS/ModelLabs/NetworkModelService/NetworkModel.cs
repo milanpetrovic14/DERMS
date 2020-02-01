@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
 using FTN.Common;
+using FTN.Services.NetworkModelService.Communication;
 using FTN.Services.NetworkModelService.DataModel;
 using FTN.Services.NetworkModelService.DataModel.Core;
 using FTN.Services.NetworkModelService.DataModel.Wires;
@@ -15,9 +16,13 @@ namespace FTN.Services.NetworkModelService
     public class NetworkModelDeepCopy
     { 
         NetworkModel networkModel = null;
+        CommunicationWithCE proxyFromNMSToCE;
         public NetworkModelDeepCopy()
         {
+            proxyFromNMSToCE = new CommunicationWithCE();
             networkModel = new NetworkModel();
+            proxyFromNMSToCE.Open();
+            proxyFromNMSToCE.sendToCE.SendNetworkModel();
         }
 
         #region Find

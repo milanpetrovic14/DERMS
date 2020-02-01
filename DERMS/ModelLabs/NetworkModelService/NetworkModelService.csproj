@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communication\CommunicationWithCE.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="NetworkModel.cs" />
     <Compile Include="Config.cs" />
@@ -93,6 +94,10 @@
     <Compile Include="GDA\ResourceIterator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DERMSCommon\DERMSCommon.csproj">
+      <Project>{776EB305-B428-4D01-B4A7-0B05FA59F9B9}</Project>
+      <Name>DERMSCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DermsUI\NetworkModelGDAContract\NetworkModelGDAContract.csproj">
       <Project>{9798f72e-e42d-4b8e-a5c6-6da9c41de1de}</Project>
       <Name>NetworkModelGDAContract</Name>

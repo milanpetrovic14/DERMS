@@ -49,6 +49,7 @@
     <Compile Include="ClientSideCE.cs" />
     <Compile Include="INotify.cs" />
     <Compile Include="PubSubCalculatioEngine.cs" />
+    <Compile Include="SendDataFromNMSToCE.cs" />
     <Compile Include="SendDataToCEThroughScada.cs" />
     <Compile Include="ServerSideProxy.cs" />
     <Compile Include="ServiceManager.cs" />

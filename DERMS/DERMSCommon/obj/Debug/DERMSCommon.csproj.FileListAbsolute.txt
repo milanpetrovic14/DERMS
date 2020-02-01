@@ -37,3 +37,8 @@ C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.dll
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.pdb
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.dll
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DERMSCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DERMSCommon\obj\Debug\DERMSCommon.pdb
