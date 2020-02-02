@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 
 namespace DERMSCommon
 {
-    public static class SmartCache
+    public class SmartCache
     {
-        static string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"SmartCash\Smart_Cash.dat");
+        private string path;
 
-        public static void WriteToFile(List<DataPoint> listOfScadaData)
+        public SmartCache() 
+        {
+            path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, @"SmartCash\Smart_Cash.dat");
+        }
+        public void WriteToFile(List<DataPoint> listOfScadaData)
         {
             Dictionary<long, List<DataPoint>> dictionaryDataPoints = new Dictionary<long, List<DataPoint>>();
             List<DataPoint> temp = new List<DataPoint>();
@@ -45,7 +49,7 @@ namespace DERMSCommon
             }
         }
 
-        public static Dictionary<long, List<DataPoint>> ReadFromFile()
+        public Dictionary<long, List<DataPoint>> ReadFromFile()
         {
             using (var fs = new FileStream(path, FileMode.Open))
             {

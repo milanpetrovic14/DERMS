@@ -40,7 +40,6 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\De
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CopyComplete
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.dll
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.pdb
-C:\Users\filip\Desktop\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.dll
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.pdb
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\FTN.Common.dll

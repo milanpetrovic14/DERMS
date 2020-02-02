@@ -523,7 +523,6 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.cspr
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.csproj.CopyComplete
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.exe
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.pdb
-C:\Users\filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\DermsUI.exe.config
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\DermsUI.exe
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\DermsUI.pdb
@@ -931,3 +930,8 @@ C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.csproj.CopyComplete
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.exe
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\DermsUI\obj\Debug\DermsUI.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\NetworkModelGDAContract.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\NetworkModelGDAContract.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\DermsUI\bin\Debug\FTN.DataModel.pdb

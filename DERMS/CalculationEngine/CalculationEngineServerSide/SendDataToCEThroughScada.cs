@@ -14,8 +14,9 @@ namespace CalculationEngineService
     {
         public void ReceiveFromScada(List<DataPoint> data)
         {
-            SmartCache.WriteToFile(data);
-            SmartCache.ReadFromFile();
+            SmartCache smartCache = new SmartCache();
+            smartCache.WriteToFile(data);
+            smartCache.ReadFromFile();
             ClientSideCE.Instance.ProxyUI.SendDataUI(data);
         }
     }

@@ -40,3 +40,8 @@ C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\bin\FTN.Common.pdb
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
 C:\Users\Filip\Desktop\Radi\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\bin\FTN.Common.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\bin\FTN.Common.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb

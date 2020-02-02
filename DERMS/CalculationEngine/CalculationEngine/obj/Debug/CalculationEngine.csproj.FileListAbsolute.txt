@@ -62,7 +62,6 @@ C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngine\ob
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CopyComplete
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.exe
 C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.pdb
-C:\Users\filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\WeatherForecast.dll
 C:\Users\filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\DarkSkyApi.dll
 C:\Users\filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\WeatherForecast.pdb
@@ -130,3 +129,7 @@ C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngin
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.csproj.CopyComplete
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.exe
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngine\obj\Debug\CalculationEngine.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngine\bin\Debug\FTN.DataModel.pdb

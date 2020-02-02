@@ -45,7 +45,6 @@ C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Process
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
-C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb

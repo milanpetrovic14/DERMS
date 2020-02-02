@@ -98,3 +98,9 @@ C:\Users\Filip\Desktop\New folder\DERMS\DERMS\ModelLabs\NetworkModelService\Data
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\bin\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\bin\FTN.DataModel.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb

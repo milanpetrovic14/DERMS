@@ -28,8 +28,6 @@ C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug
 C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\Common\obj\Debug\Common.pdb
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
-C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
-C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
 C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll

@@ -201,7 +201,6 @@ C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\MainWindow.baml
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.g.resources
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.Properties.Resources.resources
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.GenerateResource.cache
-C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.CopyComplete
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.exe
 C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.pdb
@@ -309,3 +308,7 @@ C:\Users\Filip\Desktop\New folder\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csp
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.csproj.CopyComplete
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.exe
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\SCADA\dCom\dCom\obj\Debug\dCom.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\bin\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\bin\Debug\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\bin\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\SCADA\dCom\dCom\bin\Debug\FTN.DataModel.pdb
