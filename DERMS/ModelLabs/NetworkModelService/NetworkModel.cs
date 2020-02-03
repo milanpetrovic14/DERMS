@@ -12,17 +12,32 @@ using FTN.Services.NetworkModelService.DataModel.Core;
 using FTN.Services.NetworkModelService.DataModel.Wires;
 
 namespace FTN.Services.NetworkModelService
-{
+{    
     public class NetworkModelDeepCopy
     { 
         NetworkModel networkModel = null;
         CommunicationWithCE proxyFromNMSToCE;
+        CommunicationWithScada proxyFromNMSToScada;
+        List<long> gidoviA = new List<long>();
+        List<long> gidoviD = new List<long>();
+        Dictionary<int, List<long>> signals = new Dictionary<int, List<long>>();
         public NetworkModelDeepCopy()
         {
-            proxyFromNMSToCE = new CommunicationWithCE();
+            //proxyFromNMSToCE = new CommunicationWithCE();
+            //proxyFromNMSToScada = new CommunicationWithScada();
             networkModel = new NetworkModel();
-            proxyFromNMSToCE.Open();
-            proxyFromNMSToCE.sendToCE.SendNetworkModel();
+            
+            //gidoviA = networkModel.GetContainer(DMSType.ANALOG).GetEntitiesGlobalIds();
+            //gidoviD = networkModel.GetContainer(DMSType.DISCRETE).GetEntitiesGlobalIds();           
+            //signals.Add(0, gidoviA);
+            //signals.Add(1, gidoviD);
+
+            //proxyFromNMSToCE.Open();
+            //proxyFromNMSToCE.sendToCE.SendNetworkModel();
+            
+            //proxyFromNMSToScada.Open();
+            //proxyFromNMSToScada.sendToScada.SendGids(signals);
+
         }
 
         #region Find
@@ -89,6 +104,8 @@ namespace FTN.Services.NetworkModelService
                 networkModel = networkModelCopy;
                 return updateResult;
             }
+
+
 
             return updateResult;
         }
@@ -177,7 +194,7 @@ namespace FTN.Services.NetworkModelService
         /// </summary>
         /// <param name="type">Type of container.</param>
         /// <returns>Container for specified local id</returns>
-        private Container GetContainer(DMSType type)
+        public Container GetContainer(DMSType type)
         {
             if (ContainerExists(type))
             {

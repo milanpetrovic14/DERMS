@@ -81,3 +81,12 @@ C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\NetworkModelGDAContract\ob
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CopyComplete
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.dll
 C:\Users\Filip\Desktop\New folder\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\NetworkModelGDAContract.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\FTN.Common.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\bin\Debug\FTN.Common.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\NetworkModelGDAContract\obj\Debug\NetworkModelGDAContract.pdb

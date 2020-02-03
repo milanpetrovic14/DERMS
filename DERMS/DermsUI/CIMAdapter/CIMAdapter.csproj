@@ -72,6 +72,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SwitchingEquipmentCIMProfile_Labs">
+      <HintPath>..\..\..\..\..\28012020\bin\DLL\SwitchingEquipmentCIMProfile_Labs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -92,6 +95,10 @@
     <Compile Include="TransformAndLoadReport.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ModelLabs\NetworkModelService\Test\NMSTestClient\NMSTestClient.csproj">
+      <Project>{32EE9373-A350-42AC-972B-41B2EDABA082}</Project>
+      <Name>NMSTestClient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CIMParser\CIMParser.csproj">
       <Project>{3C03A41C-BE4C-40A8-97D5-5DBAC0C34102}</Project>
       <Name>CIMParser</Name>
@@ -106,7 +113,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lib\PowerTransformerCIMProfile_Labs.dll" />
+    <Content Include="Lib\SwitchingEquipmentCIMProfile_Labs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

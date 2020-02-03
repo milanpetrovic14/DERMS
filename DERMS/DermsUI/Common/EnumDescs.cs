@@ -11,11 +11,9 @@ namespace FTN.Common
 
 		public EnumDescs()
 		{
-			property2enumType.Add(ModelCode.BASIC_INTERVAL_SCHEDULE_VAL1MULTI, typeof(UnitMultiplier));
-			property2enumType.Add(ModelCode.BASIC_INTERVAL_SCHEDULE_VAL2MULTI, typeof(UnitMultiplier));
-			property2enumType.Add(ModelCode.BASIC_INTERVAL_SCHEDULE_VAL1UNIT, typeof(UnitSymbol));
-			property2enumType.Add(ModelCode.BASIC_INTERVAL_SCHEDULE_VAL2UNIT, typeof(UnitSymbol));
-			property2enumType.Add(ModelCode.SWITCHINGOP_NEWSTATE, typeof(SwitchState));													
+			property2enumType.Add(ModelCode.MEASUREMENT_MEAS_TYPE, typeof(MeasurementType));
+			property2enumType.Add(ModelCode.CONDUCTOR_TYPE, typeof(ConductorType));
+			property2enumType.Add(ModelCode.ENERGYSOURCE_TYPE, typeof(EnergySourceType));												
 		}
 
 		public List<string> GetEnumList(ModelCode propertyId)

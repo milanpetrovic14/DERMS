@@ -7134,3 +7134,322 @@ Exception rethrown at [0]:
    at FTN.Services.NetworkModelService.NetworkModelDeepCopy..ctor() in C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModel.cs:line 25
    at FTN.Services.NetworkModelService.NetworkModelService..ctor() in C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModelService.cs:line 21
    at FTN.Services.NetworkModelService.Program.Main(String[] args) in C:\Users\Filip\Desktop\DERMS\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\Program.cs:line 22
+2/2/2020 4:44:02 PM : Starting Network Model Serivice...
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 4:44:03 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 4:44:08 PM : Could not connect to net.tcp://localhost:19002/ISendDataFromNMSToCE. The connection attempt lasted for a time span of 00:00:04.0889334. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:19002. 
+2/2/2020 4:44:08 PM : NetworkModelService failed.
+2/2/2020 4:44:08 PM : 
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.EnsureOpened(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at DERMSCommon.NMSCommuication.ISendDataFromNMSToCE.SendNetworkModel()
+   at FTN.Services.NetworkModelService.NetworkModelDeepCopy..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModel.cs:line 25
+   at FTN.Services.NetworkModelService.NetworkModelService..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModelService.cs:line 21
+   at FTN.Services.NetworkModelService.Program.Main(String[] args) in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\Program.cs:line 22
+2/2/2020 4:46:29 PM : Starting Network Model Serivice...
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 4:46:29 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 4:46:30 PM : The WCF service GenericDataAccess is ready.
+2/2/2020 4:46:30 PM : Endpoints:
+2/2/2020 4:46:30 PM : net.tcp://localhost:10000/NetworkModelService/GDA/
+2/2/2020 4:46:30 PM : Connection string: ../NetworkModelData.data
+2/2/2020 4:46:30 PM : Trace level: Info
+2/2/2020 4:46:30 PM : The Network Model Service is started.
+2/2/2020 4:46:30 PM : Press <Enter> to stop the service.
+2/2/2020 6:16:25 PM : Starting Network Model Serivice...
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 6:16:26 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 6:16:32 PM : Could not connect to net.tcp://localhost:19002/ISendDataFromNMSToCE. The connection attempt lasted for a time span of 00:00:04.0883902. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:19002. 
+2/2/2020 6:16:32 PM : NetworkModelService failed.
+2/2/2020 6:16:32 PM : 
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.EnsureOpened(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at DERMSCommon.NMSCommuication.ISendDataFromNMSToCE.SendNetworkModel()
+   at FTN.Services.NetworkModelService.NetworkModelDeepCopy..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModel.cs:line 28
+   at FTN.Services.NetworkModelService.NetworkModelService..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModelService.cs:line 21
+   at FTN.Services.NetworkModelService.Program.Main(String[] args) in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\Program.cs:line 22
+2/2/2020 6:20:20 PM : Starting Network Model Serivice...
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 6:20:23 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 6:20:24 PM : The requested upgrade is not supported by 'net.tcp://localhost:19012/ISendDataFromNMSToScada'. This could be due to mismatched bindings (for example security enabled on the client and not on the server).
+2/2/2020 6:20:24 PM : NetworkModelService failed.
+2/2/2020 6:20:24 PM : 
+Server stack trace: 
+   at System.ServiceModel.Channels.ConnectionUpgradeHelper.DecodeFramingFault(ClientFramingDecoder decoder, IConnection connection, Uri via, String contentType, TimeoutHelper& timeoutHelper)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.SendPreamble(IConnection connection, ArraySegment`1 preamble, TimeoutHelper& timeoutHelper)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.DuplexConnectionPoolHelper.AcceptPooledConnection(IConnection connection, TimeoutHelper& timeoutHelper)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.EnsureOpened(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at DERMSCommon.NMSCommuication.ISendDataFromNMSToScada.SendGids()
+   at FTN.Services.NetworkModelService.NetworkModelDeepCopy..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModel.cs:line 31
+   at FTN.Services.NetworkModelService.NetworkModelService..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModelService.cs:line 21
+   at FTN.Services.NetworkModelService.Program.Main(String[] args) in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\Program.cs:line 22
+2/2/2020 6:25:02 PM : Starting Network Model Serivice...
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 6:25:19 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 6:25:52 PM : The WCF service GenericDataAccess is ready.
+2/2/2020 6:25:52 PM : Endpoints:
+2/2/2020 6:25:52 PM : net.tcp://localhost:10000/NetworkModelService/GDA/
+2/2/2020 6:25:52 PM : Connection string: ../NetworkModelData.data
+2/2/2020 6:25:52 PM : Trace level: Info
+2/2/2020 6:25:52 PM : The Network Model Service is started.
+2/2/2020 6:25:52 PM : Press <Enter> to stop the service.
+2/2/2020 6:28:12 PM : Starting Network Model Serivice...
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000100000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000100000002).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000b00000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000b00000002).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000a00000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000200000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000400000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000500000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000900000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000c00000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000300000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000300000002).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000600000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000700000001).
+2/2/2020 6:28:17 PM : Inserting entity with GID (0000000800000001).
+2/2/2020 6:28:32 PM : The WCF service GenericDataAccess is ready.
+2/2/2020 6:28:32 PM : Endpoints:
+2/2/2020 6:28:32 PM : net.tcp://localhost:10000/NetworkModelService/GDA/
+2/2/2020 6:28:32 PM : Connection string: ../NetworkModelData.data
+2/2/2020 6:28:32 PM : Trace level: Info
+2/2/2020 6:28:32 PM : The Network Model Service is started.
+2/2/2020 6:28:32 PM : Press <Enter> to stop the service.
+2/2/2020 6:43:37 PM : Starting Network Model Serivice...
+2/3/2020 8:46:32 PM : Starting Network Model Serivice...
+2/3/2020 8:47:14 PM : Starting Network Model Serivice...
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000100000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000100000002).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000b00000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000b00000002).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000a00000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000200000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000400000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000500000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000900000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000c00000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000300000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000300000002).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000600000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000700000001).
+2/3/2020 8:47:16 PM : Inserting entity with GID (0000000800000001).
+2/3/2020 8:47:21 PM : Could not connect to net.tcp://localhost:19012/ISendDataFromNMSToScada. The connection attempt lasted for a time span of 00:00:04.0468455. TCP error code 10061: No connection could be made because the target machine actively refused it 127.0.0.1:19012. 
+2/3/2020 8:47:21 PM : NetworkModelService failed.
+2/3/2020 8:47:21 PM : 
+Server stack trace: 
+   at System.ServiceModel.Channels.SocketConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.BufferedConnectionInitiator.Connect(Uri uri, TimeSpan timeout)
+   at System.ServiceModel.Channels.ConnectionPoolHelper.EstablishConnection(TimeSpan timeout)
+   at System.ServiceModel.Channels.ClientFramingDuplexSessionChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOpenOnce.System.ServiceModel.Channels.ServiceChannel.ICallOnce.Call(ServiceChannel channel, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.CallOnceManager.CallOnce(TimeSpan timeout, CallOnceManager cascade)
+   at System.ServiceModel.Channels.ServiceChannel.EnsureOpened(TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at DERMSCommon.NMSCommuication.ISendDataFromNMSToScada.SendGids(Dictionary`2 signals)
+   at FTN.Services.NetworkModelService.NetworkModelDeepCopy..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModel.cs:line 39
+   at FTN.Services.NetworkModelService.NetworkModelService..ctor() in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\NetworkModelService.cs:line 21
+   at FTN.Services.NetworkModelService.Program.Main(String[] args) in C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\Program.cs:line 22
+2/3/2020 8:48:04 PM : Starting Network Model Serivice...
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000100000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000100000002).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000b00000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000b00000002).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000a00000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000200000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000400000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000500000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000900000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000c00000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000300000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000300000002).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000600000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000700000001).
+2/3/2020 8:48:08 PM : Inserting entity with GID (0000000800000001).
+2/3/2020 8:48:09 PM : The WCF service GenericDataAccess is ready.
+2/3/2020 8:48:09 PM : Endpoints:
+2/3/2020 8:48:09 PM : net.tcp://localhost:10000/NetworkModelService/GDA/
+2/3/2020 8:48:09 PM : Connection string: ../NetworkModelData.data
+2/3/2020 8:48:09 PM : Trace level: Info
+2/3/2020 8:48:09 PM : The Network Model Service is started.
+2/3/2020 8:48:09 PM : Press <Enter> to stop the service.
+2/3/2020 8:53:32 PM : Starting Network Model Serivice...
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000100000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000100000002).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000b00000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000b00000002).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000a00000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000200000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000400000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000500000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000900000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000c00000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000300000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000300000002).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000600000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000700000001).
+2/3/2020 8:53:49 PM : Inserting entity with GID (0000000800000001).
+2/3/2020 8:53:50 PM : The WCF service GenericDataAccess is ready.
+2/3/2020 8:53:50 PM : Endpoints:
+2/3/2020 8:53:50 PM : net.tcp://localhost:10000/NetworkModelService/GDA/
+2/3/2020 8:53:50 PM : Connection string: ../NetworkModelData.data
+2/3/2020 8:53:50 PM : Trace level: Info
+2/3/2020 8:53:50 PM : The Network Model Service is started.
+2/3/2020 8:53:50 PM : Press <Enter> to stop the service.
+2/3/2020 8:54:29 PM : Applying  delta to network model.
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000200000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000200000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000400000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000400000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000500000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000500000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000c00000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000c00000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000004).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000005).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000006).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000007).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000008).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000300000009).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000030000000a).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000003).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000004).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000005).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000006).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000007).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000008).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000009).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000a).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000b).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000c).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000d).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000e).
+2/3/2020 8:54:29 PM : Inserting entity with GID (000000060000000f).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000010).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000011).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000600000012).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000700000002).
+2/3/2020 8:54:29 PM : Inserting entity with GID (0000000800000002).
+2/3/2020 8:54:29 PM : Applying delta to network model successfully finished.

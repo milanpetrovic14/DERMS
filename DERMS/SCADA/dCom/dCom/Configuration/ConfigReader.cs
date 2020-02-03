@@ -1,16 +1,20 @@
 ﻿using Common;
 using dCom.Exceptions;
+using DERMSCommon.NMSCommuication;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.ServiceModel;
 
 namespace dCom.Configuration
 {
 	internal class ConfigReader : IConfiguration
 	{
-		private ushort transactionId = 0;
+
+        private ServiceHost serviceHostForNMS;
+        private ushort transactionId = 0;
 
 		private byte unitAddress;
 		private int tcpPort;
@@ -130,7 +134,19 @@ namespace dCom.Configuration
 					throw new ConfigurationException("Configuration error! Check RtuCfg.txt file!");
 				}
 			}
-		}
+
+            //
+
+            //Open service for NMS
+            string address3 = String.Format("net.tcp://localhost:19012/ISendDataFromNMSToScada");
+            NetTcpBinding binding = new NetTcpBinding();
+            binding.Security = new NetTcpSecurity() { Mode = SecurityMode.None };
+            serviceHostForNMS = new ServiceHost(typeof(SendDataFromNmsToScada));
+
+            serviceHostForNMS.AddServiceEndpoint(typeof(ISendDataFromNMSToScada), binding, address3);
+            serviceHostForNMS.Open();
+            Console.WriteLine("Open: net.tcp://localhost:19012/ISendDataFromNMSToScada");
+        }
 
 		public ushort GetTransactionId()
 		{

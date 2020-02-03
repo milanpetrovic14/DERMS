@@ -105,7 +105,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\DERMS\DermsUI\NetworkModelGDAContract\NetworkModelGDAContract.csproj">
+    <ProjectReference Include="..\..\..\..\DermsUI\NetworkModelGDAContract\NetworkModelGDAContract.csproj">
       <Project>{9798f72e-e42d-4b8e-a5c6-6da9c41de1de}</Project>
       <Name>NetworkModelGDAContract</Name>
     </ProjectReference>

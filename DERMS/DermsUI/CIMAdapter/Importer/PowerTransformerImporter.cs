@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using CIM.Model;
 using FTN.Common;
 using FTN.ESI.SIMES.CIM.CIMAdapter.Manager;
+using TelventDMS.Services.NetworkModelService.TestClient.Tests;
 
 namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 {
@@ -11,336 +12,1180 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 	/// </summary>
 	public class PowerTransformerImporter
 	{
-		/// <summary> Singleton </summary>
-		private static PowerTransformerImporter ptImporter = null;
-		private static object singletoneLock = new object();
+        /// <summary> Singleton </summary>
+        private static PowerTransformerImporter ptImporter = null;
+        private static object singletoneLock = new object();
 
-		private ConcreteModel concreteModel;
-		private Delta delta;
-		private ImportHelper importHelper;
-		private TransformAndLoadReport report;
-
-
-		#region Properties
-		public static PowerTransformerImporter Instance
-		{
-			get
-			{
-				if (ptImporter == null)
-				{
-					lock (singletoneLock)
-					{
-						if (ptImporter == null)
-						{
-							ptImporter = new PowerTransformerImporter();
-							ptImporter.Reset();
-						}
-					}
-				}
-				return ptImporter;
-			}
-		}
-
-		public Delta NMSDelta
-		{
-			get 
-			{
-				return delta;
-			}
-		}
-		#endregion Properties
+        public static TestGda test = new TestGda();
+        private ConcreteModel concreteModel;
+        private Delta delta;
+        private ImportHelper importHelper;
+        private TransformAndLoadReport report;
 
 
-		public void Reset()
-		{
-			concreteModel = null;
-			delta = new Delta();
-			importHelper = new ImportHelper();
-			report = null;
-		}
+        #region Properties
+        public static PowerTransformerImporter Instance
+        {
+            get
+            {
+                if (ptImporter == null)
+                {
+                    lock (singletoneLock)
+                    {
+                        if (ptImporter == null)
+                        {
+                            ptImporter = new PowerTransformerImporter();
+                            ptImporter.Reset();
+                        }
+                    }
+                }
+                return ptImporter;
+            }
+        }
 
-		//public TransformAndLoadReport CreateNMSDelta(ConcreteModel cimConcreteModel)
-		//{
-		//	LogManager.Log("Importing PowerTransformer Elements...", LogLevel.Info);
-		//	report = new TransformAndLoadReport();
-		//	concreteModel = cimConcreteModel;
-		//	delta.ClearDeltaOperations();
+        public Delta NMSDelta
+        {
+            get
+            {
+                return delta;
+            }
+        }
+        #endregion Properties
 
-		//	if ((concreteModel != null) && (concreteModel.ModelMap != null))
-		//	{
-		//		try
-		//		{
-		//			// convert into DMS elements
-		//			ConvertModelAndPopulateDelta();
-		//		}
-		//		catch (Exception ex)
-		//		{
-		//			string message = string.Format("{0} - ERROR in data import - {1}", DateTime.Now, ex.Message);
-		//			LogManager.Log(message);
-		//			report.Report.AppendLine(ex.Message);
-		//			report.Success = false;
-		//		}
-		//	}
-		//	LogManager.Log("Importing PowerTransformer Elements - END.", LogLevel.Info);
-		//	return report;
-		//}
 
-		///// <summary>
-		///// Method performs conversion of network elements from CIM based concrete model into DMS model.
-		///// </summary>
-		//private void ConvertModelAndPopulateDelta()
-		//{
-		//	LogManager.Log("Loading elements and creating delta...", LogLevel.Info);
+        public void Reset()
+        {
+            concreteModel = null;
+            delta = new Delta();
+            importHelper = new ImportHelper();
+            report = null;
+        }
 
-  //          //// import all concrete model types (DMSType enum)
-  //          ImportOutageSchedules();
-  //          ImportSwitchingOperations();
-  //          ImportIrregularTimePoints();
-  //          ImportRegularIntervalSchedules();
-  //          ImportRegularTimePoints();
-  //          ImportDisconnectors();
+        public TransformAndLoadReport CreateNMSDelta(ConcreteModel cimConcreteModel)
+        {
+            LogManager.Log("Importing PowerTransformer Elements...", LogLevel.Info);
+            report = new TransformAndLoadReport();
+            concreteModel = cimConcreteModel;
+            delta.ClearDeltaOperations();
 
-		//	LogManager.Log("Loading elements and creating delta completed.", LogLevel.Info);
-		//}
+            if ((concreteModel != null) && (concreteModel.ModelMap != null))
+            {
+                try
+                {
+                    // convert into DMS elements
+                    ConvertModelAndPopulateDelta();
+                }
+                catch (Exception ex)
+                {
+                    string message = string.Format("{0} - ERROR in data import - {1}", DateTime.Now, ex.Message);
+                    LogManager.Log(message);
+                    report.Report.AppendLine(ex.Message);
+                    report.Success = false;
+                }
+            }
+            LogManager.Log("Importing PowerTransformer Elements - END.", LogLevel.Info);
+            return report;
+        }
 
-  //      #region Import
-  //      //
-  //      private void ImportDisconnectors()
-  //      {
-  //          SortedDictionary<string, object> cimDisconnectors = concreteModel.GetAllObjectsOfType("FTN.Disconnector");
-  //          if (cimDisconnectors != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimDisconnectorPair in cimDisconnectors)
-  //              {
-  //                  FTN.Disconnector cimDisconnector = cimDisconnectorPair.Value as FTN.Disconnector;
+        /// <summary>
+        /// Method performs conversion of network elements from CIM based concrete model into DMS model.
+        /// </summary>
+        private void ConvertModelAndPopulateDelta()
+        {
+            LogManager.Log("Loading elements and creating delta...", LogLevel.Info);
 
-  //                  ResourceDescription rd = CreateDisconnectorDescription(cimDisconnector);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("Disconnector ID = ").Append(cimDisconnector.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("BaseDisconnectorVoltage ID = ").Append(cimDisconnector.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+            //// import all concrete model types (DMSType enum)
+            //ImportBaseVoltages();
 
-  //      private ResourceDescription CreateDisconnectorDescription(FTN.Disconnector cimDisconnector)
-  //      {
-  //          ResourceDescription rd = null;
-		//	if (cimDisconnector != null)
-		//	{
-		//		long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.DISCONNECTOR, importHelper.CheckOutIndexForDMSType(DMSType.DISCONNECTOR));
-		//		rd = new ResourceDescription(gid);
-		//		importHelper.DefineIDMapping(cimDisconnector.ID, gid);
+            ImportGeographicalRegions();
+            ImportSubGeographicalRegions();
+            //ImportFeederObjects();
+            ImportSubstations();
+            ImportBreakers();
+            ImportSynchronousMachines();
+            ImportEnergyConsumers();
+            ImportEnergySources();
+            ImportACLineSegments();
 
-		//		////populate ResourceDescription
-		//		PowerTransformerConverter.PopulateDisconnectorProperties(cimDisconnector, rd,importHelper,report);
-		//	}
-		//	return rd;
-  //      }
+            ImportConnectivityNodes();
+            ImportTerminals();
+            ImportAnalogs();
+            ImportDiscretes();
 
-  //      private void ImportOutageSchedules()
-  //      {
-  //          SortedDictionary<string, object> cimOutageSchedules = concreteModel.GetAllObjectsOfType("FTN.OutageSchedule");
-  //          if (cimOutageSchedules != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimOutageSchedulePair in cimOutageSchedules)
-  //              {
-  //                  FTN.OutageSchedule cimOutageSchedule= cimOutageSchedulePair.Value as FTN.OutageSchedule;
+            LogManager.Log("Loading elements and creating delta completed.", LogLevel.Info);
+        }
 
-  //                  ResourceDescription rd = CreateOutageScheduleDescription(cimOutageSchedule);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("OutageSchedule ID = ").Append(cimOutageSchedule.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("OutageSchedule ID = ").Append(cimOutageSchedule.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+        #region Import
 
-  //      private ResourceDescription CreateOutageScheduleDescription(FTN.OutageSchedule cimOutageSchedule)
-  //      {
-  //          ResourceDescription rd = null;
-  //          if (cimOutageSchedule != null)
-  //          {
-  //              long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.OUTAGE_SCHEDULE, importHelper.CheckOutIndexForDMSType(DMSType.OUTAGE_SCHEDULE));
-  //              rd = new ResourceDescription(gid);
-  //              importHelper.DefineIDMapping(cimOutageSchedule.ID, gid);
+        private void ImportBreakers()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.BREAKER);
+            SortedDictionary<string, object> cimBreakers = concreteModel.GetAllObjectsOfType("FTN.Breaker");
+            if (cimBreakers != null)
+            {
+                foreach (KeyValuePair<string, object> cimBreakerPair in cimBreakers)
+                {
+                    FTN.Breaker cimBreaker = cimBreakerPair.Value as FTN.Breaker;
 
-  //              ////populate ResourceDescription
-  //              PowerTransformerConverter.PopulateOutageScheduleProperties(cimOutageSchedule, rd);
-  //          }
-  //          return rd;
-  //      }
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateBreakerProperties(cimBreaker, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+                    if (mrids.ContainsKey(cimBreaker.MRID))
+                    {
+                        rd.Id = mrids[cimBreaker.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimBreaker.MRID].Id);
+                        importHelper.DefineIDMapping(cimBreaker.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimBreaker.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimBreaker.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimBreaker.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimBreaker.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimBreaker.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimBreaker.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimBreaker.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
 
-  //      private void ImportSwitchingOperations()
-  //      {
-  //          SortedDictionary<string, object> cimSwitchingOperations = concreteModel.GetAllObjectsOfType("FTN.SwitchingOperation");
-  //          if (cimSwitchingOperations != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimSwitchingOperationPair in cimSwitchingOperations)
-  //              {
-  //                  FTN.SwitchingOperation cimSwitchingOperation = cimSwitchingOperationPair.Value as FTN.SwitchingOperation;
+                        if (isUpdated)
+                        {
+                            report.Report.Append("Breaker ID = ").Append(cimBreaker.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimBreaker.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
 
-  //                  ResourceDescription rd = CreateSwitchingOperationDescription(cimSwitchingOperation);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("SwitchingOperation ID = ").Append(cimSwitchingOperation.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("SwitchingOperation ID = ").Append(cimSwitchingOperation.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateBreakerResourceDescription(cimBreaker);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("Breaker ID = ").Append(cimBreaker.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("Breaker ID = ").Append(cimBreaker.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
 
-  //      private ResourceDescription CreateSwitchingOperationDescription(FTN.SwitchingOperation switchingOperation)
-  //      {
-  //          ResourceDescription rd = null;
-  //          if (switchingOperation != null)
-  //          {
-  //              long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.SWITCHINGOP, importHelper.CheckOutIndexForDMSType(DMSType.SWITCHINGOP));
-  //              rd = new ResourceDescription(gid);
-  //              importHelper.DefineIDMapping(switchingOperation.ID, gid);
+        private ResourceDescription CreateBreakerResourceDescription(FTN.Breaker cimBreaker)
+        {
+            ResourceDescription rd = null;
+            if (cimBreaker != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.BREAKER, importHelper.CheckOutIndexForDMSType(DMSType.BREAKER));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimBreaker.ID, gid);
 
-  //              ////populate ResourceDescription
-  //              PowerTransformerConverter.PopulateSwitchingOperationProperties(switchingOperation, rd,importHelper,report);
-  //          }
-  //          return rd;
-  //      }
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateBreakerProperties(cimBreaker, rd, importHelper, report);
+            }
+            return rd;
+        }
 
-  //      private void ImportRegularIntervalSchedules()
-  //      {
-  //          SortedDictionary<string, object> cimRegularIntervalSchedules = concreteModel.GetAllObjectsOfType("FTN.RegularIntervalSchedule");
-  //          if (cimRegularIntervalSchedules != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimRegularIntervalSchedulePair in cimRegularIntervalSchedules)
-  //              {
-  //                  FTN.RegularIntervalSchedule cimRegularIntervalSchedule = cimRegularIntervalSchedulePair.Value as FTN.RegularIntervalSchedule;
+        private void ImportGeographicalRegions()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.GEOGRAPHICALREGION);
+            SortedDictionary<string, object> cimGeographicalRegions = concreteModel.GetAllObjectsOfType("FTN.GeographicalRegion");
+            if (cimGeographicalRegions != null)
+            {
+                foreach (KeyValuePair<string, object> cimGeographicalRegionPair in cimGeographicalRegions)
+                {
+                    FTN.GeographicalRegion cimGeographicalRegion = cimGeographicalRegionPair.Value as FTN.GeographicalRegion;
 
-  //                  ResourceDescription rd = CreateRegularIntervalScheduleDescription(cimRegularIntervalSchedule);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("RegularIntervalSchedule ID = ").Append(cimRegularIntervalSchedule.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("RegularIntervalSchedule ID = ").Append(cimRegularIntervalSchedule.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateGeographicalRegionProperties(cimGeographicalRegion, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
 
-  //      private ResourceDescription CreateRegularIntervalScheduleDescription(FTN.RegularIntervalSchedule regularIntervalSchedule)
-  //      {
-  //          ResourceDescription rd = null;
-  //          if (regularIntervalSchedule != null)
-  //          {
-  //              long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.REGULAR_INTERVAL_SCHEDULE, importHelper.CheckOutIndexForDMSType(DMSType.REGULAR_INTERVAL_SCHEDULE));
-  //              rd = new ResourceDescription(gid);
-  //              importHelper.DefineIDMapping(regularIntervalSchedule.ID, gid);
+                    if (mrids.ContainsKey(cimGeographicalRegion.MRID))
+                    {
+                        rd.Id = mrids[cimGeographicalRegion.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimGeographicalRegion.MRID].Id);
+                        importHelper.DefineIDMapping(cimGeographicalRegion.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimGeographicalRegion.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimGeographicalRegion.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimGeographicalRegion.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimGeographicalRegion.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimGeographicalRegion.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimGeographicalRegion.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimGeographicalRegion.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
 
-  //              ////populate ResourceDescription
-  //              PowerTransformerConverter.PopulateRegularIntervalScheduleProperties(regularIntervalSchedule, rd);
-  //          }
-  //          return rd;
-  //      }
+                        if (isUpdated)
+                        {
+                            report.Report.Append("GeographicalRegion ID = ").Append(cimGeographicalRegion.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimGeographicalRegion.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
 
-  //      private void ImportIrregularTimePoints()
-  //      {
-  //          SortedDictionary<string, object> cimIrregularTimePoints = concreteModel.GetAllObjectsOfType("FTN.IrregularTimePoint");
-  //          if (cimIrregularTimePoints != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimIrregularTimePointsPair in cimIrregularTimePoints)
-  //              {
-  //                  FTN.IrregularTimePoint cimIrregularTimePoint = cimIrregularTimePointsPair.Value as FTN.IrregularTimePoint;
 
-  //                  ResourceDescription rd = CreateIrregularTimePointsDescription(cimIrregularTimePoint);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("IrregularTimePoint ID = ").Append(cimIrregularTimePoint.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("IrregularTimePoint ID = ").Append(cimIrregularTimePoint.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateGeographicalRegionResourceDescription(cimGeographicalRegion);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("GeographicalRegion ID = ").Append(cimGeographicalRegion.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("GeographicalRegion ID = ").Append(cimGeographicalRegion.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
 
-  //      private ResourceDescription CreateIrregularTimePointsDescription(FTN.IrregularTimePoint irregularTimePoint)
-  //      {
-  //          ResourceDescription rd = null;
-  //          if (irregularTimePoint != null)
-  //          {
-  //              long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.IRREGULAR_TIME_POINT, importHelper.CheckOutIndexForDMSType(DMSType.IRREGULAR_TIME_POINT));
-  //              rd = new ResourceDescription(gid);
-  //              importHelper.DefineIDMapping(irregularTimePoint.ID, gid);
+        private ResourceDescription CreateGeographicalRegionResourceDescription(FTN.GeographicalRegion cimGeographicalRegion)
+        {
+            ResourceDescription rd = null;
+            if (cimGeographicalRegion != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.GEOGRAPHICALREGION, importHelper.CheckOutIndexForDMSType(DMSType.GEOGRAPHICALREGION));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimGeographicalRegion.ID, gid);
 
-  //              ////populate ResourceDescription
-  //              PowerTransformerConverter.PopulateIrregularTimePointProperties(irregularTimePoint, rd,importHelper,report);
-  //          }
-  //          return rd;
-  //      }
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateGeographicalRegionProperties(cimGeographicalRegion, rd, importHelper, report);
+            }
+            return rd;
+        }
 
-  //      private void ImportRegularTimePoints()
-  //      {
-  //          SortedDictionary<string, object> cimRegularTimePoints = concreteModel.GetAllObjectsOfType("FTN.RegularTimePoint");
-  //          if (cimRegularTimePoints != null)
-  //          {
-  //              foreach (KeyValuePair<string, object> cimRegularTimePointPair in cimRegularTimePoints)
-  //              {
-  //                  FTN.RegularTimePoint cimRegularTimePoint = cimRegularTimePointPair.Value as FTN.RegularTimePoint;
+        private void ImportSubGeographicalRegions()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.SUBGEOGRAPHICALREGION);
+            SortedDictionary<string, object> cimSubGeographicalRegions = concreteModel.GetAllObjectsOfType("FTN.SubGeographicalRegion");
+            if (cimSubGeographicalRegions != null)
+            {
+                foreach (KeyValuePair<string, object> cimSubGeographicalRegionPair in cimSubGeographicalRegions)
+                {
+                    FTN.SubGeographicalRegion cimSubGeographicalRegion = cimSubGeographicalRegionPair.Value as FTN.SubGeographicalRegion;
 
-  //                  ResourceDescription rd = CreateRegularTimePointsDescription(cimRegularTimePoint);
-  //                  if (rd != null)
-  //                  {
-  //                      delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
-  //                      report.Report.Append("RegularTimePoint ID = ").Append(cimRegularTimePoint.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
-  //                  }
-  //                  else
-  //                  {
-  //                      report.Report.Append("RegularTimePoint ID = ").Append(cimRegularTimePoint.ID).AppendLine(" FAILED to be converted");
-  //                  }
-  //              }
-  //              report.Report.AppendLine();
-  //          }
-  //      }
+                    ResourceDescription rdResult = null;
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateSubGeographicalRegionProperties(cimSubGeographicalRegion, rd, importHelper, report);
+                    if (mrids.ContainsKey(cimSubGeographicalRegion.MRID))
+                    {
+                        rd.Id = mrids[cimSubGeographicalRegion.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimSubGeographicalRegion.MRID].Id);
+                        importHelper.DefineIDMapping(cimSubGeographicalRegion.ID, rdResult.Id);
 
-  //      private ResourceDescription CreateRegularTimePointsDescription(FTN.RegularTimePoint regularTimePoint)
-  //      {
-  //          ResourceDescription rd = null;
-  //          if (regularTimePoint != null)
-  //          {
-  //              long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.REGULAR_TIME_POINT, importHelper.CheckOutIndexForDMSType(DMSType.REGULAR_TIME_POINT));
-  //              rd = new ResourceDescription(gid);
-  //              importHelper.DefineIDMapping(regularTimePoint.ID, gid);
+                        for (int i = 0; i < mrids[cimSubGeographicalRegion.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimSubGeographicalRegion.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimSubGeographicalRegion.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimSubGeographicalRegion.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimSubGeographicalRegion.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimSubGeographicalRegion.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimSubGeographicalRegion.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
 
-  //              ////populate ResourceDescription
-  //              PowerTransformerConverter.PopulateRegularTimePointProperties(regularTimePoint, rd, importHelper, report);
-  //          }
-  //          return rd;
-  //      }
+                        if (isUpdated)
+                        {
+                            report.Report.Append("SubGeographicalRegion ID = ").Append(cimSubGeographicalRegion.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimSubGeographicalRegion.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
 
-  //      //
-  //      #endregion Import
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateSubGeographicalRegionResourceDescription(cimSubGeographicalRegion);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("SubGeographicalRegion ID = ").Append(cimSubGeographicalRegion.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("SubGeographicalRegion ID = ").Append(cimSubGeographicalRegion.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateSubGeographicalRegionResourceDescription(FTN.SubGeographicalRegion cimSubGeographicalRegion)
+        {
+            ResourceDescription rd = null;
+            if (cimSubGeographicalRegion != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.SUBGEOGRAPHICALREGION, importHelper.CheckOutIndexForDMSType(DMSType.SUBGEOGRAPHICALREGION));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimSubGeographicalRegion.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateSubGeographicalRegionProperties(cimSubGeographicalRegion, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportEnergyConsumers()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.ENERGYCONSUMER);
+            SortedDictionary<string, object> cimEnergyConsumers = concreteModel.GetAllObjectsOfType("FTN.EnergyConsumer");
+            if (cimEnergyConsumers != null)
+            {
+                foreach (KeyValuePair<string, object> cimEnergyConsumerPair in cimEnergyConsumers)
+                {
+                    FTN.EnergyConsumer cimEnergyConsumer = cimEnergyConsumerPair.Value as FTN.EnergyConsumer;
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateEnergyConsumerProperties(cimEnergyConsumer, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimEnergyConsumer.MRID))
+                    {
+                        rd.Id = mrids[cimEnergyConsumer.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimEnergyConsumer.MRID].Id);
+                        importHelper.DefineIDMapping(cimEnergyConsumer.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimEnergyConsumer.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimEnergyConsumer.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimEnergyConsumer.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimEnergyConsumer.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimEnergyConsumer.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimEnergyConsumer.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimEnergyConsumer.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("EnergyConsumer ID = ").Append(cimEnergyConsumer.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimEnergyConsumer.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateEnergyConsumerResourceDescription(cimEnergyConsumer);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("EnergyConsumer ID = ").Append(cimEnergyConsumer.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("EnergyConsumer ID = ").Append(cimEnergyConsumer.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateEnergyConsumerResourceDescription(FTN.EnergyConsumer cimEnergyConsumer)
+        {
+            ResourceDescription rd = null;
+            if (cimEnergyConsumer != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.ENERGYCONSUMER, importHelper.CheckOutIndexForDMSType(DMSType.ENERGYCONSUMER));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimEnergyConsumer.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateEnergyConsumerProperties(cimEnergyConsumer, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportConnectivityNodes()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.CONNECTIVITYNODE);
+            SortedDictionary<string, object> cimConnectivityNodes = concreteModel.GetAllObjectsOfType("FTN.ConnectivityNode");
+            if (cimConnectivityNodes != null)
+            {
+                foreach (KeyValuePair<string, object> cimConnectivityNodePair in cimConnectivityNodes)
+                {
+                    FTN.ConnectivityNode cimConnectivityNode = cimConnectivityNodePair.Value as FTN.ConnectivityNode;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateConnectivityNodeProperties(cimConnectivityNode, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimConnectivityNode.MRID))
+                    {
+                        rd.Id = mrids[cimConnectivityNode.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimConnectivityNode.MRID].Id);
+                        importHelper.DefineIDMapping(cimConnectivityNode.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimConnectivityNode.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimConnectivityNode.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimConnectivityNode.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimConnectivityNode.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimConnectivityNode.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimConnectivityNode.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimConnectivityNode.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("ConnectivityNode ID = ").Append(cimConnectivityNode.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimConnectivityNode.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateConnectivityNodeResourceDescription(cimConnectivityNode);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("ConnectivityNode ID = ").Append(cimConnectivityNode.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("ConnectivityNode ID = ").Append(cimConnectivityNode.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateConnectivityNodeResourceDescription(FTN.ConnectivityNode cimConnectivityNode)
+        {
+            ResourceDescription rd = null;
+            if (cimConnectivityNode != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.CONNECTIVITYNODE, importHelper.CheckOutIndexForDMSType(DMSType.CONNECTIVITYNODE));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimConnectivityNode.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateConnectivityNodeProperties(cimConnectivityNode, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportTerminals()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.TERMINAL);
+            SortedDictionary<string, object> cimTerminals = concreteModel.GetAllObjectsOfType("FTN.Terminal");
+            if (cimTerminals != null)
+            {
+                foreach (KeyValuePair<string, object> cimTerminalPair in cimTerminals)
+                {
+                    FTN.Terminal cimTerminal = cimTerminalPair.Value as FTN.Terminal;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateTerminalProperties(cimTerminal, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimTerminal.MRID))
+                    {
+                        rd.Id = mrids[cimTerminal.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimTerminal.MRID].Id);
+                        importHelper.DefineIDMapping(cimTerminal.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimTerminal.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimTerminal.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimTerminal.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimTerminal.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimTerminal.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimTerminal.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimTerminal.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("Terminal ID = ").Append(cimTerminal.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimTerminal.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateTerminalResourceDescription(cimTerminal);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("Terminal ID = ").Append(cimTerminal.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("Terminal ID = ").Append(cimTerminal.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+        private ResourceDescription CreateTerminalResourceDescription(FTN.Terminal cimTerminal)
+        {
+            ResourceDescription rd = null;
+            if (cimTerminal != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.TERMINAL, importHelper.CheckOutIndexForDMSType(DMSType.TERMINAL));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimTerminal.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateTerminalProperties(cimTerminal, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportSubstations()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.SUBSTATION);
+            SortedDictionary<string, object> cimSubstations = concreteModel.GetAllObjectsOfType("FTN.Substation");
+            if (cimSubstations != null)
+            {
+                foreach (KeyValuePair<string, object> cimSubstationPair in cimSubstations)
+                {
+                    FTN.Substation cimSubstation = cimSubstationPair.Value as FTN.Substation;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateSubstationProperties(cimSubstation, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimSubstation.MRID))
+                    {
+                        rd.Id = mrids[cimSubstation.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimSubstation.MRID].Id);
+                        importHelper.DefineIDMapping(cimSubstation.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimSubstation.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimSubstation.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimSubstation.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimSubstation.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimSubstation.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimSubstation.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimSubstation.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("Substation ID = ").Append(cimSubstation.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimSubstation.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateSubstationResourceDescription(cimSubstation);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("Substation ID = ").Append(cimSubstation.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("Substation ID = ").Append(cimSubstation.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+        private ResourceDescription CreateSubstationResourceDescription(FTN.Substation cimSubstation)
+        {
+            ResourceDescription rd = null;
+            if (cimSubstation != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.SUBSTATION, importHelper.CheckOutIndexForDMSType(DMSType.SUBSTATION));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimSubstation.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateSubstationProperties(cimSubstation, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportACLineSegments()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.ACLINESEGMENT);
+            SortedDictionary<string, object> cimACLineSegments = concreteModel.GetAllObjectsOfType("FTN.ACLineSegment");
+            if (cimACLineSegments != null)
+            {
+                foreach (KeyValuePair<string, object> cimACLineSegmentPair in cimACLineSegments)
+                {
+                    FTN.ACLineSegment cimACLineSegment = cimACLineSegmentPair.Value as FTN.ACLineSegment;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateACLineSegmentProperties(cimACLineSegment, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimACLineSegment.MRID))
+                    {
+                        rd.Id = mrids[cimACLineSegment.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimACLineSegment.MRID].Id);
+                        importHelper.DefineIDMapping(cimACLineSegment.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimACLineSegment.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimACLineSegment.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimACLineSegment.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimACLineSegment.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimACLineSegment.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimACLineSegment.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimACLineSegment.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("ACLineSegment ID = ").Append(cimACLineSegment.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimACLineSegment.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateACLineSegmentResourceDescription(cimACLineSegment);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("ACLineSegment ID = ").Append(cimACLineSegment.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("ACLineSegment ID = ").Append(cimACLineSegment.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateACLineSegmentResourceDescription(FTN.ACLineSegment cimACLineSegment)
+        {
+            ResourceDescription rd = null;
+            if (cimACLineSegment != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.ACLINESEGMENT, importHelper.CheckOutIndexForDMSType(DMSType.ACLINESEGMENT));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimACLineSegment.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateACLineSegmentProperties(cimACLineSegment, rd, importHelper, report);
+            }
+            return rd;
+        }
+        private void ImportEnergySources()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.ENERGYSOURCE);
+            SortedDictionary<string, object> cimEnergySources = concreteModel.GetAllObjectsOfType("FTN.EnergySource");
+            if (cimEnergySources != null)
+            {
+                foreach (KeyValuePair<string, object> cimEnergySourcePair in cimEnergySources)
+                {
+                    FTN.EnergySource cimEnergySource = cimEnergySourcePair.Value as FTN.EnergySource;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateEnergySourceProperties(cimEnergySource, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+
+                    if (mrids.ContainsKey(cimEnergySource.MRID))
+                    {
+                        rd.Id = mrids[cimEnergySource.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimEnergySource.MRID].Id);
+                        importHelper.DefineIDMapping(cimEnergySource.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimEnergySource.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimEnergySource.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimEnergySource.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimEnergySource.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimEnergySource.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimEnergySource.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimEnergySource.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("EnergySource ID = ").Append(cimEnergySource.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimEnergySource.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateEnergySourceResourceDescription(cimEnergySource);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("EnergySource ID = ").Append(cimEnergySource.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("EnergySource ID = ").Append(cimEnergySource.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateEnergySourceResourceDescription(FTN.EnergySource cimEnergySource)
+        {
+            ResourceDescription rd = null;
+            if (cimEnergySource != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.ENEGRYSOURCE, importHelper.CheckOutIndexForDMSType(DMSType.ENEGRYSOURCE));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimEnergySource.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateEnergySourceProperties(cimEnergySource, rd, importHelper, report);
+            }
+            return rd;
+        }
+        private void ImportSynchronousMachines()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.SYNCHRONOUSMACHINE);
+            SortedDictionary<string, object> cimSynchronousMachines = concreteModel.GetAllObjectsOfType("FTN.SynchronousMachine");
+            if (cimSynchronousMachines != null)
+            {
+                foreach (KeyValuePair<string, object> cimSynchronousMachinePair in cimSynchronousMachines)
+                {
+                    FTN.SynchronousMachine cimSynchronousMachine = cimSynchronousMachinePair.Value as FTN.SynchronousMachine;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateSynchronousMachineProperties(cimSynchronousMachine, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+                    if (mrids.ContainsKey(cimSynchronousMachine.MRID))
+                    {
+                        rd.Id = mrids[cimSynchronousMachine.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimSynchronousMachine.MRID].Id);
+                        importHelper.DefineIDMapping(cimSynchronousMachine.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimSynchronousMachine.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimSynchronousMachine.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimSynchronousMachine.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimSynchronousMachine.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimSynchronousMachine.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimSynchronousMachine.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimSynchronousMachine.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("SynchronousMachine ID = ").Append(cimSynchronousMachine.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimSynchronousMachine.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateSynchronousMachineResourceDescription(cimSynchronousMachine);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("SynchronousMachine ID = ").Append(cimSynchronousMachine.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("SynchronousMachine ID = ").Append(cimSynchronousMachine.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateSynchronousMachineResourceDescription(FTN.SynchronousMachine cimSynchronousMachine)
+        {
+            ResourceDescription rd = null;
+            if (cimSynchronousMachine != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.SYNCHRONOUSMACHINE, importHelper.CheckOutIndexForDMSType(DMSType.SYNCHRONOUSMACHINE));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimSynchronousMachine.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateSynchronousMachineProperties(cimSynchronousMachine, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportAnalogs()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.ANALOG);
+            SortedDictionary<string, object> cimAnalogs = concreteModel.GetAllObjectsOfType("FTN.Analog");
+            if (cimAnalogs != null)
+            {
+                foreach (KeyValuePair<string, object> cimAnalogPair in cimAnalogs)
+                {
+                    FTN.Analog cimAnalog = cimAnalogPair.Value as FTN.Analog;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateAnalogProperties(cimAnalog, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+                    if (mrids.ContainsKey(cimAnalog.MRID))
+                    {
+                        rd.Id = mrids[cimAnalog.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimAnalog.MRID].Id);
+                        importHelper.DefineIDMapping(cimAnalog.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimAnalog.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimAnalog.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimAnalog.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimAnalog.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimAnalog.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimAnalog.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimAnalog.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("Analog ID = ").Append(cimAnalog.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimAnalog.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateAnalogResourceDescription(cimAnalog);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("Analog ID = ").Append(cimAnalog.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("Analog ID = ").Append(cimAnalog.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateAnalogResourceDescription(FTN.Analog cimAnalog)
+        {
+            ResourceDescription rd = null;
+            if (cimAnalog != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.ANALOG, importHelper.CheckOutIndexForDMSType(DMSType.ANALOG));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimAnalog.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateAnalogProperties(cimAnalog, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        private void ImportDiscretes()
+        {
+            bool isUpdated = false;
+            SortedDictionary<string, ResourceDescription> mrids = test.GetAllMrids(ModelCode.IDOBJ_MRID, ModelCode.DISCRETE);
+            SortedDictionary<string, object> cimDiscretes = concreteModel.GetAllObjectsOfType("FTN.Discrete");
+            if (cimDiscretes != null)
+            {
+                foreach (KeyValuePair<string, object> cimDiscretePair in cimDiscretes)
+                {
+                    FTN.Discrete cimDiscrete = cimDiscretePair.Value as FTN.Discrete;
+
+                    ResourceDescription rd = new ResourceDescription();
+                    PowerTransformerConverter.PopulateDiscreteProperties(cimDiscrete, rd, importHelper, report);
+                    ResourceDescription rdResult = null;
+                    if (mrids.ContainsKey(cimDiscrete.MRID))
+                    {
+                        rd.Id = mrids[cimDiscrete.MRID].Id;
+                        rdResult = new ResourceDescription(mrids[cimDiscrete.MRID].Id);
+                        importHelper.DefineIDMapping(cimDiscrete.ID, rdResult.Id);
+                        for (int i = 0; i < mrids[cimDiscrete.MRID].Properties.Count; i++)
+                        {
+                            if (mrids[cimDiscrete.MRID].Properties[i].Id == ModelCode.IDOBJ_GID && mrids[cimDiscrete.MRID].Properties[i].Type != PropertyType.Reference)
+                                continue;
+                            for (int j = 0; j < rd.Properties.Count; j++)
+                                if (mrids[cimDiscrete.MRID].Properties[i].Id == rd.Properties[j].Id)
+                                {
+                                    if (!rd.Properties[j].PropertyValue.StringValue.Equals(mrids[cimDiscrete.MRID].Properties[i].PropertyValue.StringValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.LongValue.Equals(mrids[cimDiscrete.MRID].Properties[i].PropertyValue.LongValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                    if (!rd.Properties[j].PropertyValue.FloatValue.Equals(mrids[cimDiscrete.MRID].Properties[i].PropertyValue.FloatValue))
+                                    {
+                                        rdResult.Properties.Add(rd.Properties[j]);
+                                        isUpdated = true;
+                                        break;
+                                    }
+                                }
+                        }
+
+                        if (isUpdated)
+                        {
+                            report.Report.Append("Discrete ID = ").Append(cimDiscrete.ID).Append(" SUCCESSFULLY updated GID = ").AppendLine(mrids[cimDiscrete.MRID].Id.ToString());
+                            isUpdated = false;
+                        }
+
+
+                        delta.AddDeltaOperation(DeltaOpType.Update, rdResult, true);
+                    }
+                    else
+                    {
+                        rd = CreateDiscreteResourceDescription(cimDiscrete);
+                        if (rd != null)
+                        {
+                            delta.AddDeltaOperation(DeltaOpType.Insert, rd, true);
+                            report.Report.Append("Discrete ID = ").Append(cimDiscrete.ID).Append(" SUCCESSFULLY converted to GID = ").AppendLine(rd.Id.ToString());
+                        }
+                        else
+                        {
+                            report.Report.Append("Discrete ID = ").Append(cimDiscrete.ID).AppendLine(" FAILED to be converted");
+                        }
+                    }
+                }
+                report.Report.AppendLine();
+            }
+        }
+
+        private ResourceDescription CreateDiscreteResourceDescription(FTN.Discrete cimDiscrete)
+        {
+            ResourceDescription rd = null;
+            if (cimDiscrete != null)
+            {
+                long gid = ModelCodeHelper.CreateGlobalId(0, (short)DMSType.DISCRETE, importHelper.CheckOutIndexForDMSType(DMSType.DISCRETE));
+                rd = new ResourceDescription(gid);
+                importHelper.DefineIDMapping(cimDiscrete.ID, gid);
+
+                ////populate ResourceDescription
+                PowerTransformerConverter.PopulateDiscreteProperties(cimDiscrete, rd, importHelper, report);
+            }
+            return rd;
+        }
+
+        #endregion Import
     }
 }
 

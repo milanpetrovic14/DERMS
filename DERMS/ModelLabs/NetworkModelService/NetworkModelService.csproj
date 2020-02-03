@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Communication\CommunicationWithCE.cs" />
+    <Compile Include="Communication\CommunicationWithScada.cs" />
     <Compile Include="Container.cs" />
     <Compile Include="NetworkModel.cs" />
     <Compile Include="Config.cs" />

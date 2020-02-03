@@ -865,23 +865,32 @@ namespace FTN.Common
 		# region Initialization of metadata
 
 		private void InitializeTypeIdsInInsertOrder()
-		{			
-			typeIdsInInsertOrder.Add(ModelCode.OUTAGE_SCHEDULE);
-			typeIdsInInsertOrder.Add(ModelCode.SWITCHINGOP);
-			typeIdsInInsertOrder.Add(ModelCode.IRREGULAR_TIME_POINT);
-			typeIdsInInsertOrder.Add(ModelCode.REGULAR_INTERVAL_SCHEDULE);
-			typeIdsInInsertOrder.Add(ModelCode.REGULAR_TIME_POINT);			
-			typeIdsInInsertOrder.Add(ModelCode.DISCONNECTOR);			
-		}
+		{
+            typeIdsInInsertOrder.Add(ModelCode.GEOGRAPHICALREGION);
+            typeIdsInInsertOrder.Add(ModelCode.SUBGEOGRAPHICALREGION);
+            typeIdsInInsertOrder.Add(ModelCode.SUBSTATION);
+            typeIdsInInsertOrder.Add(ModelCode.BREAKER);
+            typeIdsInInsertOrder.Add(ModelCode.ENERGYCONSUMER);
+            typeIdsInInsertOrder.Add(ModelCode.SYNCHRONOUSMACHINE);
+            typeIdsInInsertOrder.Add(ModelCode.ENERGYSOURCE);
+            typeIdsInInsertOrder.Add(ModelCode.ACLINESEGMENT);
+            typeIdsInInsertOrder.Add(ModelCode.CONNECTIVITYNODE);
+            typeIdsInInsertOrder.Add(ModelCode.TERMINAL);
+            typeIdsInInsertOrder.Add(ModelCode.ANALOG);
+            typeIdsInInsertOrder.Add(ModelCode.DISCRETE);
+        }
 
 		private void InitializeNotSettablePropertyIds()
-		{			
-			notSettablePropertyIds.Add(ModelCode.IDOBJ_GID);
-			notSettablePropertyIds.Add(ModelCode.OUTAGE_SCHEDULE_SWITCHINGOPS);
-			notSettablePropertyIds.Add(ModelCode.SWITCHINGOP_SWITCHES);
-			notSettablePropertyIds.Add(ModelCode.REGULAR_INTERVAL_SCHEDULE_TIMEPTS);
-            notSettablePropertyIds.Add(ModelCode.IRREGULAR_INTERVAL_SCHEDULE_TIMEPTS);	
-		}
+		{
+            notSettablePropertyIds.Add(ModelCode.IDOBJ_GID);
+            notSettablePropertyIds.Add(ModelCode.PSR_MEASUREMENTS);
+            notSettablePropertyIds.Add(ModelCode.CONDEQ_TERMINALS);
+            notSettablePropertyIds.Add(ModelCode.CONNECTIVITYNODE_TERMINALS);
+            notSettablePropertyIds.Add(ModelCode.CONNECTIVITYNODECONTAINER_CON_NODES);
+            notSettablePropertyIds.Add(ModelCode.EQUIPMENTCONTAINER_EQUIPMENTS);
+            notSettablePropertyIds.Add(ModelCode.GEOGRAPHICALREGION_SUBGEOREGS);
+            notSettablePropertyIds.Add(ModelCode.SUBGEOGRAPHICALREGION_SUBSTATIONS);
+        }
 	
 		# endregion Initialization of metadata
 
