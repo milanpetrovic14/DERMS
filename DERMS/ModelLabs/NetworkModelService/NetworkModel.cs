@@ -26,17 +26,17 @@ namespace FTN.Services.NetworkModelService
             //proxyFromNMSToCE = new CommunicationWithCE();
             //proxyFromNMSToScada = new CommunicationWithScada();
             networkModel = new NetworkModel();
-            
+
             //gidoviA = networkModel.GetContainer(DMSType.ANALOG).GetEntitiesGlobalIds();
             //gidoviD = networkModel.GetContainer(DMSType.DISCRETE).GetEntitiesGlobalIds();           
             //signals.Add(0, gidoviA);
             //signals.Add(1, gidoviD);
 
-            //proxyFromNMSToCE.Open();
-            //proxyFromNMSToCE.sendToCE.SendNetworkModel();
-            
-            //proxyFromNMSToScada.Open();
-            //proxyFromNMSToScada.sendToScada.SendGids(signals);
+            proxyFromNMSToCE.Open();
+            proxyFromNMSToCE.sendToCE.SendNetworkModel();
+
+            proxyFromNMSToScada.Open();
+            proxyFromNMSToScada.sendToScada.SendGids(signals);
 
         }
 
