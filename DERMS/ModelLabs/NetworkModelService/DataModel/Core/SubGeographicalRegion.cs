@@ -1,4 +1,5 @@
-﻿using FTN.Common;
+﻿
+using FTN.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         public long GeoReg { get => georeg; set => georeg = value; }
         public List<long> Substations { get => substations; set => substations = value; }
 
+        private float longitude;
+        private float latitude;
+        public float Longitude { get => longitude; set => longitude = value; }
+        public float Latitude { get => latitude; set => latitude = value; }
         public SubGeographicalRegion(long globalId) : base(globalId)
         {
         }
@@ -22,7 +27,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             if (base.Equals(obj))
             {
                 SubGeographicalRegion x = (SubGeographicalRegion)obj;
-                return ((x.georeg == this.georeg) && CompareHelper.CompareLists(x.Substations, this.Substations, true)
+                return ((x.georeg == this.georeg && x.longitude == this.longitude && x.latitude == this.latitude) && CompareHelper.CompareLists(x.Substations, this.Substations, true)
                         /*(x.normallyInService == this.normallyInService)*/);
             }
             else
@@ -43,8 +48,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             switch (property)
             {
                 //case ModelCode.SWITCH_NORMAL_OPEN:
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //case ModelCode.SWITCH_RETAINED:
+                case ModelCode.SUBGEOGRAPHICALREGION_LONGITUDE:
+                case ModelCode.SUBGEOGRAPHICALREGION_LATITUDE:
                 case ModelCode.SUBGEOGRAPHICALREGION_SUBSTATIONS:
                 case ModelCode.SUBGEOGRAPHICALREGION_GEOREG:
                     return true;
@@ -58,13 +63,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (prop.Id)
             {
-                //case ModelCode.SWITCH_NORMAL_OPEN:
-                //    prop.SetValue(normalOpen);
-                //    break;
+                case ModelCode.SUBGEOGRAPHICALREGION_LONGITUDE:
+                    prop.SetValue(longitude);
+                    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    prop.SetValue((short)ratedCurrent);
-                //    break;
+                case ModelCode.SUBGEOGRAPHICALREGION_LATITUDE:
+                    prop.SetValue(latitude);
+                    break;
 
                 //case ModelCode.SWITCH_RETAINED:
                 //    prop.SetValue(retained);
@@ -90,13 +95,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
                 //    normalOpen = property.AsBool();
                 //    break;
 
-                //case ModelCode.SWITCH_RATED_CURRENT:
-                //    ratedCurrent = (CurrentFlow)property.AsEnum();
-                //    break;
+                case ModelCode.SUBGEOGRAPHICALREGION_LATITUDE:
+                    latitude = property.AsFloat();
+                    break;
 
-                //case ModelCode.SWITCH_RETAINED:
-                //    retained = property.AsBool();
-                //    break;
+                case ModelCode.SUBGEOGRAPHICALREGION_LONGITUDE:
+                    longitude = property.AsFloat();
+                    break;
                 case ModelCode.SUBGEOGRAPHICALREGION_SUBSTATIONS:
                     Substations = property.AsReferences();
                     break;

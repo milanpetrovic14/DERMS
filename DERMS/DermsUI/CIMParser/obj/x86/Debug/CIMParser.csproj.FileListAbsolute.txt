@@ -48,8 +48,9 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\bin\CIMParser.p
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csproj.CoreCompileInputs.cache
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.pdb
-C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\CIMParser.dll
-C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\CIMParser.pdb
-C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csproj.CoreCompileInputs.cache
-C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.dll
-C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\bin\CIMParser.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\bin\CIMParser.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csprojAssemblyReference.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.csproj.CoreCompileInputs.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\CIMParser\obj\x86\Debug\CIMParser.pdb

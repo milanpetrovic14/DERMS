@@ -323,5 +323,10 @@ namespace ModelLabsApp
 		{
 			Close();
 		}
-	}
+
+        private void TextBoxCIMFile_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

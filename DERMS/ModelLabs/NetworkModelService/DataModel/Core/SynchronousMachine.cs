@@ -12,11 +12,12 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         private float maxQ;
         private float minQ;
         private float considerP;
-
+        private GeneratorType generatorType;
       
         public float MaxQ { get => maxQ; set => maxQ = value; }
         public float MinQ { get => minQ; set => minQ = value; }
         public float ConsiderP { get => considerP; set => considerP = value; }
+        public GeneratorType GeneratorType { get => generatorType; set => generatorType = value; }
 
         public SynchronousMachine(long globalId) : base(globalId)
         {
@@ -27,7 +28,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             if (base.Equals(obj))
             {
                 SynchronousMachine x = (SynchronousMachine)obj;
-                return (x.maxQ == this.maxQ && x.minQ == this.minQ && x.considerP == this.considerP);
+                return (x.maxQ == this.maxQ && x.minQ == this.minQ && x.considerP == this.considerP && x.generatorType == this.generatorType);
             }
             else
             {
@@ -46,6 +47,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (property)
             {
+                case ModelCode.SYNCHRONOUSMACHINE_GENERATORTYPE:
                 case ModelCode.SYNCHRONOUSMACHINE_MAXQ:
                 case ModelCode.SYNCHRONOUSMACHINE_MINQ:
                 case ModelCode.SYNCHRONOUSMACHINE_CONSIDERP:
@@ -60,6 +62,9 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (prop.Id)
             {
+                case ModelCode.SYNCHRONOUSMACHINE_GENERATORTYPE:
+                    prop.SetValue((short)generatorType);
+                    break;
 
                 case ModelCode.SYNCHRONOUSMACHINE_MAXQ:
                     prop.SetValue(maxQ);
@@ -83,8 +88,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (property.Id)
             {
-                
 
+                case ModelCode.SYNCHRONOUSMACHINE_GENERATORTYPE:
+                    generatorType = (GeneratorType)property.AsEnum();
+                    break;
                 case ModelCode.SYNCHRONOUSMACHINE_MAXQ:
                     maxQ = property.AsFloat();
                     break;

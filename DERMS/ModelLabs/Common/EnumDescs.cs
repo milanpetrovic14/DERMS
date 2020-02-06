@@ -11,24 +11,10 @@ namespace FTN.Common
 
 		public EnumDescs()
 		{
-            //property2enumType.Add(ModelCode.CONDEQ_PHASES, typeof(PhaseCode));
-            //property2enumType.Add(ModelCode.POWERTR_FUNC, typeof(TransformerFunction));
-            //property2enumType.Add(ModelCode.POWERTRWINDING_CONNTYPE, typeof(WindingConnection));
-            //property2enumType.Add(ModelCode.POWERTRWINDING_WINDTYPE, typeof(WindingType));   
             property2enumType.Add(ModelCode.MEASUREMENT_MEAS_TYPE, typeof(MeasurementType));
-            //property2enumType.Add(ModelCode.CURVE_CURVE_STYLE, typeof(CurveStyle));
-            //property2enumType.Add(ModelCode.CURVE_XMULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.CURVE_Y1MULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.CURVE_Y2MULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.CURVE_Y3MULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.BASICINTSCHEDULE_VAL1_MULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.BASICINTSCHEDULE_VAL2_MULTI, typeof(UnitMultiplier));
-            //property2enumType.Add(ModelCode.CURVE_XUNIT, typeof(UnitSymbol));
-            //property2enumType.Add(ModelCode.CURVE_Y1UNIT, typeof(UnitSymbol));
-            //property2enumType.Add(ModelCode.CURVE_Y2UNIT, typeof(UnitSymbol));
-            //property2enumType.Add(ModelCode.CURVE_Y3UNIT, typeof(UnitSymbol));
-            //property2enumType.Add(ModelCode.BASICINTSCHEDULE_VAL1_UNIT, typeof(UnitSymbol));
-            //property2enumType.Add(ModelCode.BASICINTSCHEDULE_VAL2_UNIT, typeof(UnitSymbol));
+            property2enumType.Add(ModelCode.CONDUCTOR_TYPE, typeof(ConductorType));
+            property2enumType.Add(ModelCode.ENERGYSOURCE_TYPE, typeof(EnergySourceType));
+            property2enumType.Add(ModelCode.SYNCHRONOUSMACHINE_GENERATORTYPE, typeof(GeneratorType));
         }
 
 		public List<string> GetEnumList(ModelCode propertyId)

@@ -11,7 +11,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             private List<long> regions = new List<long>();
 
             public List<long> Regions { get => regions; set => regions = value; }
-
+            private float longitude;
+            private float latitude;
+            public float Longitude { get => longitude; set => longitude = value; }
+            public float Latitude { get => latitude; set => latitude = value; }
             public GeographicalRegion(long globalId) : base(globalId)
             {
 
@@ -22,7 +25,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
                 if (base.Equals(obj))
                 {
                     GeographicalRegion x = (GeographicalRegion)obj;
-                    return (CompareHelper.CompareLists(x.Regions, this.Regions, true));
+                    return ((x.longitude == this.longitude && x.latitude == this.latitude) && CompareHelper.CompareLists(x.Regions, this.Regions, true));
                 }
                 else
                 {
@@ -41,11 +44,11 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             {
                 switch (property)
                 {
-                    //case ModelCode.SWITCH_NORMAL_OPEN:
-                    //case ModelCode.SWITCH_RATED_CURRENT:
-                    //case ModelCode.SWITCH_RETAINED:
-                    //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                    case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
+                case ModelCode.GEOGRAPHICALREGION_LONGITUDE:
+                case ModelCode.GEOGRAPHICALREGION_LATITUDE:
+                //case ModelCode.SWITCH_RETAINED:
+                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
+                case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
                         return true;
 
                     default:
@@ -57,21 +60,22 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             {
                 switch (prop.Id)
                 {
-                    //case ModelCode.SWITCH_NORMAL_OPEN:
-                    //    prop.SetValue(normalOpen);
-                    //    break;
+                case ModelCode.GEOGRAPHICALREGION_LONGITUDE:
+                    prop.SetValue(longitude);
+                    break;
 
-                    //case ModelCode.SWITCH_RATED_CURRENT:
-                    //    prop.SetValue((short)ratedCurrent);
-                    //    break;
+                case ModelCode.GEOGRAPHICALREGION_LATITUDE:
+                    prop.SetValue(latitude);
+                    break;
 
-                    //case ModelCode.SWITCH_RETAINED:
-                    //    prop.SetValue(retained);
-                    //    break;
-                    //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                    //    prop.SetValue(switchOnCount);
-                    //    break;
-                    case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
+
+                //case ModelCode.SWITCH_RETAINED:
+                //    prop.SetValue(retained);
+                //    break;
+                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
+                //    prop.SetValue(switchOnCount);
+                //    break;
+                case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
                         prop.SetValue(regions);
                         break;
 
@@ -85,21 +89,21 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             {
                 switch (property.Id)
                 {
-                    //case ModelCode.SWITCH_NORMAL_OPEN:
-                    //    normalOpen = property.AsBool();
-                    //    break;
+                case ModelCode.GEOGRAPHICALREGION_LATITUDE:
+                    latitude = property.AsFloat();
+                    break;
 
-                    //case ModelCode.SWITCH_RATED_CURRENT:
-                    //    ratedCurrent = (CurrentFlow)property.AsEnum();
-                    //    break;
+                case ModelCode.GEOGRAPHICALREGION_LONGITUDE:
+                    longitude = property.AsFloat();
+                    break;
 
-                    //case ModelCode.SWITCH_RETAINED:
-                    //    retained = property.AsBool();
-                    //    break;
-                    //case ModelCode.SWITCH_SWITCH_ON_COUNT:
-                    //    switchOnCount = property.AsInt();
-                    //    break;
-                    case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
+                //case ModelCode.SWITCH_RETAINED:
+                //    retained = property.AsBool();
+                //    break;
+                //case ModelCode.SWITCH_SWITCH_ON_COUNT:
+                //    switchOnCount = property.AsInt();
+                //    break;
+                case ModelCode.GEOGRAPHICALREGION_SUBGEOREGS:
                         regions = property.AsReferences();
                         break;
 

@@ -74,6 +74,11 @@
             {
                 PowerTransformerConverter.PopulateRegulatingCondEqProperties(cimSynchronousMachine, rd, importHelper, report);
 
+                if (cimSynchronousMachine.GeneratorTypeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_GENERATORTYPE, (short)GetDMSGeneratorType(cimSynchronousMachine.GeneratorType)));
+                }
+
                 if (cimSynchronousMachine.MaxQHasValue)
                 {
                     rd.AddProperty(new Property(ModelCode.SYNCHRONOUSMACHINE_MAXQ, cimSynchronousMachine.MaxQ));
@@ -137,6 +142,16 @@
             if ((cimEquipmentContainer != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateConnectivityNodeContainerProperties(cimEquipmentContainer, rd, importHelper, report);
+
+                if (cimEquipmentContainer.LongitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.EQUIPMENTCONTAINER_LONGITUDE, cimEquipmentContainer.Longitude));
+                }
+
+                if (cimEquipmentContainer.LatitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.EQUIPMENTCONTAINER_LATITUDE, cimEquipmentContainer.Latitude));
+                }
             }
         }
 
@@ -179,7 +194,7 @@
             if ((cimDiscrete != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateMeasurementProperties(cimDiscrete, rd, importHelper, report);
-
+                
                 if (cimDiscrete.MaxValueHasValue)
                 {
                     rd.AddProperty(new Property(ModelCode.DISCRETE_MAX_VALUE, cimDiscrete.MaxValue));
@@ -241,6 +256,16 @@
             if ((cimGeographicalRegion != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimGeographicalRegion, rd);
+
+                if (cimGeographicalRegion.LongitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.GEOGRAPHICALREGION_LONGITUDE, cimGeographicalRegion.Longitude));
+                }
+
+                if (cimGeographicalRegion.LatitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.GEOGRAPHICALREGION_LATITUDE, cimGeographicalRegion.Latitude));
+                }
             }
         }
 
@@ -249,6 +274,16 @@
             if ((cimSubGeographicalRegion != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimSubGeographicalRegion, rd);
+
+                if (cimSubGeographicalRegion.LongitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.SUBGEOGRAPHICALREGION_LONGITUDE, cimSubGeographicalRegion.Longitude));
+                }
+
+                if (cimSubGeographicalRegion.LatitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.SUBGEOGRAPHICALREGION_LATITUDE, cimSubGeographicalRegion.Latitude));
+                }
 
                 if (cimSubGeographicalRegion.RegionHasValue)
                 {
@@ -365,6 +400,16 @@
             if ((cimConductingEquipment != null) && (rd != null))
             {
                 PowerTransformerConverter.PopulateEquipmentProperties(cimConductingEquipment, rd, importHelper, report);
+
+                if (cimConductingEquipment.LongitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.CONDEQ_LONGITUDE, cimConductingEquipment.Longitude));
+                }
+
+                if (cimConductingEquipment.LatitudeHasValue)
+                {
+                    rd.AddProperty(new Property(ModelCode.CONDEQ_LATITUDE, cimConductingEquipment.Latitude));
+                }
             }
         }
 
@@ -454,6 +499,21 @@
                     return MeasurementType.Voltage;
                 default:
                     return MeasurementType.None;
+            }
+        }
+
+        public static GeneratorType GetDMSGeneratorType(FTN.GeneratorType generatorType)
+        {
+            switch (generatorType)
+            {
+                case FTN.GeneratorType.Wind:
+                    return GeneratorType.Wind;
+                case FTN.GeneratorType.Solar:
+                    return GeneratorType.Solar;
+                case FTN.GeneratorType.Battery:
+                    return GeneratorType.Battery;
+                default:
+                    return GeneratorType.None;
             }
         }
 

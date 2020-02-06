@@ -9,6 +9,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
     public class EquipmentContainer : ConnectivityNodeContainer
     {
         private List<long> equipments = new List<long>();
+        private float longitude;
+        private float latitude;
+        public float Longitude { get => longitude; set => longitude = value; }
+        public float Latitude { get => latitude; set => latitude = value; }
         public EquipmentContainer(long globalId) : base(globalId)
         {
 
@@ -20,7 +24,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             if (base.Equals(obj))
             {
                 EquipmentContainer x = (EquipmentContainer)obj;
-                return (CompareHelper.CompareLists(x.Equipments, this.Equipments, true));
+                return ((x.longitude == this.longitude && x.latitude == this.latitude) && CompareHelper.CompareLists(x.Equipments, this.Equipments, true));
             }
             else
             {
@@ -39,6 +43,9 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (t)
             {
+
+                case ModelCode.EQUIPMENTCONTAINER_LONGITUDE:
+                case ModelCode.EQUIPMENTCONTAINER_LATITUDE:
                 case ModelCode.EQUIPMENTCONTAINER_EQUIPMENTS:
                     return true;
 
@@ -51,6 +58,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (prop.Id)
             {
+                case ModelCode.EQUIPMENTCONTAINER_LONGITUDE:
+                    prop.SetValue(longitude);
+                    break;
+
+                case ModelCode.EQUIPMENTCONTAINER_LATITUDE:
+                    prop.SetValue(latitude);
+                    break;
                 case ModelCode.EQUIPMENTCONTAINER_EQUIPMENTS:
                     prop.SetValue(equipments);
                     break;
@@ -65,6 +79,14 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         {
             switch (property.Id)
             {
+
+                case ModelCode.EQUIPMENTCONTAINER_LATITUDE:
+                    latitude = property.AsFloat();
+                    break;
+
+                case ModelCode.EQUIPMENTCONTAINER_LONGITUDE:
+                    longitude = property.AsFloat();
+                    break;
                 case ModelCode.EQUIPMENTCONTAINER_EQUIPMENTS:
                     equipments = property.AsReferences();
                     break;

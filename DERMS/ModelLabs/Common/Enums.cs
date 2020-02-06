@@ -81,4 +81,12 @@ namespace FTN.Common
         Interconnection = 1,
         None = 3
     }
+
+    public enum GeneratorType : short
+    {
+        Wind = 0,
+        Solar = 1,
+        Battery = 2,
+        None = 3
+    }
 }

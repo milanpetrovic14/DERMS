@@ -23,8 +23,8 @@ namespace FTN.Services.NetworkModelService
         Dictionary<int, List<long>> signals = new Dictionary<int, List<long>>();
         public NetworkModelDeepCopy()
         {
-            //proxyFromNMSToCE = new CommunicationWithCE();
-            //proxyFromNMSToScada = new CommunicationWithScada();
+            proxyFromNMSToCE = new CommunicationWithCE();
+            proxyFromNMSToScada = new CommunicationWithScada();
             networkModel = new NetworkModel();
 
             //gidoviA = networkModel.GetContainer(DMSType.ANALOG).GetEntitiesGlobalIds();

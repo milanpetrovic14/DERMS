@@ -72,8 +72,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SwitchingEquipmentCIMProfile_Labs">
-      <HintPath>..\..\..\..\..\28012020\bin\DLL\SwitchingEquipmentCIMProfile_Labs.dll</HintPath>
+    <Reference Include="SwitchingEquipmentCIMProfile_Labs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\SwitchingEquipmentCIMProfile_Labs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

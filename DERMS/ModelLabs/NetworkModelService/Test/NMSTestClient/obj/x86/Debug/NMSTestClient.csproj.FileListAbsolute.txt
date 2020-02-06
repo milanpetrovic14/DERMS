@@ -72,3 +72,11 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.exe
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\bin\NMSTestClient.exe.config
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\bin\NMSTestClient.exe
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\bin\NMSTestClient.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csprojAssemblyReference.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CoreCompileInputs.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.csproj.CopyComplete
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.exe
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\NetworkModelService\Test\NMSTestClient\obj\x86\Debug\NMSTestClient.pdb

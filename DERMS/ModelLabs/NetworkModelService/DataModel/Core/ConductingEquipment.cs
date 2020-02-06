@@ -1,11 +1,12 @@
-﻿using System;
+﻿
+using FTN.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
-using FTN.Common;
 
 namespace FTN.Services.NetworkModelService.DataModel.Core
 {
@@ -14,7 +15,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         private List<long> terminals = new List<long>();
         public List<long> Terminals { get => terminals; set => terminals = value; }
         //private PhaseCode phases;
-        //private float ratedVoltage;
+        private float longitude;
+        private float latitude;
+        public float Longitude { get => longitude; set => longitude = value; }
+        public float Latitude { get => latitude; set => latitude = value; }
         //private long baseVoltage = 0;
 
         public ConductingEquipment(long globalId) : base(globalId) 
@@ -51,7 +55,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             if (base.Equals(obj))
             {
                 ConductingEquipment x = (ConductingEquipment)obj;
-                return (CompareHelper.CompareLists(x.Terminals, this.Terminals, true));
+                return (CompareHelper.CompareLists(x.Terminals, this.Terminals, true) && x.longitude == this.longitude && x.latitude == this.latitude);
             }
             else
             {
@@ -70,8 +74,8 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		{
 			switch (property)
 			{
-                //case ModelCode.CONDEQ_PHASES:				
-                //case ModelCode.CONDEQ_RATEDVOLTAGE:
+                case ModelCode.CONDEQ_LATITUDE:
+                case ModelCode.CONDEQ_LONGITUDE:
                 case ModelCode.CONDEQ_TERMINALS:
                     return true;
 
@@ -84,13 +88,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		{
 			switch (prop.Id)
 			{
-                //case ModelCode.CONDEQ_PHASES:
-                //	prop.SetValue((short)phases);
-                //	break;
+                case ModelCode.CONDEQ_LONGITUDE:
+                    prop.SetValue(longitude);
+                    break;
 
-                //case ModelCode.CONDEQ_RATEDVOLTAGE:
-                //	prop.SetValue(ratedVoltage);
-                //	break;
+                case ModelCode.CONDEQ_LATITUDE:
+                    prop.SetValue(latitude);
+                    break;
 
                 case ModelCode.CONDEQ_TERMINALS:
                     prop.SetValue(terminals);
@@ -106,13 +110,13 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		{
 			switch (property.Id)
 			{
-                //case ModelCode.CONDEQ_PHASES:					
-                //	phases = (PhaseCode)property.AsEnum();
-                //	break;
+                case ModelCode.CONDEQ_LATITUDE:
+                    latitude = property.AsFloat();
+                    break;
 
-                //case ModelCode.CONDEQ_RATEDVOLTAGE:
-                //	ratedVoltage = property.AsFloat();
-                //	break;
+                case ModelCode.CONDEQ_LONGITUDE:
+                    longitude = property.AsFloat();
+                    break;
 
                 case ModelCode.CONDEQ_TERMINALS:
                     terminals = property.AsReferences();
@@ -136,7 +140,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
             }
         }
 
-
+        
 
         public override void GetReferences(Dictionary<ModelCode, List<long>> references, TypeOfReference refType)
         {

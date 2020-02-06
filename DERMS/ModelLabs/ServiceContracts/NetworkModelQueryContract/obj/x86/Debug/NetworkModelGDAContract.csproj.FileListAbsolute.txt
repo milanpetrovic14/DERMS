@@ -67,3 +67,10 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\ServiceContracts\Ne
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\NetworkModelGDAContract.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\bin\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\bin\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\NetworkModelGDAContract.csprojAssemblyReference.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\NetworkModelGDAContract.csproj.CoreCompileInputs.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\NetworkModelGDAContract.csproj.CopyComplete
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\ModelLabs\ServiceContracts\NetworkModelQueryContract\obj\x86\Debug\FTN.ServiceContracts.ServiceContracts.NetworkModelQueryContract.pdb

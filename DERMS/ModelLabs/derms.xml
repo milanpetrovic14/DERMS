@@ -8,18 +8,24 @@
 		<cim:IdentifiedObject.description>gr1</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>gr_1</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.Name>GR1</cim:IdentifiedObject.Name>
+		<cim:GeographicalRegion.longitude>20</cim:GeographicalRegion.longitude>
+		<cim:GeographicalRegion.latitude>20</cim:GeographicalRegion.latitude>
 	</cim:GeographicalRegion>
 	
 	<cim:GeographicalRegion rdf:ID="gr_2">
 		<cim:IdentifiedObject.description>gr2</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>gr_2</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.Name>GR2</cim:IdentifiedObject.Name>
+		<cim:GeographicalRegion.longitude>20.1</cim:GeographicalRegion.longitude>
+		<cim:GeographicalRegion.latitude>20</cim:GeographicalRegion.latitude>
 	</cim:GeographicalRegion>
 	
 	<cim:SubGeographicalRegion rdf:ID="sgr_1">
 		<cim:IdentifiedObject.description>sgr1</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>sgr_1</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>SGR1</cim:IdentifiedObject.name>
+		<cim:SubGeographicalRegion.longitude>20</cim:SubGeographicalRegion.longitude>
+		<cim:SubGeographicalRegion.latitude>20</cim:SubGeographicalRegion.latitude>
 		<cim:SubGeographicalRegion.Region rdf:resource="#gr_2"/>
 	</cim:SubGeographicalRegion>	
 	
@@ -27,6 +33,8 @@
 		<cim:IdentifiedObject.description>sgr2</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.mRID>sgr_2</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>SGR2</cim:IdentifiedObject.name>
+		<cim:SubGeographicalRegion.longitude>20</cim:SubGeographicalRegion.longitude>
+		<cim:SubGeographicalRegion.latitude>20</cim:SubGeographicalRegion.latitude>
 		<cim:SubGeographicalRegion.Region rdf:resource="#gr_1"/>
 	</cim:SubGeographicalRegion>	
 	
@@ -107,6 +115,8 @@
 		<cim:EnergySource.nominalVoltage>10</cim:EnergySource.nominalVoltage>
 		<cim:EnergySource.voltageMagnitude>20</cim:EnergySource.voltageMagnitude>
 		<cim:EnergySource.sourceType>Distribution</cim:EnergySource.sourceType>
+		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>
 	</cim:EnergySource>
 	
@@ -132,6 +142,8 @@
 		<cim:Conductor.conductorType>Overhead</cim:Conductor.conductorType>	
 		<cim:ACLineSegment.feederCable>false</cim:ACLineSegment.feederCable>	
 		<cim:ACLineSegment.ratedCurrent>30</cim:ACLineSegment.ratedCurrent>	
+		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>
 	</cim:ACLineSegment>
 	
@@ -164,6 +176,8 @@
 		<cim:IdentifiedObject.name>EC2</cim:IdentifiedObject.name>
 		<cim:EnergyConsumer.pfixed>2</cim:EnergyConsumer.pfixed>
 		<cim:EnergyConsumer.qfixed>2</cim:EnergyConsumer.qfixed>
+		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>		
 	</cim:EnergyConsumer>
 	
@@ -199,6 +213,8 @@
 		<cim:IdentifiedObject.mRID>b_2</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.description>b2</cim:IdentifiedObject.description>
 		<cim:IdentifiedObject.name>B2</cim:IdentifiedObject.name>
+		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>
 	</cim:Breaker>	
 	
@@ -243,6 +259,9 @@
 		<cim:SynchronousMachine.maxQ>8</cim:SynchronousMachine.maxQ>			
 		<cim:SynchronousMachine.minQ>0</cim:SynchronousMachine.minQ>			
 		<cim:SynchronousMachine.condenserP>2</cim:SynchronousMachine.condenserP>
+		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
+		<cim:SynchronousMachine.generatorType>Wind</cim:SynchronousMachine.generatorType>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>		
 	</cim:SynchronousMachine>
 	
@@ -276,7 +295,7 @@
 	
 		
 	
-	<cim:ACLineSegment rdf:id="acl_3">
+	<!-- <cim:ACLineSegment rdf:id="acl_3">
 		<cim:identifiedobject.description>acl3</cim:identifiedobject.description>
 		<cim:identifiedobject.mRID>acl_3</cim:identifiedobject.mRID>
 		<cim:IdentifiedObject.name>ACL3</cim:IdentifiedObject.name>	
@@ -394,7 +413,7 @@
 		<cim:IdentifiedObject.name>T19</cim:IdentifiedObject.name>
 		<cim:Terminal.conductingEquipment rdf:resource="#sm_3"/>
 		<cim:Terminal.connectivityNode rdf:resource="cn_11"/>		
-	</cim:Terminal>
+	</cim:Terminal> -->
 	
 	<!-- grana2 end -->
 	

@@ -27,7 +27,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-
+        
         <TabControl Grid.Column="1">
             <TabItem Header="Model Management">
                 <Grid Margin="-4,-2,-4,-4">
@@ -328,21 +328,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="GMaps">
-                <Grid Margin="10,8,0,0">
-                    <WindowsFormsHost Grid.Column="0" Margin="185,0,-19,0">
-                        <gmf:GMapControl x:Name="GMapp" MinZoom="3" MaxZoom="17" Zoom="12">
-                        </gmf:GMapControl>
-                    </WindowsFormsHost>
-                    <CheckBox x:Name="CheckBoxBreakerEntity" Background="blue" Content="Breaker entity" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="22" Width="130"/>
-                    <CheckBox x:Name="CheckBoxEnergySourceEntity" Background="Black" Content="EnergySource entity" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="150" Height="18" RenderTransformOrigin="0.34,0.294"/>
-                    <CheckBox x:Name="CheckBoxEnergyConsumerEntity" Content="EnergyConsumer entity" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="170" Height="18"/>
-                    <CheckBox x:Name="CheckBoxSubstitutionEntuty" Background="red" Content="Substitution entity" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="145" Height="20"/>
-                    <CheckBox x:Name="CheckBoxAllEntity" Content="All entities" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="117" Height="20"/>
-                    <CheckBox x:Name="CheckBoxGeneratorEntity" Background="Green" Content="Generator entity" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="22" Width="130"/>
-                    <Label x:Name="labelOptions" Content="Options:" Grid.Column="2" HorizontalAlignment="Left" Height="29" Margin="10,30,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold"/>
-                    <Button x:Name="OptionsButton" Content="Show" HorizontalAlignment="Left" Margin="20,204,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" Click="OptionsButton_Click"/>
-                    <Button x:Name="OptionsButton_Copy" Content="ClearAll" HorizontalAlignment="Left" Margin="20,248,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" Click="OptionsButton_Copy_Click"/>
-                </Grid>
+                <gmaps:GMapControl x:Name="GMapp" MinZoom="3" MaxZoom="17" Zoom="12" />
             </TabItem>
         </TabControl>
 
