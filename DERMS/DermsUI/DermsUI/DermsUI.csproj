@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -69,6 +70,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -85,12 +87,17 @@
     <Compile Include="MediatorPattern\EventRaiser.cs" />
     <Compile Include="MediatorPattern\Mediator.cs" />
     <Compile Include="MediatorPattern\RelayCommand.cs" />
+    <Compile Include="Model\Breakers.cs" />
     <Compile Include="Model\ConnectivityNodeHelper.cs" />
     <Compile Include="Model\EnergyConsumerHelper.cs" />
+    <Compile Include="Model\EnergyConsumers.cs" />
+    <Compile Include="Model\EnergySources.cs" />
     <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\Generator.cs" />
     <Compile Include="Model\Log.cs" />
     <Compile Include="Model\SampleGroupVm.cs" />
     <Compile Include="Model\SampleVm.cs" />
+    <Compile Include="Model\SubstationEntity.cs" />
     <Compile Include="Model\TerminalHelper.cs" />
     <Compile Include="Model\ThreeViewModel\EnergyNetwork.cs" />
     <Compile Include="Model\ThreeViewModel\Feeder.cs" />
@@ -334,6 +341,5 @@
       <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -111,3 +111,9 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelS
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\bin\FTN.DataModel.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\bin\FTN.DataModel.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CoreCompileInputs.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\DataModel.csproj.CopyComplete
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\ModelLabs\NetworkModelService\DataModel\obj\x86\Debug\FTN.DataModel.pdb

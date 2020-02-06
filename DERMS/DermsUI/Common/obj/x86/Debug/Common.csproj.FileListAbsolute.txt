@@ -51,3 +51,9 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\Common\obj\x86\
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\FTN.Common.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\FTN.Common.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb

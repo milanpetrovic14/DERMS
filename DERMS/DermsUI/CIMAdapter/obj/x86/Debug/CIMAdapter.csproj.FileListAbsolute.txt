@@ -61,3 +61,10 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMAdapter\obj\
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csproj.CopyComplete
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\FTN.ESI.SIMES.CIM.CIMAdapter.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\bin\FTN.ESI.SIMES.CIM.CIMAdapter.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csprojAssemblyReference.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csproj.CoreCompileInputs.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\CIMAdapter.csproj.CopyComplete
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\DermsUI\CIMAdapter\obj\x86\Debug\FTN.ESI.SIMES.CIM.CIMAdapter.pdb

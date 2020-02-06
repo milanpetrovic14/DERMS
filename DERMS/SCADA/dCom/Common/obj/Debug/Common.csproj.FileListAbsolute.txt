@@ -51,3 +51,9 @@ C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\Common\obj\D
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
 C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\bin\Debug\Common.pdb
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.dll
+C:\Users\miroslav.tanasic\Desktop\DERMS-MasterProjekat\5.2.2020\DERMS\DERMS\SCADA\dCom\Common\obj\Debug\Common.pdb
