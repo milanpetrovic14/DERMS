@@ -48,7 +48,9 @@
         </ResourceDescription>
         <ResourceDescription>
           <id gid="0x0000000900000001" type="ENEGRYSOURCE" />
-          <Properties />
+          <Properties>
+            <Property id="CONDEQ_LONGITUDE" value="4133.68359" />
+          </Properties>
         </ResourceDescription>
         <ResourceDescription>
           <id gid="0x0000000c00000001" type="ACLINESEGMENT" />

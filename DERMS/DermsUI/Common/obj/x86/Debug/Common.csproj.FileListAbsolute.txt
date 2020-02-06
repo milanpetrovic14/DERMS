@@ -57,3 +57,9 @@ C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\Common\obj\x86\Debu
 C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
 C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\bin\FTN.Common.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\bin\FTN.Common.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csprojAssemblyReference.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\DermsUI\Common\obj\x86\Debug\FTN.Common.pdb

@@ -115,8 +115,8 @@
 		<cim:EnergySource.nominalVoltage>10</cim:EnergySource.nominalVoltage>
 		<cim:EnergySource.voltageMagnitude>20</cim:EnergySource.voltageMagnitude>
 		<cim:EnergySource.sourceType>Distribution</cim:EnergySource.sourceType>
-		<cim:ConductingEquipment.longitude>20</cim:ConductingEquipment.longitude>
-		<cim:ConductingEquipment.latitude>20</cim:ConductingEquipment.latitude>
+		<cim:ConductingEquipment.longitude>413321.68355993</cim:ConductingEquipment.longitude>
+		<cim:ConductingEquipment.latitude>5009020.27018182</cim:ConductingEquipment.latitude>
 		<cim:Equipment.EquipmentContainer rdf:resource="#s_1"/>
 	</cim:EnergySource>
 	
