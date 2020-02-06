@@ -1,0 +1,101 @@
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\admin\Desktop\4lexis-scada_ftn-690b3d58fe6c\4lexis-scada_ftn-690b3d58fe6c\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\bin\Debug\Common.dll
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\bin\Debug\Common.pdb
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+E:\Sesti semestar\Osnove softvera sa kriticnim odzivom u elektroenergetskim sistemima\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Andrej\Desktop\SCADA Master\Vezbe\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Andrej\Desktop\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojResolveAssemblyReference.cache
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Andrej\Documents\DERMS-master\DERMS\PROBA2\Vezba7\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\filip\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\ProcessingModule.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\bin\Debug\Common.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csprojAssemblyReference.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CoreCompileInputs.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.csproj.CopyComplete
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\SCADA\dCom\ProcessingModule\obj\Debug\ProcessingModule.pdb

@@ -1,0 +1,126 @@
+D:\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+D:\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+D:\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+D:\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+D:\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+D:\CE\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+D:\CE\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+D:\CE\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+D:\CE\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+D:\CE\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Caki\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\f\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\Master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\admin\Desktop\DERMS_MASTER\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Mimin\Desktop\Master\30.01.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\luka.bosanac\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\Radi\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Filip\Desktop\New folder\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.dll
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.pdb
+C:\Users\Filip\Desktop\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.pdb
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Nemanja\Desktop\master\DERMS-master\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.pdb
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\milan.petrovic\Desktop\DERMSGit\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\CalculationEngineServiceCommon.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\DERMSCommon.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.Common.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\bin\Debug\FTN.DataModel.pdb
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csprojAssemblyReference.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CoreCompileInputs.cache
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.csproj.CopyComplete
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.dll
+C:\Users\Mimin\Desktop\Master\6.2.2020\DERMS\DERMS\CalculationEngine\CalculationEngineServiceCommon\obj\Debug\CalculationEngineServiceCommon.pdb
